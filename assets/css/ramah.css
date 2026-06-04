@@ -437,7 +437,7 @@
   align-items: center;
   gap: 9px;
   font-size: 14px;
-  color: rgba(255, 255, 255, .55);
+  color: rgb(97, 101, 129);
   text-decoration: none;
   transition: color .3s;
   font-family: 'Onest', 'Inter', sans-serif
