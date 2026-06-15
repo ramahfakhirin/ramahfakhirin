@@ -213,6 +213,59 @@
   display: block
 }
 
+/* ─── Card media wrapper: image + colorful gradient fallback ────────────────
+   Structure: .rf-pcard-media (gradient bg, same as old .rf-ph-*)
+                ├─ img.rf-pcard-img       (real screenshot, on top)
+                └─ .rf-ph-fallback        (icon + label, hidden if img loads)
+
+   If image fails to load (404), JS adds .rf-ph-empty to media wrapper,
+   img hides itself, and .rf-ph-fallback becomes visible — showing the
+   original colorful placeholder (icon + label) exactly as before.
+   ──────────────────────────────────────────────────────────────────────────── */
+.rf-pcard-media {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.rf-pcard-media .rf-pcard-img {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.rf-ph-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;              /* hidden by default — image is on top */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 0;
+}
+
+.rf-ph-fallback svg {
+  width: 32px;
+  height: 32px;
+  opacity: .22
+}
+
+.rf-ph-fallback span {
+  font-size: 10px;
+  color: #8080b0;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: 'Onest', 'Inter', sans-serif
+}
+
+/* When image fails to load: show gradient + fallback icon/label */
+.rf-pcard-media.rf-ph-empty .rf-ph-fallback {
+  display: flex;
+}
+
 .rf-ph {
   width: 100%;
   height: 260px;
@@ -326,6 +379,12 @@
   color: var(--rf-mid)
 }
 
+.rf-pcard-media { position: relative; z-index: 0; }
+.rf-pcard-media .rf-pcard-img { z-index: 1; }
+.rf-ph-fallback { display: none; }            /* fallback gradient, hidden by default */
+.rf-pcard-media.rf-ph-empty .rf-ph-fallback { display: flex; }  /* muncul jika img 404 */
+.rf-pov { z-index: 2; }                        /* overlay SELALU di atas image */
+
 /* ---- Photo placeholder ---- */
 .rf-photo-ph {
   width: 100%;
@@ -437,7 +496,7 @@
   align-items: center;
   gap: 9px;
   font-size: 14px;
-  color: rgb(97, 101, 129);
+  color: rgb(32, 32, 32);
   text-decoration: none;
   transition: color .3s;
   font-family: 'Onest', 'Inter', sans-serif
@@ -561,47 +620,23 @@ input,
   vertical-align: top;
 }
 
-/* ─── Education & Awards — vertical list ────────────────────────────────────
-   5 items stacked top-to-bottom, each: icon + title + sub
-   ──────────────────────────────────────────────────────────────────────────── */
-.rf-edu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 14px;
+/* 4. Mobile: shrink card to fit viewport, keep readable padding */
+@media (max-width: 575px) {
+  .app-testimonial-item {
+    min-width: calc(100vw - 60px) !important;
+    max-width: calc(100vw - 60px) !important;
+    margin: 0 10px !important;
+    padding: 24px !important;
+  }
+
+  .app-testimonial-area.app-testimonial-ptb {
+    padding-top: 100px;
+  }
 }
 
-.rf-edu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.rf-edu-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 7px;
-  background: rgba(116, 99, 255, .12);
-  border: 1px solid rgba(116, 99, 255, .2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  flex-shrink: 0;
-}
-
-.rf-edu-title {
-  font-size: 13px;
-  font-weight: 600;
-  /*color: rgba(255, 255, 255, .72);*/
-  font-family: 'Onest', 'Inter', sans-serif;
-  line-height: 1.3;
-}
-
-.rf-edu-sub {
-  font-size: 11px;
-  /*color: rgba(255, 255, 255, .72);*/
-  ;
-  font-family: 'Onest', 'Inter', sans-serif;
-  margin-top: 1px;
+@media (min-width: 576px) and (max-width: 767px) {
+  .app-testimonial-item {
+    min-width: 420px !important;
+    max-width: 420px !important;
+  }
 }

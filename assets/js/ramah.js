@@ -110,7 +110,7 @@
     wrapper.style.animation = 'none';
     wrapper.style.webkitAnimation = 'none';
 
-    var SPEED = 2;          // ~120px/s @ 60fps — matches template feel          // px per frame — matches template feel
+    var SPEED = 1;          // ~120px/s @ 60fps — matches template feel          // px per frame — matches template feel
     var PAUSE_ON_HOVER = true;
     var x = 0;
     var paused = false;
