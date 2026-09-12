@@ -1,0 +1,993 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overscroll-behavior:none;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Pricelist Website &amp; App Development Services — Ramahfakhirin</title>
+<meta name="description" content="Website and app development pricing. 5 packages from Rp 5,000,000 — Starter, Business, Professional, Custom Apps, and Enterprise. Nano Indonesia Sakti.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ramahfakhirin.com/pricelist">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramahfakhirin.com/pricelist">
+<meta property="og:title" content="Pricelist Website &amp; App Development Services — Ramahfakhirin">
+<meta property="og:description" content="5 website and app packages, starting from Rp 5,000,000. Design, development, hosting, and warranty included.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — matching ramahfakhirin.com template
+   ============================================================ */
+:root{
+  --rf-accent:#7463FF;
+  --rf-accent2:#9585FF;
+  --rf-bg:#F7F7FD;
+  --rf-bg2:#EEEEF8;
+  --rf-dark:#0E0F11;
+  --rf-dark2:#101016;
+  --rf-night:#08041D;
+  --rf-mid:#66666C;
+  --rf-bdr:#E2E2F0;
+  --rf-ff-head:"Phudu",serif;
+  --rf-ff-body:"Onest","Inter",sans-serif;
+  --rf-grad:linear-gradient(230deg,#FF994B 6.7%,#D34BE9 48.83%,#3188FF 90.96%);
+  --rf-grad-purple:linear-gradient(120deg,#7463FF,#9585FF);
+  --rf-shadow:0 18px 50px rgba(20,16,60,.08);
+  --rf-shadow-lg:0 28px 80px rgba(20,16,60,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--rf-ff-body);
+  background-color:var(--rf-bg);
+  color:var(--rf-dark);
+  font-size:16px;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5,h6{font-family:var(--rf-ff-head);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--rf-dark)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer}
+::selection{background:var(--rf-accent);color:#fff}
+
+/* ---------- Layout helpers ---------- */
+.container{width:100%;margin:0 auto;padding:0 24px}
+.c-1230{max-width:1278px}
+.c-1430{max-width:1478px}
+.c-1630{max-width:1678px}
+.sec{padding:110px 0}
+.text-center{text-align:center}
+.mb-48{margin-bottom:48px}
+.mb-64{margin-bottom:64px}
+
+/* ---------- Badge / section pill ---------- */
+.rf-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rf-accent);background:rgba(116,99,255,.12);
+  padding:7px 18px;border-radius:99px;border:1px solid rgba(116,99,255,.25);
+  margin-bottom:24px;font-family:var(--rf-ff-body);
+}
+.rf-badge.on-dark{color:#cfc8ff;background:rgba(116,99,255,.18);border-color:rgba(116,99,255,.38)}
+.rf-dot{width:7px;height:7px;border-radius:50%;background:var(--rf-accent);animation:rfPulse 2s infinite}
+@keyframes rfPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+
+/* ---------- Section titles ---------- */
+.sec-title{font-size:clamp(34px,5vw,70px);line-height:1.04;margin-bottom:18px}
+.sec-title span{color:var(--rf-accent)}
+.sec-title.on-dark{color:#fff}
+.sec-lead{font-size:16px;color:var(--rf-mid);max-width:640px;margin:0 auto;line-height:1.8}
+.sec-lead.on-dark{color:rgba(255,255,255,.6)}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;justify-content:center;
+  font-size:15px;font-weight:600;letter-spacing:-.01em;
+  border-radius:14px;padding:15px 26px;border:none;transition:.4s;line-height:1;
+}
+.btn-grad{color:#fff;background:var(--rf-grad);box-shadow:0 10px 26px rgba(148,80,220,.28)}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(148,80,220,.38)}
+.btn-purple{color:#fff;background:var(--rf-accent);box-shadow:0 10px 26px rgba(116,99,255,.3)}
+.btn-purple:hover{background:#6252ee;transform:translateY(-3px)}
+.btn-ghost{color:var(--rf-dark);background:transparent;border:1.5px solid var(--rf-bdr)}
+.btn-ghost:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-ghost.on-dark:hover{border-color:var(--rf-accent2);color:var(--rf-accent2)}
+.btn-block{width:100%}
+.btn-sm{padding:12px 20px;font-size:14px;border-radius:12px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.announce{background:var(--rf-dark);color:rgba(255,255,255,.72);font-size:12.5px}
+.announce-in{display:flex;align-items:center;justify-content:center;gap:18px;padding:11px 0;flex-wrap:wrap}
+.announce-in span{color:var(--rf-accent2);font-weight:600}
+.announce-in a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.announce-in a:hover{color:var(--rf-accent2)}
+
+.hdr{position:sticky;top:0;z-index:99;background:rgba(247,247,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,226,240,.7)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.logo{font-family:var(--rf-ff-head);font-size:24px;font-weight:700;color:#1a1a1a;letter-spacing:-.01em}
+.logo span{color:var(--rf-accent)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--rf-mid);transition:.3s;position:relative}
+.nav a:hover,.nav a.active{color:var(--rf-accent)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--rf-accent);transition:width .3s;border-radius:2px}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.hdr-right{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--rf-bdr);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.burger i{display:block;width:17px;height:1.8px;background:var(--rf-dark);border-radius:2px}
+.mobile-nav{display:none;border-top:1px solid var(--rf-bdr);background:#fff}
+.mobile-nav.open{display:block}
+.mobile-nav ul{padding:14px 0}
+.mobile-nav a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--rf-dark)}
+.mobile-nav a:hover,.mobile-nav a.active{background:var(--rf-bg2);color:var(--rf-accent);font-weight:600}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:96px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1100px;height:660px;background:radial-gradient(ellipse at center,rgba(116,99,255,.20),rgba(116,99,255,0) 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-160px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(211,75,233,.14),rgba(211,75,233,0) 68%);pointer-events:none}
+.hero-in{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(38px,6.2vw,78px);line-height:1.02;margin-bottom:22px}
+.hero h1 span{color:var(--rf-accent)}
+.hero p.lead{font-size:17px;color:var(--rf-mid);max-width:660px;margin:0 auto 34px;line-height:1.8}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:860px;margin:0 auto}
+.hstat{background:#fff;border:1px solid var(--rf-bdr);border-radius:18px;padding:22px 16px;box-shadow:var(--rf-shadow)}
+.hstat b{display:block;font-family:var(--rf-ff-head);font-size:30px;color:var(--rf-accent);line-height:1;margin-bottom:6px}
+.hstat small{font-size:12.5px;color:var(--rf-mid);letter-spacing:.02em}
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.price-note{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--rf-mid);background:#fff;border:1px solid var(--rf-bdr);border-radius:99px;padding:8px 18px;margin-top:22px}
+.price-note b{color:var(--rf-dark);font-weight:600}
+
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;align-items:stretch}
+
+.pcard{
+  position:relative;display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;
+  padding:32px 26px 28px;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s;
+}
+.pcard:hover{transform:translateY(-8px);border-color:rgba(116,99,255,.45);box-shadow:var(--rf-shadow-lg)}
+.pcard-ico{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:24px;background:rgba(116,99,255,.10);border:1px solid rgba(116,99,255,.2);margin-bottom:20px}
+.pcard-name{font-family:var(--rf-ff-head);font-size:22px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.pcard-for{font-size:12.5px;color:var(--rf-mid);line-height:1.6;min-height:40px;margin-bottom:20px}
+.pcard-pre{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rf-accent);margin-bottom:6px}
+.pcard-price{display:flex;align-items:flex-end;gap:6px;flex-wrap:wrap;margin-bottom:4px}
+.pcard-cur{font-size:14px;font-weight:600;color:var(--rf-mid);padding-bottom:7px}
+.pcard-amt{font-family:var(--rf-ff-head);font-size:clamp(30px,2.4vw,38px);line-height:1;color:var(--rf-dark)}
+.pcard-sub{font-size:12px;color:var(--rf-mid);margin-bottom:22px}
+.pcard-sep{height:1px;background:var(--rf-bdr);margin-bottom:22px}
+.pcard-list{flex:1;margin-bottom:26px}
+.pcard-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.6;color:#3a3a5c;margin-bottom:11px}
+.pcard-list li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:rgba(116,99,255,.14)}
+.pcard-list li::after{content:"";position:absolute;left:5px;top:8.5px;width:6px;height:3px;border-left:1.8px solid var(--rf-accent);border-bottom:1.8px solid var(--rf-accent);transform:rotate(-45deg)}
+.pcard-list li b{color:var(--rf-dark);font-weight:600}
+.pcard-meta{display:flex;flex-direction:column;gap:7px;font-size:12px;color:var(--rf-mid);margin-bottom:22px;padding-top:18px;border-top:1px dashed var(--rf-bdr)}
+.pcard-meta div{display:flex;justify-content:space-between;gap:10px}
+.pcard-meta b{color:var(--rf-dark);font-weight:600;text-align:right}
+
+/* featured */
+.pcard.feat{background:var(--rf-dark2);border-color:transparent;box-shadow:0 30px 70px rgba(18,12,60,.35)}
+.pcard.feat::before{
+  content:"";position:absolute;inset:-1.5px;border-radius:23px;padding:1.5px;
+  background:var(--rf-grad-purple);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.pcard.feat .pcard-name,.pcard.feat .pcard-amt{color:#fff}
+.pcard.feat .pcard-for,.pcard.feat .pcard-sub,.pcard.feat .pcard-cur{color:rgba(255,255,255,.5)}
+.pcard.feat .pcard-list li{color:rgba(255,255,255,.76)}
+.pcard.feat .pcard-list li b{color:#fff}
+.pcard.feat .pcard-list li::before{background:rgba(116,99,255,.3)}
+.pcard.feat .pcard-list li::after{border-color:var(--rf-accent2)}
+.pcard.feat .pcard-sep{background:rgba(255,255,255,.12)}
+.pcard.feat .pcard-meta{color:rgba(255,255,255,.5);border-top-color:rgba(255,255,255,.14)}
+.pcard.feat .pcard-meta b{color:#fff}
+.pcard.feat .pcard-ico{background:rgba(116,99,255,.22);border-color:rgba(116,99,255,.4)}
+.pcard.feat:hover{transform:translateY(-10px)}
+.pcard-tag{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--rf-grad-purple);color:#fff;font-size:10.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:99px;
+  white-space:nowrap;box-shadow:0 8px 20px rgba(116,99,255,.45);
+}
+
+/* ============================================================
+   COMPARISON TABLE
+   ============================================================ */
+.compare{background:var(--rf-dark2);color:#fff}
+.tbl-wrap{overflow-x:auto;border-radius:22px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);-webkit-overflow-scrolling:touch}
+table.cmp{width:100%;border-collapse:collapse;min-width:1000px;font-size:13.5px}
+table.cmp th,table.cmp td{padding:16px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08)}
+table.cmp thead th{
+  font-family:var(--rf-ff-head);font-size:15px;color:#fff;font-weight:700;
+  background:#191925;border-bottom:1px solid rgba(116,99,255,.28);
+  position:sticky;top:0;z-index:2;
+}
+table.cmp thead th small{display:block;font-family:var(--rf-ff-body);font-size:11.5px;font-weight:500;color:var(--rf-accent2);margin-top:4px;letter-spacing:.02em}
+table.cmp tbody th{
+  text-align:left;font-family:var(--rf-ff-body);font-weight:500;font-size:13.5px;
+  color:rgba(255,255,255,.86);background:#15151d;
+  position:sticky;left:0;min-width:210px;z-index:1;
+}
+table.cmp td{color:rgba(255,255,255,.62)}
+table.cmp tbody tr:hover td{background:rgba(116,99,255,.06)}
+table.cmp .col-feat{background:rgba(116,99,255,.08)}
+table.cmp .yes{color:#8DE39A;font-weight:700}
+table.cmp .no{color:rgba(255,255,255,.24)}
+table.cmp tfoot td{font-family:var(--rf-ff-head);font-size:16px;color:#fff;background:rgba(116,99,255,.14)}
+table.cmp tfoot th{background:#1b1830;color:#fff;font-weight:700}
+.tbl-hint{font-size:12.5px;color:rgba(255,255,255,.42);margin-top:14px}
+
+/* ============================================================
+   ADD-ONS
+   ============================================================ */
+.addon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.addon{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--rf-bdr);border-radius:16px;padding:18px 22px;transition:.3s}
+.addon:hover{border-color:rgba(116,99,255,.45);box-shadow:var(--rf-shadow);transform:translateY(-3px)}
+.addon-l{display:flex;align-items:center;gap:14px;min-width:0}
+.addon-ico{width:38px;height:38px;flex-shrink:0;border-radius:11px;background:rgba(116,99,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px}
+.addon-name{font-size:14px;font-weight:600;color:var(--rf-dark);line-height:1.35}
+.addon-name small{display:block;font-weight:400;font-size:11.5px;color:var(--rf-mid);margin-top:2px}
+.addon-price{font-family:var(--rf-ff-head);font-size:15px;color:var(--rf-accent);white-space:nowrap;text-align:right}
+.addon-price small{display:block;font-family:var(--rf-ff-body);font-size:10.5px;color:var(--rf-mid);font-weight:400}
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.proc{background:#fff;border:1px solid var(--rf-bdr);border-radius:20px;padding:28px 24px;transition:.3s}
+.proc:hover{border-color:rgba(116,99,255,.45);transform:translateY(-6px);box-shadow:var(--rf-shadow)}
+.proc-num{font-family:var(--rf-ff-head);font-size:44px;line-height:1;color:rgba(116,99,255,.22);margin-bottom:12px}
+.proc h4{font-size:18px;margin-bottom:9px}
+.proc p{font-size:13px;color:var(--rf-mid);line-height:1.65}
+
+/* ============================================================
+   TERMS
+   ============================================================ */
+.terms-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:start}
+.tbox{background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;padding:34px 32px}
+.tbox h3{font-size:24px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.tbox h3 em{font-style:normal;font-size:22px}
+.tbox ul li{position:relative;padding-left:24px;font-size:14px;color:#3a3a5c;line-height:1.7;margin-bottom:12px}
+.tbox ul li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--rf-accent);opacity:.55}
+.tbox ul li b{color:var(--rf-dark);font-weight:600}
+.pay-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.pay-pill{font-size:12px;font-weight:500;color:var(--rf-accent);background:rgba(116,99,255,.08);border:1.5px solid rgba(116,99,255,.25);border-radius:99px;padding:6px 15px}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-wrap{max-width:880px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--rf-bdr)}
+.faq-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;background:none;border:none;text-align:left;font-size:15.5px;font-weight:500;color:var(--rf-dark);transition:color .3s}
+.faq-btn:hover{color:var(--rf-accent)}
+.faq-ico{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--rf-bg2);display:flex;align-items:center;justify-content:center;transition:.3s}
+.faq-ico svg{width:14px;height:14px;transition:transform .3s;stroke:var(--rf-dark)}
+.faq-item.open .faq-ico{background:var(--rf-accent)}
+.faq-item.open .faq-ico svg{transform:rotate(45deg);stroke:#fff}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.faq-ans-in{padding:0 0 22px;font-size:14.5px;color:var(--rf-mid);line-height:1.8;max-width:760px}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta{background:var(--rf-night);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-180px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.28),rgba(116,99,255,0) 68%)}
+.cta::after{content:"";position:absolute;bottom:-220px;right:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(211,75,233,.20),rgba(211,75,233,0) 70%)}
+.cta-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-size:clamp(34px,5vw,66px);color:#fff;line-height:1.04;margin-bottom:18px}
+.cta h2 span{color:var(--rf-accent2)}
+.cta p{color:rgba(255,255,255,.62);font-size:16px;max-width:600px;margin:0 auto 34px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.cta-contacts{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px}
+.cta-ci{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.62);transition:color .3s}
+.cta-ci:hover{color:#fff}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.ftr{background:var(--rf-bg);padding:70px 0 34px;border-top:1px solid var(--rf-bdr)}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:48px}
+.ftr-logo{font-family:var(--rf-ff-head);font-size:26px;font-weight:700;color:#1a1a1a;margin-bottom:18px;display:inline-block}
+.ftr-logo span{color:var(--rf-accent)}
+.ftr p{font-size:14px;color:var(--rf-mid);line-height:1.75;max-width:330px}
+.ftr h4{font-family:var(--rf-ff-head);font-size:17px;margin-bottom:18px}
+.ftr ul li{margin-bottom:10px}
+.ftr ul li a,.ftr ul li span{font-size:14px;color:var(--rf-mid);transition:.3s}
+.ftr ul li a:hover{color:var(--rf-accent)}
+.ftr-bottom{border-top:1px solid var(--rf-bdr);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--rf-mid)}
+
+/* ---------- Floating WhatsApp ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:98;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 34px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(37,211,102,.5)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1399px){
+  .grid5{grid-template-columns:repeat(3,1fr)}
+  .proc-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1199px){
+  .nav{display:none}
+  .burger{display:flex}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:991px){
+  .sec{padding:80px 0}
+  .grid5{grid-template-columns:repeat(2,1fr)}
+  .terms-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hero{padding:70px 0 60px}
+}
+@media (max-width:767px){
+  .container{padding:0 18px}
+  .sec{padding:64px 0}
+  .grid5{grid-template-columns:1fr;gap:18px}
+  .proc-grid{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+  .announce-in p{font-size:11.5px;text-align:center}
+  .announce-in a{display:none}
+  .hero-cta .btn,.cta-btns .btn{width:100%}
+  .tbox{padding:26px 22px}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+}
+@media (max-width:479px){
+  .hero-stats{grid-template-columns:1fr 1fr;gap:12px}
+  .hstat{padding:18px 12px}
+  .hstat b{font-size:24px}
+}
+@media print{
+  .hdr,.announce,.wa-float,.cta-btns,.hero-cta{display:none}
+  body{background:#fff}
+  .rv{opacity:1;transform:none}
+  .pcard{break-inside:avoid;box-shadow:none}
+}
+</style>
+<link rel="stylesheet" href="assets/css/rf-toggle.css">
+</head>
+<body>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce">
+  <div class="container c-1430">
+    <div class="announce-in">
+      <p><span>Nano Indonesia</span> — Digital Yearbook • Creative Production House • AR Technology • Event Organizer • Visual Creators</p>
+      <a href="mailto:ramafakhirin@gmail.com" data-rf-id="cta.consult">Free Consultation
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr">
+  <div class="container c-1430">
+    <div class="hdr-in">
+      <a href="index.html" class="logo">Ramahf<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html" data-rf-id="nav.home">Home</a>
+        <a href="about.html" data-rf-id="nav.about">About</a>
+        <a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a>
+        <a href="services.html" data-rf-id="nav.services">Services</a>
+        <a href="blog.html" data-rf-id="nav.blog">Blog</a>
+        <a href="pricelist.html" class="active" data-rf-id="nav.pricelist">Pricelist</a>
+        <a href="contact.html" data-rf-id="nav.contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn-grad btn-sm" href="https://wa.me/6282244719826" target="_blank" rel="noopener" data-rf-id="cta.talk">Let's Talk</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+      <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+      <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+      <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" class="active" data-rf-id="nav.pricelist">Pricelist</a></li>
+      <li><a href="contact.html" data-rf-id="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container c-1230">
+    <div class="hero-in">
+      <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="pricelist.hero.eyebrow">✦ Pricelist 2026 — Website &amp; Apps</span></div>
+      <h1 class="rv" data-cms="pricelist.hero.title">Clear Pricing,<br><span>Premium Results.</span></h1>
+      <p class="lead rv" data-cms="pricelist.hero.subtitle">Five website and app packages — from UMKM landing pages to enterprise application ecosystems. All include design, development, and guidance. No hidden fees.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-grad" href="#paket">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg>
+          View All Packages
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20website%20packages" target="_blank" rel="noopener" data-rf-id="cta.consult">Free Consultation</a>
+      </div>
+      <div class="hero-stats rv">
+        <div class="hstat"><b>50+</b><small>Projects Completed</small></div>
+        <div class="hstat"><b>7</b><small>Fastest Turnaround (working days)</small></div>
+        <div class="hstat"><b>4.9</b><small>Client Rating</small></div>
+        <div class="hstat"><b>100%</b><small>Your Source Code</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="sec" id="paket">
+  <div class="container c-1630">
+    <div class="text-center mb-64">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Pricing</div>
+      <h2 class="sec-title rv">Choose the Package<br><span>That Fits</span> Your Business Scale</h2>
+      <p class="sec-lead rv">All packages include responsive design, first-year hosting, and bug warranty. Prices in Rupiah, excluding VAT.</p>
+      <div class="price-note rv">💡 <b>Not sure?</b>&nbsp;30-minute free consultation — we'll help map your needs.</div>
+    </div>
+
+    <div class="grid5" id="pricelistGrid">
+      <!-- Packages dynamically loaded via /api/pricelist -->
+
+      <!-- PAKET 1 -->
+      <div class="pcard rv">
+        <div class="pcard-ico">🚀</div>
+        <h3 class="pcard-name">Starter</h3>
+        <p class="pcard-for">Landing page &amp; mini company profile for UMKM, personal brand, and events.</p>
+        <span class="pcard-pre">Starting from</span>
+        <div class="pcard-price"><span class="pcard-cur">Rp</span><span class="pcard-amt">5.000.000</span></div>
+        <p class="pcard-sub">One-time payment • includes domain &amp; 1-year hosting</p>
+        <div class="pcard-sep"></div>
+        <ul class="pcard-list">
+          <li><b>1–3 pages</b> (One Page / Landing)</li>
+          <li>Premium template design customized to your brand</li>
+          <li>100% mobile responsive &amp; lightweight</li>
+          <li>.com domain + 1-year SSD hosting</li>
+          <li>Active SSL certificate (HTTPS)</li>
+          <li>Contact form + floating WhatsApp button</li>
+          <li>Google Maps &amp; social media integration</li>
+          <li>Basic on-page SEO + Google Analytics</li>
+          <li>Basic copywriting for 1 page</li>
+          <li>2 design revisions</li>
+        </ul>
+        <div class="pcard-meta">
+          <div><span>Estimate</span><b>7–10 working days</b></div>
+          <div><span>Revisions</span><b>2x</b></div>
+          <div><span>Warranty &amp; support</span><b>1 month</b></div>
+        </div>
+        <a class="btn btn-ghost btn-block" href="https://wa.me/6282244719826?text=Hi%2C%20I%20am%20interested%20in%20the%20STARTER%20package" target="_blank" rel="noopener">Get Starter Package</a>
+      </div>
+
+      <!-- PAKET 2 -->
+      <div class="pcard rv">
+        <div class="pcard-ico">🏢</div>
+        <h3 class="pcard-name">Business</h3>
+        <p class="pcard-for">Complete company profile with CMS — manage content yourself.</p>
+        <span class="pcard-pre">Starting from</span>
+        <div class="pcard-price"><span class="pcard-cur">Rp</span><span class="pcard-amt">12.500.000</span></div>
+        <p class="pcard-sub">One-time payment • custom design, not template</p>
+        <div class="pcard-sep"></div>
+        <ul class="pcard-list">
+          <li><b>6–10 custom pages</b></li>
+          <li>Custom UI design (Figma) per brand guideline</li>
+          <li><b>CMS</b> — manage content without coding</li>
+          <li>Blog / articles module + categories &amp; tags</li>
+          <li>Product or service catalog (non-transaction)</li>
+          <li>Bilingual Indonesian &amp; English</li>
+          <li>On-page SEO + Search Console + sitemap</li>
+          <li>5 business email accounts (nama@domain.com)</li>
+          <li>Domain + 1-year SSD hosting</li>
+          <li>1-session CMS usage training</li>
+        </ul>
+        <div class="pcard-meta">
+          <div><span>Estimate</span><b>14–21 working days</b></div>
+          <div><span>Revisions</span><b>4x</b></div>
+          <div><span>Warranty &amp; support</span><b>3 months</b></div>
+        </div>
+        <a class="btn btn-purple btn-block" href="https://wa.me/6282244719826?text=Hi%2C%20I%20am%20interested%20in%20the%20BUSINESS%20package" target="_blank" rel="noopener">Get Business Package</a>
+      </div>
+
+      <!-- PAKET 3 — FEATURED -->
+      <div class="pcard feat rv">
+        <span class="pcard-tag">★ Most Popular</span>
+        <div class="pcard-ico">🛒</div>
+        <h3 class="pcard-name">Professional</h3>
+        <p class="pcard-for">Online store &amp; lightweight web app with automatic payment and admin dashboard.</p>
+        <span class="pcard-pre">Starting from</span>
+        <div class="pcard-price"><span class="pcard-cur">Rp</span><span class="pcard-amt">27.500.000</span></div>
+        <p class="pcard-sub">One-time payment • includes VPS &amp; payment gateway</p>
+        <div class="pcard-sep"></div>
+        <ul class="pcard-list">
+          <li><b>Unlimited pages</b></li>
+          <li>UI/UX design from scratch + Figma prototype</li>
+          <li>E-commerce: cart, checkout, coupons, stock</li>
+          <li><b>Payment gateway</b> (Midtrans / Xendit / QRIS)</li>
+          <li>Shipping integration &amp; automatic invoices</li>
+          <li>Admin dashboard + multi-role users</li>
+          <li>Automatic WhatsApp &amp; email notifications</li>
+          <li>PWA — installable on phones like an app</li>
+          <li>Technical SEO, schema markup, speed optimization</li>
+          <li>1-year VPS hosting + daily backup</li>
+        </ul>
+        <div class="pcard-meta">
+          <div><span>Estimate</span><b>30–45 working days</b></div>
+          <div><span>Revisions</span><b>6x</b></div>
+          <div><span>Warranty &amp; support</span><b>6 months</b></div>
+        </div>
+        <a class="btn btn-grad btn-block" href="https://wa.me/6282244719826?text=Hi%2C%20I%20am%20interested%20in%20the%20PROFESSIONAL%20package" target="_blank" rel="noopener">Get Professional Package</a>
+      </div>
+
+      <!-- PAKET 4 -->
+      <div class="pcard rv">
+        <div class="pcard-ico">⚙️</div>
+        <h3 class="pcard-name">Custom Apps</h3>
+        <p class="pcard-for">Custom web apps &amp; internal systems built for your workflow.</p>
+        <span class="pcard-pre">Starting from</span>
+        <div class="pcard-price"><span class="pcard-cur">Rp</span><span class="pcard-amt">55.000.000</span></div>
+        <p class="pcard-sub">Phased payments • scope determined by analysis results</p>
+        <div class="pcard-sep"></div>
+        <ul class="pcard-list">
+          <li>Needs analysis + BRD document &amp; system flow</li>
+          <li><b>Custom web app</b> (Laravel / Next.js)</li>
+          <li>Database design, multi-role, granular access rights</li>
+          <li>Modules as needed: POS, inventory, attendance, booking, LMS</li>
+          <li>REST API + documentation for integration</li>
+          <li>Analytics dashboard &amp; Excel/PDF report export</li>
+          <li>Third-party integration (WA API, accounting, payment)</li>
+          <li>PWA / Android hybrid app version</li>
+          <li>UAT testing with your team</li>
+          <li>Server setup, basic CI/CD, automatic backup</li>
+        </ul>
+        <div class="pcard-meta">
+          <div><span>Estimate</span><b>2–3 months</b></div>
+          <div><span>Revisions</span><b>Unlimited during development</b></div>
+          <div><span>Warranty &amp; support</span><b>12 months</b></div>
+        </div>
+         <a class="btn btn-purple btn-block" href="https://wa.me/6282244719826?text=Hi%2C%20I'd%20like%20to%20discuss%20the%20CUSTOM%20APPS%20package" target="_blank" rel="noopener">Discuss Your Needs</a>
+      </div>
+
+      <!-- PAKET 5 -->
+      <div class="pcard rv">
+        <div class="pcard-ico">🏆</div>
+        <h3 class="pcard-name">Enterprise</h3>
+        <p class="pcard-for">Android &amp; iOS mobile apps plus large-scale digital ecosystem.</p>
+        <span class="pcard-pre">Starting from</span>
+        <div class="pcard-price"><span class="pcard-cur">Rp</span><span class="pcard-amt">120.000.000</span></div>
+        <p class="pcard-sub">Proposal prepared per project after workshop</p>
+        <div class="pcard-sep"></div>
+        <ul class="pcard-list">
+          <li>Product discovery workshop with stakeholders</li>
+          <li><b>Mobile app</b> Flutter/Native — Android &amp; iOS</li>
+          <li>Publication to Play Store &amp; App Store</li>
+          <li>Scalable backend + cloud infrastructure</li>
+          <li>Admin panel, CMS, and integrated analytics</li>
+          <li>Advanced features: AR/3D, realtime, chat, push notification</li>
+          <li>Security audit + load testing before release</li>
+          <li>CI/CD pipeline &amp; 24/7 uptime monitoring</li>
+          <li>Dedicated team: PM, designer, frontend, backend, QA</li>
+          <li>Complete documentation + source code handover</li>
+        </ul>
+        <div class="pcard-meta">
+          <div><span>Estimate</span><b>4–6 months</b></div>
+          <div><span>Revisions</span><b>Per sprint</b></div>
+          <div><span>Warranty &amp; support</span><b>12 months + SLA</b></div>
+        </div>
+        <a class="btn btn-ghost btn-block" href="https://wa.me/6282244719826?text=Hi%2C%20I'd%20like%20to%20request%20an%20ENTERPRISE%20proposal" target="_blank" rel="noopener">Request Proposal</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON ===================== -->
+<section class="sec compare" id="perbandingan">
+  <div class="container c-1630">
+    <div class="text-center mb-48">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Compare</div>
+      <h2 class="sec-title on-dark rv">Compare<br>All <span>Packages</span></h2>
+      <p class="sec-lead on-dark rv">One table to view feature differences across packages side by side.</p>
+    </div>
+
+    <div class="tbl-wrap rv">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th style="text-align:left">Feature</th>
+            <th>Starter<small>Rp 5 jt</small></th>
+            <th>Business<small>Rp 12,5 jt</small></th>
+            <th class="col-feat">Professional<small>Rp 27,5 jt</small></th>
+            <th>Custom Apps<small>Rp 55 jt</small></th>
+            <th>Enterprise<small>Rp 120 jt+</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th>Page count</th><td>1–3</td><td>6–10</td><td class="col-feat">Unlimited</td><td>By module</td><td>By scope</td></tr>
+          <tr><th>Design type</th><td>Premium template</td><td>Custom</td><td class="col-feat">Custom + prototype</td><td>Custom + design system</td><td>Full design system</td></tr>
+          <tr><th>CMS / self-manage content</th><td class="no">—</td><td class="yes">✓</td><td class="col-feat yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th>Blog / articles</th><td class="no">—</td><td class="yes">✓</td><td class="col-feat yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th>E-commerce &amp; checkout</th><td class="no">—</td><td class="no">—</td><td class="col-feat yes">✓</td><td>Optional</td><td class="yes">✓</td></tr>
+          <tr><th>Payment gateway</th><td class="no">—</td><td class="no">—</td><td class="col-feat yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th>Admin dashboard &amp; multi-role</th><td class="no">—</td><td>Basic</td><td class="col-feat yes">✓</td><td class="yes">✓ granular</td><td class="yes">✓ granular</td></tr>
+          <tr><th>REST API + documentation</th><td class="no">—</td><td class="no">—</td><td>Limited</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th>Mobile app</th><td class="no">—</td><td class="no">—</td><td class="col-feat">PWA</td><td>PWA / Android</td><td class="yes">Android + iOS</td></tr>
+          <tr><th>Multi-language</th><td class="no">—</td><td>2 languages</td><td class="col-feat yes">2 languages</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th>SEO</th><td>Basic on-page</td><td>Full on-page</td><td class="col-feat">Technical + schema</td><td>Technical</td><td>Technical + strategy</td></tr>
+          <tr><th>Domain + hosting year 1</th><td class="yes">✓ Shared</td><td class="yes">✓ Shared SSD</td><td class="col-feat yes">✓ VPS</td><td class="yes">✓ VPS</td><td class="yes">✓ Cloud</td></tr>
+          <tr><th>Business email</th><td class="no">—</td><td>5 accounts</td><td class="col-feat">10 accounts</td><td>Unlimited</td><td>Unlimited</td></tr>
+          <tr><th>Security audit &amp; load testing</th><td class="no">—</td><td class="no">—</td><td class="col-feat no">—</td><td>Basic</td><td class="yes">✓ Complete</td></tr>
+          <tr><th>Number of revisions</th><td>2x</td><td>4x</td><td class="col-feat">6x</td><td>Unlimited during development</td><td>Per sprint</td></tr>
+          <tr><th>Estimated turnaround</th><td>7–10 days</td><td>14–21 days</td><td class="col-feat">30–45 days</td><td>2–3 months</td><td>4–6 months</td></tr>
+          <tr><th>Warranty &amp; support</th><td>1 month</td><td>3 months</td><td class="col-feat">6 months</td><td>12 months</td><td>12 months + SLA</td></tr>
+          <tr><th>Source code handover</th><td class="yes">✓</td><td class="yes">✓</td><td class="col-feat yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Starting price</th>
+            <td>Rp 5.000.000</td>
+            <td>Rp 12.500.000</td>
+            <td class="col-feat">Rp 27.500.000</td>
+            <td>Rp 55.000.000</td>
+            <td>Rp 120.000.000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="tbl-hint">↔ Scroll table horizontally to view all columns.</p>
+  </div>
+</section>
+
+<!-- ===================== ADD-ONS ===================== -->
+<section class="sec" id="addon">
+  <div class="container c-1430">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Add-On Services</div>
+      <h2 class="sec-title rv">Add-Ons That Can Be<br>Installed on <span>Any Package</span></h2>
+      <p class="sec-lead rv">Need something beyond the packages? Add individual items as needed, without upgrading your package.</p>
+    </div>
+
+    <div class="addon-grid rv">
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🌐</div><div class="addon-name">Additional .com/.id domain<small>Annual renewal</small></div></div><div class="addon-price">Rp 250k<small>/year</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🖥️</div><div class="addon-name">Upgrade hosting to VPS<small>2 vCPU, 4 GB RAM, SSD NVMe</small></div></div><div class="addon-price">Rp 2.5m<small>/year</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">✍️</div><div class="addon-name">Professional copywriting<small>Research + writing per page</small></div></div><div class="addon-price">Rp 350k<small>/page</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📷</div><div class="addon-name">Studio product photos<small>10 ready-to-use photos + retouch</small></div></div><div class="addon-price">Rp 1.5m<small>/package</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🎬</div><div class="addon-name">Company profile video<small>60–90 seconds, full production</small></div></div><div class="addon-price">Rp 4.5m<small>/video</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🎨</div><div class="addon-name">Logo &amp; brand identity<small>Logo, colors, typography, guideline</small></div></div><div class="addon-price">Rp 3.5m<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🛠️</div><div class="addon-name">Monthly maintenance<small>Updates, backup, monitoring, minor fixes</small></div></div><div class="addon-price">Rp 750k<small>/month</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">💳</div><div class="addon-name">Additional payment gateway<small>Second provider integration</small></div></div><div class="addon-price">Rp 2m<small>one-time setup</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">💬</div><div class="addon-name">WhatsApp Business API<small>Automated notifications &amp; chatbot</small></div></div><div class="addon-price">Rp 3m<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🌏</div><div class="addon-name">Additional language<small>Includes content translation</small></div></div><div class="addon-price">Rp 1.5m<small>/language</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📈</div><div class="addon-name">Google Ads setup<small>Keyword research, campaigns, tracking</small></div></div><div class="addon-price">Rp 2.5m<small>one-time setup</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🔍</div><div class="addon-name">Monthly SEO<small>Content, backlinks, performance reports</small></div></div><div class="addon-price">Rp 3m<small>/month</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📦</div><div class="addon-name">Old website migration<small>Data, content, and domain transfer</small></div></div><div class="addon-price">Rp 1.5m<small>one-time</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🕶️</div><div class="addon-name">Web AR / interactive filter<small>AR marker, 3D viewer, IG filter</small></div></div><div class="addon-price">Rp 7.5m<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📖</div><div class="addon-name">Digital yearbook<small>Interactive yearbook + AR</small></div></div><div class="addon-price">Rp 9m<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">⚡</div><div class="addon-name">Fast track processing<small>Queue priority, timeline reduced</small></div></div><div class="addon-price">+30%<small>of package value</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="sec" id="proses" style="background:var(--rf-bg2)">
+  <div class="container c-1430">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Workflow</div>
+      <h2 class="sec-title rv">Five Steps from<br>Idea to <span>Live</span></h2>
+      <p class="sec-lead rv">Transparent at every stage — you always know where your project stands.</p>
+    </div>
+    <div class="proc-grid rv">
+      <div class="proc"><div class="proc-num">01</div><h4>Consultation</h4><p>Free 30-minute discussion to map goals, target users, and visual references. Output: needs summary and package recommendation.</p></div>
+      <div class="proc"><div class="proc-num">02</div><h4>Proposal &amp; Agreement</h4><p>We send proposal, scope of work, and written timeline. Once agreed, the down payment marks project kickoff.</p></div>
+      <div class="proc"><div class="proc-num">03</div><h4>Design</h4><p>Wireframe then UI design. You review and provide feedback until the design is approved before a single line of code is written.</p></div>
+      <div class="proc"><div class="proc-num">04</div><h4>Development</h4><p>Coding, integration, and testing. You get a preview link and weekly progress reports.</p></div>
+      <div class="proc"><div class="proc-num">05</div><h4>Launch &amp; Support</h4><p>Deploy to your domain, usage training, source code handover, then warranty period begins.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TERMS ===================== -->
+<section class="sec" id="ketentuan">
+  <div class="container c-1230">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Terms</div>
+      <h2 class="sec-title rv">Things You<br>Should <span>Know</span></h2>
+    </div>
+    <div class="terms-grid">
+      <div class="tbox rv">
+        <h3><em>💳</em> Payment</h3>
+        <ul>
+          <li><b>Starter &amp; Business:</b> 50% down payment at start, 50% balance at handover.</li>
+          <li><b>Professional:</b> 3 installments — 40% at agreement, 30% after design approval, 30% at launch.</li>
+          <li><b>Custom Apps &amp; Enterprise:</b> per-milestone installments as per work contract.</li>
+          <li>Prices on this page <b>exclude VAT</b> if a tax invoice is required.</li>
+          <li>Payment via transfer to company account under <b>PT Nano Indonesia Sakti</b>.</li>
+        </ul>
+        <div class="pay-row">
+          <span class="pay-pill">Bank Transfer</span>
+          <span class="pay-pill">QRIS</span>
+          <span class="pay-pill">Virtual Account</span>
+          <span class="pay-pill">Corporate Invoice</span>
+        </div>
+      </div>
+      <div class="tbox rv">
+        <h3><em>📋</em> Terms of Work</h3>
+        <ul>
+          <li>Content materials (text, logo, photos) prepared by client. If unavailable, copywriting and photo add-ons are available.</li>
+          <li>Timeline starts after DP is received and content materials are complete.</li>
+          <li>Revisions beyond the package allowance are charged at <b>Rp 500,000 per request</b>.</li>
+          <li>Major scope changes mid-project require a separate proposal.</li>
+          <li>Warranty covers bug fixes, <b>not</b> new feature additions.</li>
+          <li>Source code and all accounts are fully handed over to the client after final payment.</li>
+          <li>Domain and hosting renewal in year two is the client's responsibility.</li>
+          <li>We feature projects in our portfolio unless an NDA is requested.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq" style="background:var(--rf-bg2)">
+  <div class="container c-1230">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> FAQ</div>
+      <h2 class="sec-title rv">Frequently<br><span>Asked Questions</span></h2>
+    </div>
+    <div class="faq-wrap rv">
+
+      <div class="faq-item">
+        <button class="faq-btn">Are the prices above final?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">The listed prices are starting prices for the standard scope of each package. For Starter, Business, and Professional, those figures are usually sufficient for general needs. For Custom Apps and Enterprise, the final price is determined after needs analysis since scope heavily depends on the number of modules and integrations.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">How long until my website is live?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Starter package can go live in 7–10 working days if content materials are provided from the start. Business 14–21 days, Professional 30–45 days, while Custom Apps and Enterprise run in months. Need it faster? Fast track add-on available with 30% additional cost.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Is the source code mine?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes, 100%. After final payment, all source code, hosting access, domain, database, and third-party accounts are fully handed over to you. No vendor lock-in — you can continue development with any team.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">What if I need features outside the package list?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. Check the add-on section — many additional needs are available as standalone items. If the feature is truly custom, we calculate a separate proposal based on estimated working hours, then combine it into the contract for your chosen package.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">After the warranty period ends, is support still available?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Certainly. You can take our monthly maintenance service starting from Rp 750,000 covering security updates, routine backups, uptime monitoring, and minor fixes. Fixes outside the maintenance contract are calculated per case.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Can you build Android and iOS apps at the same time?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes, through the Enterprise package using Flutter so one codebase runs on both platforms simultaneously. We also handle the publication process to Play Store and App Store. For lighter needs, the Professional package includes a PWA that can be installed on the phone's home screen.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Do you serve clients outside Jember and Makassar?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. Most projects are done remotely via WhatsApp, email, and scheduled video calls. We've worked with clients from various cities in Indonesia and abroad.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="sec cta" id="kontak">
+  <div class="container c-1230">
+    <div class="cta-in">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Get Started</div>
+      <h2 class="rv">Ready To Build<br><span>Your Website?</span></h2>
+      <p class="rv">Tell us about your project — we'll respond with package recommendations, timeline estimates, and a written proposal within 24 working hours. Initial consultation is completely free.</p>
+      <div class="cta-btns rv">
+        <a class="btn btn-grad" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20website%20development" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"></path></svg>
+          Chat via WhatsApp
+        </a>
+        <a class="btn btn-ghost on-dark" href="mailto:ramafakhirin@gmail.com?subject=Website%20Development%20Consultation">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Send Email
+        </a>
+      </div>
+      <div class="cta-contacts rv">
+        <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
+        <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
+        <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
+        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ftr">
+  <div class="container c-1230">
+    <div class="ftr-grid">
+      <div>
+        <a href="index.html" class="ftr-logo">Ramahf<span>.</span></a>
+        <p>Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — turning blank canvases into digital experiences people remember.</p>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.thispage">This Page</h4>
+        <ul>
+          <li><a href="#paket">Packages &amp; Pricing</a></li>
+          <li><a href="#perbandingan">Compare</a></li>
+          <li><a href="#addon">Add-On</a></li>
+          <li><a href="#proses">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.services">Services</h4>
+        <ul>
+          <li><a href="services.html#web">Web Design &amp; Dev</a></li>
+          <li><a href="services.html#visual">Visual Creators</a></li>
+          <li><a href="services.html#brand">Brand Strategy</a></li>
+          <li><a href="services.html#photo">Photo &amp; Video</a></li>
+          <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
+          <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
+          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; 2026 Ramahfakhirin — PT Nano Indonesia Sakti. All rights reserved.</span>
+      <span>Prices effective January 2026 and subject to change.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20have%20a%20question%20about%20your%20pricelist" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+  <span data-rf-id="cta.consultation">Consultation</span>
+</a>
+
+<script>
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger');
+var mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', function () { mobileNav.classList.toggle('open'); });
+mobileNav.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () { mobileNav.classList.remove('open'); });
+});
+
+/* ---------- FAQ accordion ---------- */
+window.addEventListener('load', loadDynamicPricelist);
+
+document.querySelectorAll('.faq-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = btn.parentElement;
+    var ans = item.querySelector('.faq-ans');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function (o) {
+      o.classList.remove('open');
+      o.querySelector('.faq-ans').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ---------- CMS pricelist ---------- */
+function priceEscape(value) {
+  return String(value == null ? '' : value).replace(/[&<>'"]/g, function (char) {
+    return {'&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;'}[char];
+  });
+}
+function priceWhatsAppText(name) {
+  return 'https://wa.me/6282244719826?text=' + encodeURIComponent('Hello, I am interested in the ' + name + ' package');
+}
+function renderPackageCard(item) {
+  var meta = item.meta || {};
+  var features = Array.isArray(item.features) ? item.features : [];
+  var btnClass = item.featured ? 'btn-grad' : 'btn-purple';
+  return '<div class="pcard ' + (item.featured ? 'feat ' : '') + 'rv">' +
+    (item.featured ? '<span class="pcard-tag">★ Most Popular</span>' : '') +
+    '<div class="pcard-ico">' + priceEscape(item.icon || '⚡') + '</div>' +
+    '<h3 class="pcard-name">' + priceEscape(item.name) + '</h3>' +
+    '<p class="pcard-for">' + priceEscape(item.for_who) + '</p>' +
+    '<span class="pcard-pre">Starting from</span>' +
+    '<div class="pcard-price"><span class="pcard-cur">' + priceEscape(item.currency || 'Rp') + '</span><span class="pcard-amt">' + priceEscape(item.price) + '</span></div>' +
+    '<p class="pcard-sub">' + priceEscape(item.subtitle) + '</p>' +
+    '<div class="pcard-sep"></div>' +
+    '<ul class="pcard-list">' + features.map(function (feature) { return '<li>' + priceEscape(feature) + '</li>'; }).join('') + '</ul>' +
+    '<div class="pcard-meta">' +
+      '<div><span>Estimate</span><b>' + priceEscape(meta.estimasi || '—') + '</b></div>' +
+      '<div><span>Revisions</span><b>' + priceEscape(meta.revisi || '—') + '</b></div>' +
+      '<div><span>Warranty &amp; support</span><b>' + priceEscape(meta.garansi || '—') + '</b></div>' +
+    '</div>' +
+    '<a class="btn ' + btnClass + ' btn-block" href="' + priceWhatsAppText(item.name || 'PRICELIST') + '" target="_blank" rel="noopener">Get ' + priceEscape(item.name || '') + ' Package</a>' +
+  '</div>';
+}
+function loadDynamicPricelist() {
+  var grid = document.getElementById('pricelistGrid');
+  if (!grid || !window.fetch) return;
+  fetch('/api/pricelist')
+    .then(function (res) { return res.json(); })
+    .then(function (res) {
+      // Static cards stay as fallback when the API is unreachable or empty
+      if (!res.success || !Array.isArray(res.data) || !res.data.length) return;
+      grid.innerHTML = res.data.map(renderPackageCard).join('');
+      grid.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+    })
+    .catch(function () { /* keep static fallback */ });
+}
+
+/* ---------- Reveal on scroll ---------- */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e, i) {
+    if (e.isIntersecting) {
+      e.target.style.transitionDelay = (Math.min(i, 6) * 70) + 'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+/* ---------- Smooth anchor with header offset ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="assets/js/rf-toggle.js"></script>
+
+<!-- CMS: konten dinamis dari Supabase. Isi HTML di atas dipakai sebagai fallback. -->
+<script>
+  window.RF_CMS_CONFIG = {
+    url: 'https://tfnsulqqfzkmefdhgoyi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw',
+    page: 'pricelist'
+  };
+</script>
+<script src="assets/js/rf-cms.js" defer></script>
+</body>
+</html>

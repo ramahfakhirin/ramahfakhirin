@@ -1,0 +1,970 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overscroll-behavior:none;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Blog &amp; Notes — Ramahfakhirin</title>
+<meta name="description" content="Articles, news, and field notes on technology, business building, design, and the journey of running a creative company from Jember, Indonesia.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ramahfakhirin.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramahfakhirin.com/blog">
+<meta property="og:title" content="Blog &amp; Notes — Ramahfakhirin">
+<meta property="og:description" content="Writing about technology, business, design, and the journey of building a creative company from Jember.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — matching ramahfakhirin.com template
+   ============================================================ */
+:root{
+  --rf-accent:#7463FF;
+  --rf-accent2:#9585FF;
+  --rf-bg:#F7F7FD;
+  --rf-bg2:#EEEEF8;
+  --rf-dark:#0E0F11;
+  --rf-dark2:#101016;
+  --rf-night:#08041D;
+  --rf-mid:#66666C;
+  --rf-bdr:#E2E2F0;
+  --rf-ff-head:"Phudu",serif;
+  --rf-ff-body:"Onest","Inter",sans-serif;
+  --rf-grad:linear-gradient(230deg,#FF994B 6.7%,#D34BE9 48.83%,#3188FF 90.96%);
+  --rf-grad-purple:linear-gradient(120deg,#7463FF,#9585FF);
+  --rf-shadow:0 18px 50px rgba(20,16,60,.08);
+  --rf-shadow-lg:0 28px 80px rgba(20,16,60,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--rf-ff-body);
+  background-color:var(--rf-bg);
+  color:var(--rf-dark);
+  font-size:16px;line-height:1.7;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5{font-family:var(--rf-ff-head);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--rf-dark)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button,input{font-family:inherit}
+::selection{background:var(--rf-accent);color:#fff}
+
+.container{width:100%;margin:0 auto;padding:0 24px}
+.c-1230{max-width:1278px}
+.c-1430{max-width:1478px}
+.c-1630{max-width:1678px}
+.sec{padding:96px 0}
+.text-center{text-align:center}
+
+/* ---------- Badge ---------- */
+.rf-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rf-accent);background:rgba(116,99,255,.12);
+  padding:7px 18px;border-radius:99px;border:1px solid rgba(116,99,255,.25);
+  margin-bottom:24px;
+}
+.rf-badge.on-dark{color:#cfc8ff;background:rgba(116,99,255,.18);border-color:rgba(116,99,255,.38)}
+.rf-dot{width:7px;height:7px;border-radius:50%;background:var(--rf-accent);animation:rfPulse 2s infinite}
+@keyframes rfPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+
+/* ---------- Section head ---------- */
+.sec-title{font-size:clamp(34px,5vw,70px);line-height:1.04;margin-bottom:18px}
+.sec-title span{color:var(--rf-accent)}
+.sec-title.on-dark{color:#fff}
+.sec-lead{font-size:16px;color:var(--rf-mid);max-width:660px;margin:0 auto;line-height:1.8}
+.sec-lead.on-dark{color:rgba(255,255,255,.6)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;justify-content:center;font-size:15px;font-weight:600;letter-spacing:-.01em;border-radius:14px;padding:15px 26px;border:none;transition:.4s;line-height:1;cursor:pointer}
+.btn-grad{color:#fff;background:var(--rf-grad);box-shadow:0 10px 26px rgba(148,80,220,.28)}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(148,80,220,.38)}
+.btn-purple{color:#fff;background:var(--rf-accent);box-shadow:0 10px 26px rgba(116,99,255,.3)}
+.btn-purple:hover{background:#6252ee;transform:translateY(-3px)}
+.btn-ghost{color:var(--rf-dark);background:transparent;border:1.5px solid var(--rf-bdr)}
+.btn-ghost:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-ghost.on-dark:hover{border-color:var(--rf-accent2);color:var(--rf-accent2)}
+.btn-sm{padding:12px 20px;font-size:14px;border-radius:12px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.announce{background:var(--rf-dark);color:rgba(255,255,255,.72);font-size:12.5px}
+.announce-in{display:flex;align-items:center;justify-content:center;gap:18px;padding:11px 0;flex-wrap:wrap}
+.announce-in span{color:var(--rf-accent2);font-weight:600}
+.announce-in a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.announce-in a:hover{color:var(--rf-accent2)}
+
+.hdr{position:sticky;top:0;z-index:99;background:rgba(247,247,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,226,240,.7)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.logo{font-family:var(--rf-ff-head);font-size:24px;font-weight:700;color:#1a1a1a;letter-spacing:-.01em}
+.logo span{color:var(--rf-accent)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--rf-mid);transition:.3s;position:relative}
+.nav a:hover,.nav a.active{color:var(--rf-accent)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--rf-accent);transition:width .3s;border-radius:2px}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.hdr-right{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--rf-bdr);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.burger i{display:block;width:17px;height:1.8px;background:var(--rf-dark);border-radius:2px}
+.mobile-nav{display:none;border-top:1px solid var(--rf-bdr);background:#fff}
+.mobile-nav.open{display:block}
+.mobile-nav ul{padding:14px 0}
+.mobile-nav a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--rf-dark)}
+.mobile-nav a:hover,.mobile-nav a.active{background:var(--rf-bg2);color:var(--rf-accent);font-weight:600}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:84px 0 60px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-270px;left:50%;transform:translateX(-50%);width:1100px;height:660px;background:radial-gradient(ellipse at center,rgba(116,99,255,.20),rgba(116,99,255,0) 66%);pointer-events:none}
+.hero-in{position:relative;z-index:2;text-align:center;max-width:880px;margin:0 auto}
+.hero h1{font-size:clamp(38px,6vw,76px);line-height:1.02;margin-bottom:22px}
+.hero h1 span{color:var(--rf-accent)}
+.hero p.lead{font-size:17px;color:var(--rf-mid);max-width:660px;margin:0 auto 38px;line-height:1.8}
+.hero-stats{display:flex;gap:34px;justify-content:center;flex-wrap:wrap}
+.hero-stats div{text-align:center}
+.hero-stats b{display:block;font-family:var(--rf-ff-head);font-size:26px;color:var(--rf-accent);line-height:1;margin-bottom:5px}
+.hero-stats small{font-size:12.5px;color:var(--rf-mid)}
+
+/* ============================================================
+   TOOLBAR — filter + search
+   ============================================================ */
+.toolbar{position:sticky;top:79px;z-index:90;background:rgba(247,247,253,.94);backdrop-filter:blur(14px);padding:20px 0;border-block:1px solid var(--rf-bdr)}
+.toolbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.filter{display:flex;gap:8px;flex-wrap:wrap}
+.fbtn{padding:9px 20px;border-radius:99px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--rf-bdr);background:transparent;color:var(--rf-mid);transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.fbtn:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.fbtn.on{background:var(--rf-accent);border-color:var(--rf-accent);color:#fff;box-shadow:0 4px 16px rgba(116,99,255,.3)}
+.fbtn em{font-style:normal;font-size:11px;opacity:.65;font-weight:600}
+.search-box{position:relative;flex-shrink:0}
+.search-box svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--rf-mid);fill:none;pointer-events:none}
+.search-box input{
+  width:270px;padding:11px 16px 11px 40px;border-radius:99px;
+  border:1.5px solid var(--rf-bdr);background:#fff;font-size:13.5px;color:var(--rf-dark);outline:none;transition:.3s;
+}
+.search-box input::placeholder{color:#a3a3b5}
+.search-box input:focus{border-color:var(--rf-accent);box-shadow:0 0 0 4px rgba(116,99,255,.1)}
+.result-count{font-size:13px;color:var(--rf-mid);padding:30px 0 24px}
+.result-count b{color:var(--rf-dark);font-weight:600}
+
+/* ============================================================
+   FEATURED POST
+   ============================================================ */
+.feat{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:0;
+  background:#fff;border:1px solid var(--rf-bdr);border-radius:26px;overflow:hidden;
+  box-shadow:var(--rf-shadow);transition:.45s cubic-bezier(.16,1,.3,1);margin-bottom:60px;
+}
+.feat:hover{transform:translateY(-6px);box-shadow:var(--rf-shadow-lg);border-color:rgba(116,99,255,.32)}
+.feat-media{position:relative;min-height:340px;background:linear-gradient(150deg,#7463FF,#9585FF 45%,#3188FF)}
+.feat-media .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.feat-media .ph b{font-family:var(--rf-ff-head);font-size:clamp(40px,5vw,66px);color:rgba(255,255,255,.94);line-height:1}
+.feat-media .ph small{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.feat-media .grid-ov{position:absolute;inset:0;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:44px 44px}
+.feat-pin{position:absolute;top:20px;left:20px;z-index:3;display:inline-flex;align-items:center;gap:8px;background:rgba(14,15,17,.62);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:7px 15px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.feat-body{padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
+.feat-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--rf-mid);margin-bottom:18px}
+.feat-cat{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rf-accent);background:rgba(116,99,255,.1);border-radius:99px;padding:5px 13px}
+.feat-body h2{font-size:clamp(26px,2.9vw,38px);line-height:1.12;margin-bottom:16px}
+.feat-body p{font-size:15px;color:var(--rf-mid);line-height:1.8;margin-bottom:28px}
+.feat-by{display:flex;align-items:center;gap:12px;padding-top:24px;border-top:1px solid var(--rf-bdr)}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--rf-grad-purple);display:grid;place-items:center;font-family:var(--rf-ff-head);font-size:15px;font-weight:700;color:#fff;flex-shrink:0}
+.by-n{font-family:var(--rf-ff-head);font-size:14.5px;font-weight:700;line-height:1.3}
+.by-r{font-size:12px;color:var(--rf-mid)}
+
+/* ============================================================
+   POST GRID
+   ============================================================ */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px}
+.post{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--rf-bdr);
+  border-radius:22px;overflow:hidden;transition:.42s cubic-bezier(.16,1,.3,1);
+}
+.post.hide{display:none}
+.post:hover{transform:translateY(-8px);box-shadow:var(--rf-shadow-lg);border-color:rgba(116,99,255,.32)}
+.post-media{position:relative;height:200px;overflow:hidden}
+.post-media .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.post-media .ph svg{width:32px;height:32px;opacity:.35;stroke:rgba(255,255,255,.9);fill:none;stroke-width:1.5}
+.post-media .ph span{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.ph-a{background:linear-gradient(140deg,#7463FF,#5B4BE0)}
+.ph-b{background:linear-gradient(140deg,#3188FF,#2A5FCC)}
+.ph-c{background:linear-gradient(140deg,#D34BE9,#8B37B8)}
+.ph-d{background:linear-gradient(140deg,#FF994B,#E0662A)}
+.ph-e{background:linear-gradient(140deg,#25C99A,#159173)}
+.ph-f{background:linear-gradient(140deg,#5E5AA8,#3A3670)}
+.post-pin{position:absolute;top:14px;left:14px;z-index:3;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(14,15,17,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:5px 12px}
+.post-read{position:absolute;bottom:14px;right:14px;z-index:3;font-size:11px;font-weight:600;color:#fff;background:rgba(14,15,17,.55);backdrop-filter:blur(6px);border-radius:99px;padding:5px 12px}
+.post-body{padding:26px 24px 24px;display:flex;flex-direction:column;flex:1}
+.post-date{font-size:12px;color:var(--rf-mid);margin-bottom:10px}
+.post-body h3{font-size:19px;line-height:1.28;margin-bottom:11px}
+.post-body p{font-size:13.5px;color:var(--rf-mid);line-height:1.72;margin-bottom:20px;flex:1}
+.post-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.post-tags span{font-size:10.5px;font-weight:500;color:var(--rf-accent);background:rgba(116,99,255,.08);border:1.5px solid rgba(116,99,255,.2);border-radius:99px;padding:4px 11px}
+.post-more{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--rf-accent);transition:gap .3s;margin-top:auto}
+.post-more:hover{gap:13px}
+
+.empty{display:none;text-align:center;padding:80px 20px}
+.empty.show{display:block}
+.empty .ico{font-size:44px;margin-bottom:14px}
+.empty h3{font-size:22px;margin-bottom:8px}
+.empty p{font-size:14px;color:var(--rf-mid)}
+
+.load-wrap{text-align:center;margin-top:56px}
+.load-note{font-size:13px;color:var(--rf-mid);margin-top:16px}
+
+/* ============================================================
+   TOPICS BAND
+   ============================================================ */
+.band{background:var(--rf-night);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;top:-200px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.26),rgba(116,99,255,0) 68%)}
+.band::after{content:"";position:absolute;bottom:-240px;right:-160px;width:640px;height:640px;background:radial-gradient(circle,rgba(211,75,233,.18),rgba(211,75,233,0) 70%)}
+.band-in{position:relative;z-index:2}
+.topics{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px}
+.topic{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px 26px;transition:.42s cubic-bezier(.16,1,.3,1);cursor:pointer}
+.topic:hover{transform:translateY(-8px);background:rgba(116,99,255,.13);border-color:rgba(116,99,255,.42)}
+.topic .ico{font-size:32px;margin-bottom:18px}
+.topic h3{font-size:19px;color:#fff;margin-bottom:10px}
+.topic p{font-size:13px;color:rgba(255,255,255,.56);line-height:1.7}
+.topic-n{display:inline-block;margin-top:16px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--rf-accent2)}
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+.news-box{
+  background:#fff;border:1px solid var(--rf-bdr);border-radius:26px;
+  padding:56px 48px;text-align:center;box-shadow:var(--rf-shadow);max-width:820px;margin:0 auto;
+}
+.news-box h2{font-size:clamp(28px,3.4vw,42px);line-height:1.08;margin-bottom:14px}
+.news-box h2 span{color:var(--rf-accent)}
+.news-box p{font-size:15px;color:var(--rf-mid);line-height:1.8;max-width:520px;margin:0 auto 32px}
+.news-form{display:flex;gap:12px;max-width:520px;margin:0 auto 18px;flex-wrap:wrap}
+.news-form input{
+  flex:1;min-width:220px;padding:15px 20px;border-radius:14px;
+  border:1.5px solid var(--rf-bdr);background:var(--rf-bg);font-size:14.5px;color:var(--rf-dark);outline:none;transition:.3s;
+}
+.news-form input:focus{border-color:var(--rf-accent);background:#fff;box-shadow:0 0 0 4px rgba(116,99,255,.1)}
+.news-note{font-size:12.5px;color:var(--rf-mid)}
+
+/* ============================================================
+   CTA + FOOTER
+   ============================================================ */
+.cta{background:var(--rf-night);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-180px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.28),rgba(116,99,255,0) 68%)}
+.cta::after{content:"";position:absolute;bottom:-220px;right:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(211,75,233,.20),rgba(211,75,233,0) 70%)}
+.cta-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-size:clamp(34px,5vw,66px);color:#fff;line-height:1.04;margin-bottom:18px}
+.cta h2 span{color:var(--rf-accent2)}
+.cta p{color:rgba(255,255,255,.62);font-size:16px;max-width:600px;margin:0 auto 34px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.cta-contacts{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px}
+.cta-ci{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.62);transition:color .3s}
+.cta-ci:hover{color:#fff}
+
+.ftr{background:var(--rf-bg);padding:70px 0 34px;border-top:1px solid var(--rf-bdr)}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:48px}
+.ftr-logo{font-family:var(--rf-ff-head);font-size:26px;font-weight:700;color:#1a1a1a;margin-bottom:18px;display:inline-block}
+.ftr-logo span{color:var(--rf-accent)}
+.ftr p{font-size:14px;color:var(--rf-mid);line-height:1.75;max-width:330px}
+.ftr h4{font-family:var(--rf-ff-head);font-size:17px;margin-bottom:18px}
+.ftr ul li{margin-bottom:10px}
+.ftr ul li a,.ftr ul li span{font-size:14px;color:var(--rf-mid);transition:.3s;cursor:pointer}
+.ftr ul li a:hover{color:var(--rf-accent)}
+.ftr-bottom{border-top:1px solid var(--rf-bdr);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--rf-mid)}
+.ftr-bottom a:hover{color:var(--rf-accent)}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:98;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 34px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(37,211,102,.5)}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .78s cubic-bezier(.16,1,.3,1),transform .78s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1299px){
+  .nav{gap:20px}
+  .nav a{font-size:13.5px}
+  .topics{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1199px){
+  .nav{display:none}
+  .burger{display:flex}
+  .feat{grid-template-columns:1fr}
+  .feat-media{min-height:280px}
+  .feat-body{padding:38px 32px}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:991px){
+  .sec{padding:70px 0}
+  .hero{padding:60px 0 48px}
+  .toolbar{position:static}
+  .search-box{width:100%}
+  .search-box input{width:100%}
+  .news-box{padding:42px 30px}
+}
+@media (max-width:767px){
+  .container{padding:0 18px}
+  .sec{padding:56px 0}
+  .grid{grid-template-columns:1fr;gap:22px}
+  .topics{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+  .announce-in p{font-size:11.5px;text-align:center}
+  .announce-in a{display:none}
+  .cta-btns .btn{width:100%}
+  .news-form input,.news-form .btn{width:100%}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+  .toolbar-in{flex-direction:column;align-items:stretch}
+  .filter{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .fbtn{flex-shrink:0}
+  .hero-stats{gap:22px}
+  .feat-body{padding:30px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+@media print{
+  .hdr,.announce,.wa-float,.toolbar,.cta-btns,.news-form{display:none}
+  body{background:#fff}
+  .rv{opacity:1;transform:none}
+  .post,.feat{break-inside:avoid;box-shadow:none}
+}
+</style>
+<link rel="stylesheet" href="assets/css/rf-toggle.css">
+</head>
+<body>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce">
+  <div class="container c-1430">
+    <div class="announce-in">
+      <p><span>Nano Indonesia</span> — Digital Yearbook • Creative Production House • AR Technology • Event Organizer • Visual Creators</p>
+      <a href="mailto:ramafakhirin@gmail.com" data-rf-id="cta.consult">Free Consultation
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr">
+  <div class="container c-1430">
+    <div class="hdr-in">
+      <a href="index.html" class="logo">Ramahf<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html" data-rf-id="nav.home">Home</a>
+        <a href="about.html" data-rf-id="nav.about">About</a>
+        <a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a>
+        <a href="services.html" data-rf-id="nav.services">Services</a>
+        <a href="blog.html" class="active" data-rf-id="nav.blog">Blog</a>
+        <a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a>
+        <a href="contact.html" data-rf-id="nav.contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn-grad btn-sm" href="https://wa.me/6282244719826" target="_blank" rel="noopener" data-rf-id="cta.talk">Let's Talk</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+      <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+      <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+      <li><a href="blog.html" class="active" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+      <li><a href="contact.html" data-rf-id="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container c-1230">
+    <div class="hero-in">
+      <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="blog.hero.eyebrow">✦ Blog &amp; Field Notes</span></div>
+      <h1 class="rv" data-cms="blog.hero.title">Notes From<br>The <span>Build.</span></h1>
+      <p class="lead rv" data-cms="blog.hero.subtitle">Articles, news, and honest field notes on technology, business building, design, and the journey of running a creative company from a small city in East Java. Written between projects, not from a template.</p>
+      <div class="hero-stats rv">
+        <div><b>12</b><small>Articles Published</small></div>
+        <div><b>5</b><small>Topics Covered</small></div>
+        <div><b>Weekly</b><small>Publishing Rhythm</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOOLBAR ===================== -->
+<div class="toolbar">
+  <div class="container c-1630">
+    <div class="toolbar-in">
+      <div class="filter">
+        <button class="fbtn on" data-filter="all">All <em>12</em></button>
+        <button class="fbtn" data-filter="tech">Tech <em>4</em></button>
+        <button class="fbtn" data-filter="business">Business <em>3</em></button>
+        <button class="fbtn" data-filter="journey">Journey <em>2</em></button>
+        <button class="fbtn" data-filter="design">Design <em>2</em></button>
+        <button class="fbtn" data-filter="news">News <em>1</em></button>
+      </div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5" stroke-linecap="round"></path></svg>
+        <input type="search" id="search" placeholder="Search articles, topics, keywords..." data-rf-ph="blog.search" aria-label="Search articles">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== POSTS ===================== -->
+<section class="sec" style="padding-top:0" id="articles">
+  <div class="container c-1630">
+    <p class="result-count">Showing <b id="shown">12</b> of <b>12</b> articles</p>
+
+    <!-- FEATURED -->
+    <article class="feat rv" id="featured" data-cat="business" data-q="nine years building creative agency jember founder lessons scaling team">
+      <div class="feat-media">
+        <span class="feat-pin">★ Featured</span>
+        <div class="grid-ov"></div>
+        <div class="ph">
+          <b>09</b>
+          <small>Years In</small>
+        </div>
+      </div>
+      <div class="feat-body">
+        <div class="feat-meta">
+          <span class="feat-cat">Business</span>
+          <span>•</span><span>12 min read</span>
+          <span>•</span><span>March 2026</span>
+        </div>
+        <h2>Nine Years Building a Creative Agency From a City Nobody Bets On</h2>
+        <p>Everyone tells you to move to Jakarta. I stayed in Jember and built a 40-person company anyway. Here is the unglamorous version — the cash flow gaps, the clients who ghosted, the hires that failed, and the handful of decisions that actually compounded.</p>
+        <a class="post-more" href="post.html?slug=nine-years-building-a-creative-agency-from-a-city-nobody-bets-on" style="margin-bottom: 24px;">Read article →</a>
+        <div class="feat-by">
+          <div class="avatar">RF</div>
+          <div>
+            <div class="by-n">Rama Hadyan Fakhirin</div>
+            <div class="by-r">Founder &amp; CMO, PT Nano Indonesia Sakti</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- GRID -->
+    <div class="grid" id="postGrid">
+
+      <article class="post rv" id="web-ar-native-app" data-cat="tech" data-q="web ar browser augmented reality marker no app install yearbook">
+        <div class="post-media">
+          <div class="ph ph-a">
+            <svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path><path d="M3 7l9 5 9-5M12 12v10"></path></svg>
+            <span>Technology</span>
+          </div>
+          <span class="post-pin">Tech</span>
+          <span class="post-read">8 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">March 2026</div>
+          <h3>Why We Built Web AR Instead of a Native App</h3>
+          <p>Every school asked for an AR feature. Nobody wanted to download an app for it. Here is how we shipped marker-based AR that runs in a mobile browser — and what it cost us in trade-offs.</p>
+          <div class="post-tags"><span>Web AR</span><span>Mobile</span><span>Engineering</span></div>
+          <a class="post-more" href="post.html?slug=web-ar-native-app">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="project-pricing" data-cat="business" data-q="pricing packages client proposal quoting freelance agency rate">
+        <div class="post-media">
+          <div class="ph ph-b">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
+            <span>Business</span>
+          </div>
+          <span class="post-pin">Business</span>
+          <span class="post-read">7 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">February 2026</div>
+          <h3>How I Price Projects Without Undercutting Myself</h3>
+          <p>For years I quoted by feeling and lost money on half my projects. Switching to a package model with a published pricelist changed the conversation — and the client quality.</p>
+          <div class="post-tags"><span>Pricing</span><span>Sales</span><span>Freelance</span></div>
+          <a class="post-more" href="post.html?slug=project-pricing">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="design-system-style-guide" data-cat="design" data-q="design system figma brand guideline consistency template scale">
+        <div class="post-media">
+          <div class="ph ph-c">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+            <span>Design</span>
+          </div>
+          <span class="post-pin">Design</span>
+          <span class="post-read">6 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">February 2026</div>
+          <h3>A Design System Is Not a Style Guide</h3>
+          <p>We shipped 40 yearbook sites in one cycle. The only reason that was possible: a component system the whole team could build against without asking permission.</p>
+          <div class="post-tags"><span>Design System</span><span>Figma</span><span>Workflow</span></div>
+          <a class="post-more" href="post.html?slug=design-system-style-guide">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="tech-team-outside-jakarta" data-cat="journey" data-q="jember east java remote work small city talent building team outside jakarta">
+        <div class="post-media">
+          <div class="ph ph-d">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg>
+            <span>Journey</span>
+          </div>
+          <span class="post-pin">Journey</span>
+          <span class="post-read">9 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">January 2026</div>
+          <h3>Building a Tech Team Outside Jakarta</h3>
+          <p>The talent is here. The pipeline is not. What it actually takes to hire, train, and keep good people in a city where nobody else is competing for them.</p>
+          <div class="post-tags"><span>Hiring</span><span>Culture</span><span>Jember</span></div>
+          <a class="post-more" href="post.html?slug=tech-team-outside-jakarta">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="hr-pwa" data-cat="tech" data-q="pwa progressive web app hris attendance internal tool offline install">
+        <div class="post-media">
+          <div class="ph ph-e">
+            <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg>
+            <span>Technology</span>
+          </div>
+          <span class="post-pin">Tech</span>
+          <span class="post-read">10 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">January 2026</div>
+          <h3>We Replaced Our HR Software With a PWA We Built in Three Weeks</h3>
+          <p>Nothing off the shelf fit how our team actually works. So we built an attendance PWA — offline-first, installable, and cheaper than the subscription we cancelled.</p>
+          <div class="post-tags"><span>PWA</span><span>Internal Tools</span><span>Laravel</span></div>
+          <a class="post-more" href="post.html?slug=hr-pwa">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="nano-231-clients" data-cat="news" data-q="nano indonesia milestone 231 clients schools announcement company update">
+        <div class="post-media">
+          <div class="ph ph-f">
+            <svg viewBox="0 0 24 24"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"></path><path d="M18 7h2v13H7"></path></svg>
+            <span>News</span>
+          </div>
+          <span class="post-pin">News</span>
+          <span class="post-read">4 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">December 2025</div>
+          <h3>Nano Indonesia Crosses 231 Clients Served</h3>
+          <p>A milestone worth writing down. Where the numbers came from, which divisions grew fastest, and what we are building next across yearbook, AR, and event production.</p>
+          <div class="post-tags"><span>Milestone</span><span>Company</span><span>Growth</span></div>
+          <a class="post-more" href="post.html?slug=nano-231-clients">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="core-web-vitals-business" data-cat="tech" data-q="seo core web vitals speed optimization page performance lighthouse ranking">
+        <div class="post-media">
+          <div class="ph ph-b">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"></path></svg>
+            <span>Technology</span>
+          </div>
+          <span class="post-pin">Tech</span>
+          <span class="post-read">7 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">December 2025</div>
+          <h3>Core Web Vitals Are a Business Metric, Not a Dev Metric</h3>
+          <p>A 2-second delay cost one client roughly a third of their inbound leads. What we changed, in what order, and how much each fix actually moved the number.</p>
+          <div class="post-tags"><span>SEO</span><span>Performance</span><span>Analytics</span></div>
+          <a class="post-more" href="post.html?slug=core-web-vitals-business">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="revision-clause" data-cat="business" data-q="client communication scope creep contract boundaries revision policy">
+        <div class="post-media">
+          <div class="ph ph-a">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span>Business</span>
+          </div>
+          <span class="post-pin">Business</span>
+          <span class="post-read">6 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">November 2025</div>
+          <h3>The Revision Clause That Saved My Sanity</h3>
+          <p>Scope creep is not a client problem, it is a contract problem. The exact wording we now put in every proposal — and the conversation it makes easy instead of awkward.</p>
+          <div class="post-tags"><span>Contracts</span><span>Client Work</span><span>Process</span></div>
+          <a class="post-more" href="post.html?slug=revision-clause">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="yearbook-students-open" data-cat="design" data-q="yearbook theme harry potter storytelling concept school creative direction">
+        <div class="post-media">
+          <div class="ph ph-c">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2.4 6.2H21l-5.3 3.9 2 6.4-5.7-4-5.7 4 2-6.4L3 9.2h6.6z"></path></svg>
+            <span>Design</span>
+          </div>
+          <span class="post-pin">Design</span>
+          <span class="post-read">8 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">November 2025</div>
+          <h3>Designing a Yearbook Students Actually Want to Open</h3>
+          <p>Themed worlds beat pretty layouts. How we take a school's inside jokes and turn them into a concept that still holds up ten years later.</p>
+          <div class="post-tags"><span>Creative Direction</span><span>Yearbook</span><span>Storytelling</span></div>
+          <a class="post-more" href="post.html?slug=yearbook-students-open">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="whatsapp-midnight" data-cat="journey" data-q="burnout founder mental health rest boundaries working hours discipline">
+        <div class="post-media">
+          <div class="ph ph-d">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+            <span>Journey</span>
+          </div>
+          <span class="post-pin">Journey</span>
+          <span class="post-read">5 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">October 2025</div>
+          <h3>The Year I Stopped Answering WhatsApp at Midnight</h3>
+          <p>Being always available felt like dedication. It was actually the reason my judgement got worse. What changed when I set an actual cut-off time.</p>
+          <div class="post-tags"><span>Founder Life</span><span>Boundaries</span><span>Habits</span></div>
+          <a class="post-more" href="post.html?slug=whatsapp-midnight">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="ai-creative-team" data-cat="tech" data-q="ai tools workflow creative team automation prompt productivity">
+        <div class="post-media">
+          <div class="ph ph-e">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 9h6v6H9z"></path></svg>
+            <span>Technology</span>
+          </div>
+          <span class="post-pin">Tech</span>
+          <span class="post-read">9 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">October 2025</div>
+          <h3>Where AI Actually Helps a Creative Team (And Where It Doesn't)</h3>
+          <p>We tested AI across copy, design, and code for six months. Two workflows got dramatically faster. Three got quietly worse. Here is the honest split.</p>
+          <div class="post-tags"><span>AI</span><span>Workflow</span><span>Tools</span></div>
+          <a class="post-more" href="post.html?slug=ai-creative-team">Read article →</a>
+        </div>
+      </article>
+
+      <article class="post rv" id="graduation-event-contingency" data-cat="business" data-q="event production graduation rundown logistics vendor management crisis">
+        <div class="post-media">
+          <div class="ph ph-f">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
+            <span>Business</span>
+          </div>
+          <span class="post-pin">Business</span>
+          <span class="post-read">7 min</span>
+        </div>
+        <div class="post-body">
+          <div class="post-date">September 2025</div>
+          <h3>Everything That Can Go Wrong at a Graduation Event</h3>
+          <p>Rain, a dead generator, a missing MC, and 600 guests already seated. A field guide to event contingency planning, written from actual scars.</p>
+          <div class="post-tags"><span>Events</span><span>Operations</span><span>Risk</span></div>
+          <a class="post-more" href="post.html?slug=graduation-event-contingency">Read article →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="empty" id="empty">
+      <div class="ico">🔍</div>
+      <h3>No articles found</h3>
+      <p>Try a different keyword, or pick the &ldquo;All&rdquo; category to see everything.</p>
+    </div>
+
+    <div class="load-wrap rv">
+      <a class="btn btn-ghost" href="mailto:ramafakhirin@gmail.com?subject=Blog%20topic%20suggestion">Suggest a topic</a>
+      <p class="load-note">New articles published roughly every week. Subscribe below to get them first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOPICS ===================== -->
+<section class="sec band" id="topics">
+  <div class="container c-1230 band-in">
+    <div class="text-center rv">
+      <div class="rf-badge on-dark"><span class="rf-dot"></span> What I write about</div>
+      <h2 class="sec-title on-dark">Five Topics,<br>One <span>Perspective</span></h2>
+      <p class="sec-lead on-dark">Everything here comes from work I actually shipped — no theory, no recycled listicles.</p>
+    </div>
+
+    <div class="topics">
+      <article class="topic rv" data-jump="tech">
+        <div class="ico">💻</div>
+        <h3>Tech</h3>
+        <p>Web AR, PWAs, performance, internal tooling, and the engineering decisions behind the products we ship.</p>
+        <span class="topic-n">4 articles</span>
+      </article>
+      <article class="topic rv" data-jump="business">
+        <div class="ico">📈</div>
+        <h3>Business</h3>
+        <p>Pricing, contracts, sales conversations, and the operational side of running a creative company profitably.</p>
+        <span class="topic-n">3 articles</span>
+      </article>
+      <article class="topic rv" data-jump="journey">
+        <div class="ico">🧭</div>
+        <h3>Journey</h3>
+        <p>Founder notes from Jember — hiring outside the capital, burnout, and the long unglamorous middle.</p>
+        <span class="topic-n">2 articles</span>
+      </article>
+      <article class="topic rv" data-jump="design">
+        <div class="ico">🎨</div>
+        <h3>Design</h3>
+        <p>Design systems, creative direction, visual storytelling, and making work that survives a decade.</p>
+        <span class="topic-n">2 articles</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="sec" id="subscribe">
+  <div class="container c-1230">
+    <div class="news-box rv">
+      <div class="rf-badge"><span class="rf-dot"></span> Newsletter</div>
+      <h2>Get New Articles<br>In Your <span>Inbox</span></h2>
+      <p>One email when something new goes up. No sales sequences, no daily noise — just the writing, plus the occasional behind-the-scenes note I don't publish anywhere else.</p>
+      <form class="news-form" id="newsForm">
+        <input type="email" id="newsEmail" placeholder="your@email.com" aria-label="Your email address" required>
+        <button type="submit" class="btn btn-grad">Subscribe</button>
+      </form>
+      <p class="news-note">No spam. Unsubscribe anytime with one click.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="sec cta" id="contact">
+  <div class="container c-1230">
+    <div class="cta-in">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Beyond the writing</div>
+      <h2 class="rv">Got a Project<br>Worth <span>Building?</span></h2>
+      <p class="rv">If something here resonated and you're working on something real, I'd like to hear about it. First consultation is free.</p>
+      <div class="cta-btns rv">
+        <a class="btn btn-grad" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20read%20your%20blog%20and%20would%20like%20to%20talk" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"></path></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost on-dark" href="contact.html">Go to contact page</a>
+      </div>
+      <div class="cta-contacts rv">
+        <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
+        <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
+        <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
+        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ftr">
+  <div class="container c-1230">
+    <div class="ftr-grid">
+      <div>
+        <a href="index.html" class="ftr-logo">Ramahf<span>.</span></a>
+        <p>Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — turning blank canvases into digital experiences people remember.</p>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+          <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+          <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+          <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+          <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.topics">Topics</h4>
+        <ul>
+          <li><a href="#articles" data-jump="tech">Tech</a></li>
+          <li><a href="#articles" data-jump="business">Business</a></li>
+          <li><a href="#articles" data-jump="journey">Journey</a></li>
+          <li><a href="#articles" data-jump="design">Design</a></li>
+          <li><a href="#articles" data-jump="news">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
+          <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
+          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; 2026 Rama Hadyan Fakhirin — PT Nano Indonesia Sakti. All Rights Reserved.</span>
+      <a href="index.html" data-rf-id="ftr.back">&larr; Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20read%20your%20blog" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+  <span data-rf-id="cta.consultation">Consultation</span>
+</a>
+
+<script>
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger');
+var mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', function () { mobileNav.classList.toggle('open'); });
+mobileNav.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () { mobileNav.classList.remove('open'); });
+});
+
+/* ---------- Filter + search ---------- */
+var featured = document.querySelector('.feat');
+var all = [];
+var haystacks = [];
+var fbtns = Array.prototype.slice.call(document.querySelectorAll('.fbtn'));
+var search = document.getElementById('search');
+var shown = document.getElementById('shown');
+var empty = document.getElementById('empty');
+var activeFilter = 'all';
+
+/* Dipanggil ulang setiap kali grid berubah (mis. setelah CMS render). */
+function indexPosts() {
+  var posts = Array.prototype.slice.call(document.querySelectorAll('#postGrid .post'));
+  var feat = featured && featured.style.display !== 'none' ? [featured] : [];
+  all = feat.concat(posts);
+  haystacks = all.map(function (card) {
+    return ((card.dataset.q || '') + ' ' + card.textContent).toLowerCase().replace(/\s+/g, ' ');
+  });
+}
+indexPosts();
+
+function applyFilter() {
+  var q = search.value.trim().toLowerCase();
+  var count = 0;
+  all.forEach(function (card, i) {
+    var matchCat = activeFilter === 'all' || card.dataset.cat === activeFilter;
+    var matchText = !q || haystacks[i].indexOf(q) !== -1;
+    var visible = matchCat && matchText;
+    if (card === featured) {
+      card.style.display = visible ? '' : 'none';
+    } else {
+      card.classList.toggle('hide', !visible);
+    }
+    if (visible) count++;
+  });
+  shown.textContent = count;
+  empty.classList.toggle('show', count === 0);
+
+  var total = document.querySelector('.result-count b:last-child');
+  if (total) total.textContent = all.length;
+}
+
+fbtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    fbtns.forEach(function (b) { b.classList.remove('on'); });
+    btn.classList.add('on');
+    activeFilter = btn.dataset.filter;
+    applyFilter();
+  });
+});
+search.addEventListener('input', applyFilter);
+
+/* ---------- Topic / footer shortcuts ---------- */
+document.querySelectorAll('[data-jump]').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var btn = document.querySelector('.fbtn[data-filter="' + el.dataset.jump + '"]');
+    if (btn) btn.click();
+    var target = document.getElementById('articles');
+    if (target) {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ---------- Deep link: category or article ---------- */
+(function () {
+  var hash = (location.hash || '').replace('#', '');
+  var btn = hash && document.querySelector('.fbtn[data-filter="' + hash + '"]');
+  if (btn) {
+    btn.click();
+    return;
+  }
+  var article = hash && document.getElementById(hash);
+  if (article) {
+    window.setTimeout(function () {
+      window.scrollTo({ top: article.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+    }, 0);
+  }
+})();
+
+/* ---------- Newsletter ---------- */
+var newsForm = document.getElementById('newsForm');
+if (newsForm) {
+  newsForm.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var email = document.getElementById('newsEmail').value.trim();
+    if (!email) return;
+    var subject = encodeURIComponent('Subscribe to the blog');
+    var body = encodeURIComponent('Please add this address to your article notifications: ' + email);
+    window.location.href = 'mailto:ramafakhirin@gmail.com?subject=' + subject + '&body=' + body;
+  });
+}
+
+/* ---------- Reveal on scroll ---------- */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e, i) {
+    if (!e.isIntersecting) return;
+    e.target.style.transitionDelay = (Math.min(i, 5) * 70) + 'ms';
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+function observeReveal() {
+  document.querySelectorAll('.rv:not(.in)').forEach(function (el) { io.observe(el); });
+}
+observeReveal();
+
+/* ---------- CMS: grid diganti, indeks & animasi disiapkan ulang ---------- */
+document.addEventListener('rf-cms:rendered', function () {
+  indexPosts();
+  observeReveal();
+  applyFilter();
+});
+
+/* ---------- Smooth anchor with header offset ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="assets/js/rf-toggle.js"></script>
+
+<!-- CMS: konten dinamis dari Supabase. Isi HTML di atas dipakai sebagai fallback. -->
+<script>
+  window.RF_CMS_CONFIG = {
+    url: 'https://tfnsulqqfzkmefdhgoyi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw',
+    page: 'blog'
+  };
+</script>
+<script src="assets/js/rf-cms.js" defer></script>
+</body>
+</html>

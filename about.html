@@ -1,0 +1,1027 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overscroll-behavior:none;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>About — Rama Hadyan Fakhirin | Founder &amp; Visual Communication Creator</title>
+<meta name="description" content="Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — 9 years turning blank canvases into brands, events, and digital experiences.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ramahfakhirin.com/about">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://ramahfakhirin.com/about">
+<meta property="og:title" content="About — Rama Hadyan Fakhirin">
+<meta property="og:description" content="Founder of PT Nano Indonesia Sakti. 231+ schools and companies served, 40 team members, 9 years of building digital experiences.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — matching ramahfakhirin.com template
+   ============================================================ */
+:root{
+  --rf-accent:#7463FF;
+  --rf-accent2:#9585FF;
+  --rf-bg:#F7F7FD;
+  --rf-bg2:#EEEEF8;
+  --rf-dark:#0E0F11;
+  --rf-dark2:#101016;
+  --rf-night:#08041D;
+  --rf-mid:#66666C;
+  --rf-bdr:#E2E2F0;
+  --rf-ff-head:"Phudu",serif;
+  --rf-ff-body:"Onest","Inter",sans-serif;
+  --rf-grad:linear-gradient(230deg,#FF994B 6.7%,#D34BE9 48.83%,#3188FF 90.96%);
+  --rf-grad-purple:linear-gradient(120deg,#7463FF,#9585FF);
+  --rf-shadow:0 18px 50px rgba(20,16,60,.08);
+  --rf-shadow-lg:0 28px 80px rgba(20,16,60,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--rf-ff-body);
+  background-color:var(--rf-bg);
+  color:var(--rf-dark);
+  font-size:16px;line-height:1.7;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5{font-family:var(--rf-ff-head);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--rf-dark)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button,input{font-family:inherit}
+::selection{background:var(--rf-accent);color:#fff}
+
+.container{width:100%;margin:0 auto;padding:0 24px}
+.c-1230{max-width:1278px}
+.c-1430{max-width:1478px}
+.sec{padding:110px 0}
+.sec-sm{padding:76px 0}
+.text-center{text-align:center}
+
+/* ---------- Badge ---------- */
+.rf-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rf-accent);background:rgba(116,99,255,.12);
+  padding:7px 18px;border-radius:99px;border:1px solid rgba(116,99,255,.25);
+  margin-bottom:24px;
+}
+.rf-badge.on-dark{color:#cfc8ff;background:rgba(116,99,255,.18);border-color:rgba(116,99,255,.38)}
+.rf-dot{width:7px;height:7px;border-radius:50%;background:var(--rf-accent);animation:rfPulse 2s infinite}
+@keyframes rfPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+
+/* ---------- Section head ---------- */
+.sec-title{font-size:clamp(34px,5vw,70px);line-height:1.04;margin-bottom:18px}
+.sec-title span{color:var(--rf-accent)}
+.sec-title.on-dark{color:#fff}
+.sec-lead{font-size:16px;color:var(--rf-mid);max-width:660px;margin:0 auto;line-height:1.8}
+.sec-lead.on-dark{color:rgba(255,255,255,.6)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;justify-content:center;font-size:15px;font-weight:600;letter-spacing:-.01em;border-radius:14px;padding:15px 26px;border:none;transition:.4s;line-height:1;cursor:pointer}
+.btn-grad{color:#fff;background:var(--rf-grad);box-shadow:0 10px 26px rgba(148,80,220,.28)}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(148,80,220,.38)}
+.btn-ghost{color:var(--rf-dark);background:transparent;border:1.5px solid var(--rf-bdr)}
+.btn-ghost:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-ghost.on-dark:hover{border-color:var(--rf-accent2);color:var(--rf-accent2)}
+.btn-sm{padding:12px 20px;font-size:14px;border-radius:12px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.announce{background:var(--rf-dark);color:rgba(255,255,255,.72);font-size:12.5px}
+.announce-in{display:flex;align-items:center;justify-content:center;gap:18px;padding:11px 0;flex-wrap:wrap}
+.announce-in span{color:var(--rf-accent2);font-weight:600}
+.announce-in a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.announce-in a:hover{color:var(--rf-accent2)}
+
+.hdr{position:sticky;top:0;z-index:99;background:rgba(247,247,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,226,240,.7)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.logo{font-family:var(--rf-ff-head);font-size:24px;font-weight:700;color:#1a1a1a}
+.logo span{color:var(--rf-accent)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--rf-mid);transition:.3s;position:relative}
+.nav a:hover,.nav a.active{color:var(--rf-accent)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--rf-accent);transition:width .3s;border-radius:2px}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.hdr-right{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--rf-bdr);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.burger i{display:block;width:17px;height:1.8px;background:var(--rf-dark);border-radius:2px}
+.mobile-nav{display:none;border-top:1px solid var(--rf-bdr);background:#fff}
+.mobile-nav.open{display:block}
+.mobile-nav ul{padding:14px 0}
+.mobile-nav a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--rf-dark)}
+.mobile-nav a:hover,.mobile-nav a.active{background:var(--rf-bg2);color:var(--rf-accent);font-weight:600}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:86px 0 96px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-300px;left:-160px;width:900px;height:720px;background:radial-gradient(ellipse at center,rgba(116,99,255,.22),rgba(116,99,255,0) 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-260px;right:-180px;width:760px;height:660px;background:radial-gradient(ellipse at center,rgba(211,75,233,.14),rgba(211,75,233,0) 68%);pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(40px,5.6vw,78px);line-height:1.01;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--rf-accent)}
+.hero .lead{font-size:17px;color:var(--rf-mid);line-height:1.85;max-width:540px;margin-bottom:20px}
+.hero .lead strong{color:var(--rf-dark);font-weight:600}
+.sign{display:flex;align-items:center;gap:14px;margin:32px 0 34px;padding-top:26px;border-top:1px solid var(--rf-bdr)}
+.sign-name{font-family:var(--rf-ff-head);font-size:19px;font-weight:700}
+.sign-role{font-size:13px;color:var(--rf-mid)}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ---------- Portrait card ---------- */
+.pf-wrap{position:relative}
+.pf{
+  position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;
+  background:linear-gradient(150deg,#7463FF,#9585FF 42%,#3188FF);
+  box-shadow:var(--rf-shadow-lg);
+}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:center top;position:relative;z-index:2}
+.pf-mono{
+  position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:12px;
+  background:
+    radial-gradient(circle at 30% 18%,rgba(255,255,255,.22),transparent 55%),
+    linear-gradient(150deg,#7463FF,#5B4BE0 48%,#2E1B7A);
+}
+.pf-mono b{font-family:var(--rf-ff-head);font-size:clamp(64px,11vw,116px);line-height:1;color:rgba(255,255,255,.94);letter-spacing:-.03em}
+.pf-mono small{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.pf-grid{position:absolute;inset:0;z-index:1;opacity:.16;
+  background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+  background-size:44px 44px}
+.pf-chip{
+  position:absolute;z-index:5;background:#fff;border:1px solid var(--rf-bdr);border-radius:16px;
+  padding:14px 18px;box-shadow:var(--rf-shadow);display:flex;align-items:center;gap:12px;
+}
+.pf-chip b{display:block;font-family:var(--rf-ff-head);font-size:22px;line-height:1;color:var(--rf-accent)}
+.pf-chip small{font-size:11.5px;color:var(--rf-mid);white-space:nowrap}
+.pf-chip.c1{top:34px;left:-32px}
+.pf-chip.c2{bottom:78px;right:-28px}
+.pf-chip.c3{bottom:-18px;left:24px}
+.pf-ico{width:34px;height:34px;border-radius:10px;background:rgba(116,99,255,.1);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+
+/* ============================================================
+   MARQUEE — certifications
+   ============================================================ */
+.mq{padding:34px 0;border-block:1px solid var(--rf-bdr);background:#fff;overflow:hidden}
+.mq-label{text-align:center;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#a3a3b5;margin-bottom:22px}
+.mq-track{display:flex;gap:56px;width:max-content;animation:mqScroll 34s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+.mq-track span{font-size:13px;font-weight:700;letter-spacing:.08em;color:#9494a6;text-transform:uppercase;white-space:nowrap}
+@keyframes mqScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============================================================
+   PILLARS
+   ============================================================ */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pillar{
+  background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;padding:36px 30px;
+  box-shadow:var(--rf-shadow);transition:.45s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;
+}
+.pillar::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--rf-grad-purple);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.pillar:hover{transform:translateY(-8px);box-shadow:var(--rf-shadow-lg);border-color:rgba(116,99,255,.32)}
+.pillar:hover::after{transform:scaleX(1)}
+.pillar-ico{width:54px;height:54px;border-radius:16px;background:rgba(116,99,255,.1);display:grid;place-items:center;font-size:24px;margin-bottom:22px}
+.pillar h3{font-size:20px;margin-bottom:11px}
+.pillar p{font-size:14px;color:var(--rf-mid);line-height:1.75}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.tl{position:relative;max-width:880px;margin:0 auto;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,rgba(116,99,255,.05),var(--rf-accent) 18%,var(--rf-accent) 82%,rgba(116,99,255,.05))}
+.tl-item{position:relative;padding-bottom:46px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-33px;top:6px;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--rf-accent);box-shadow:0 0 0 5px rgba(116,99,255,.14)}
+.tl-year{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rf-accent);background:rgba(116,99,255,.1);border-radius:99px;padding:4px 14px;margin-bottom:11px}
+.tl-item h3{font-size:22px;margin-bottom:9px}
+.tl-item p{font-size:14.5px;color:var(--rf-mid);line-height:1.8;max-width:620px}
+
+/* ============================================================
+   SKILLS + CERTS + EDUCATION
+   ============================================================ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.blk-title{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rf-accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.blk-title::after{content:"";flex:1;height:1px;background:var(--rf-bdr)}
+
+.sb{margin-bottom:22px}
+.sb-hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.sb-name{font-size:14.5px;font-weight:500}
+.sb-pct{font-family:var(--rf-ff-head);font-size:14px;font-weight:700;color:var(--rf-accent)}
+.sb-track{height:7px;border-radius:99px;background:var(--rf-bg2);overflow:hidden}
+.sb-fill{height:100%;width:0;border-radius:99px;background:var(--rf-grad-purple);transition:width 1.4s cubic-bezier(.16,1,.3,1)}
+
+.certs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:46px}
+.ctag{font-size:12.5px;font-weight:500;color:var(--rf-accent);background:rgba(116,99,255,.07);border:1.5px solid rgba(116,99,255,.22);border-radius:99px;padding:7px 16px;transition:.3s}
+.ctag:hover{background:var(--rf-accent);color:#fff;border-color:var(--rf-accent)}
+
+.edu{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--rf-bdr)}
+.edu:last-child{border-bottom:none}
+.edu-ico{width:44px;height:44px;border-radius:13px;background:var(--rf-bg2);display:grid;place-items:center;font-size:19px;flex-shrink:0}
+.edu-t{font-size:15px;font-weight:600;line-height:1.4;margin-bottom:2px}
+.edu-s{font-size:13px;color:var(--rf-mid)}
+
+/* ============================================================
+   NUMBERS BAND
+   ============================================================ */
+.band{background:var(--rf-night);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;top:-200px;left:-120px;width:620px;height:620px;background:radial-gradient(circle,rgba(116,99,255,.26),rgba(116,99,255,0) 68%)}
+.band::after{content:"";position:absolute;bottom:-240px;right:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(211,75,233,.18),rgba(211,75,233,0) 70%)}
+.band-in{position:relative;z-index:2}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px}
+.num{text-align:center;padding:34px 18px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);transition:.4s}
+.num:hover{background:rgba(116,99,255,.12);border-color:rgba(116,99,255,.35);transform:translateY(-6px)}
+.num b{display:block;font-family:var(--rf-ff-head);font-size:clamp(34px,4.4vw,52px);line-height:1;color:#fff;margin-bottom:9px}
+.num b i{font-style:normal;color:var(--rf-accent2)}
+.num small{font-size:12.5px;color:rgba(255,255,255,.55);letter-spacing:.02em}
+
+/* ============================================================
+   SERVICES (dark)
+   ============================================================ */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px}
+.svc-item{background:rgba(116,99,255,.08);border:1px solid rgba(116,99,255,.2);border-radius:20px;padding:34px 26px;text-align:center;transition:.42s cubic-bezier(.16,1,.3,1)}
+.svc-item:hover{transform:translateY(-8px);background:rgba(116,99,255,.15);border-color:rgba(116,99,255,.45)}
+.svc-item .ico{font-size:38px;margin-bottom:16px}
+.svc-item h4{font-size:19px;color:#fff;margin-bottom:12px}
+.svc-item p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7}
+
+/* ============================================================
+   VALUES
+   ============================================================ */
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:v}
+.val{position:relative;padding:34px 30px 30px;background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;box-shadow:var(--rf-shadow);transition:.4s}
+.val:hover{transform:translateY(-6px);border-color:rgba(116,99,255,.3)}
+.val::before{counter-increment:v;content:"0" counter(v);position:absolute;top:20px;right:26px;font-family:var(--rf-ff-head);font-size:44px;line-height:1;color:rgba(116,99,255,.11)}
+.val h3{font-size:19px;margin-bottom:11px;max-width:80%}
+.val p{font-size:14px;color:var(--rf-mid);line-height:1.78}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.tst{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px}
+.tst-item{background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;padding:32px 30px;box-shadow:var(--rf-shadow);transition:.4s}
+.tst-item:hover{transform:translateY(-5px);border-color:rgba(116,99,255,.3)}
+.tst-stars{display:flex;gap:3px;margin-bottom:16px}
+.tst-stars svg{width:15px;height:15px;fill:#FFAF1B}
+.tst-item p{font-size:15px;line-height:1.82;color:#3a3a48;margin-bottom:22px}
+.tst-by{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--rf-bdr)}
+.tst-av{width:46px;height:46px;border-radius:50%;background:var(--rf-grad-purple);display:grid;place-items:center;font-family:var(--rf-ff-head);font-size:16px;font-weight:700;color:#fff;flex-shrink:0}
+.tst-n{font-family:var(--rf-ff-head);font-size:15.5px;font-weight:700;line-height:1.3}
+.tst-r{font-size:12.5px;color:var(--rf-mid)}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{max-width:880px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--rf-bdr);border-radius:18px;margin-bottom:14px;overflow:hidden;transition:.35s}
+.faq-item.open{border-color:rgba(116,99,255,.4);box-shadow:var(--rf-shadow)}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;padding:22px 26px;background:transparent;border:none;font-family:var(--rf-ff-head);font-size:17px;font-weight:600;color:var(--rf-dark);cursor:pointer}
+.faq-ico{width:30px;height:30px;border-radius:9px;background:var(--rf-bg2);display:grid;place-items:center;flex-shrink:0;transition:.35s}
+.faq-ico svg{width:15px;height:15px;stroke:var(--rf-dark);fill:none;stroke-width:2;transition:.35s}
+.faq-item.open .faq-ico{background:var(--rf-accent);transform:rotate(45deg)}
+.faq-item.open .faq-ico svg{stroke:#fff}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.16,1,.3,1)}
+.faq-ans-in{padding:0 26px 24px;font-size:14.5px;color:var(--rf-mid);line-height:1.85}
+
+/* ============================================================
+   CTA + FOOTER
+   ============================================================ */
+.cta{background:var(--rf-night);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-180px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.28),rgba(116,99,255,0) 68%)}
+.cta::after{content:"";position:absolute;bottom:-220px;right:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(211,75,233,.20),rgba(211,75,233,0) 70%)}
+.cta-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-size:clamp(34px,5vw,66px);color:#fff;line-height:1.04;margin-bottom:18px}
+.cta h2 span{color:var(--rf-accent2)}
+.cta p{color:rgba(255,255,255,.62);font-size:16px;max-width:600px;margin:0 auto 34px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.cta-contacts{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px}
+.cta-ci{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.62);transition:color .3s}
+.cta-ci:hover{color:#fff}
+
+.ftr{background:var(--rf-bg);padding:70px 0 34px;border-top:1px solid var(--rf-bdr)}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:48px}
+.ftr-logo{font-family:var(--rf-ff-head);font-size:26px;font-weight:700;color:#1a1a1a;margin-bottom:18px;display:inline-block}
+.ftr-logo span{color:var(--rf-accent)}
+.ftr p{font-size:14px;color:var(--rf-mid);line-height:1.75;max-width:330px}
+.ftr h4{font-family:var(--rf-ff-head);font-size:17px;margin-bottom:18px}
+.ftr ul li{margin-bottom:10px}
+.ftr ul li a,.ftr ul li span{font-size:14px;color:var(--rf-mid);transition:.3s}
+.ftr ul li a:hover{color:var(--rf-accent)}
+.ftr-bottom{border-top:1px solid var(--rf-bdr);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--rf-mid)}
+.ftr-bottom a:hover{color:var(--rf-accent)}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:98;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 34px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(37,211,102,.5)}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1199px){
+  .nav{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:70px}
+  .pf-wrap{max-width:430px;margin:0 auto}
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:991px){
+  .sec{padding:78px 0}
+  .sec-sm{padding:60px 0}
+  .hero{padding:60px 0 76px}
+  .split{grid-template-columns:1fr;gap:52px}
+  .pillars{grid-template-columns:1fr;gap:18px}
+  .vals{grid-template-columns:1fr;gap:18px}
+  .tst{grid-template-columns:1fr}
+  .nums{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:767px){
+  .container{padding:0 18px}
+  .sec{padding:60px 0}
+  .announce-in p{font-size:11.5px;text-align:center}
+  .announce-in a{display:none}
+  .hero-btns .btn{width:100%}
+  .pf-chip.c1{left:-10px;top:18px}
+  .pf-chip.c2{right:-10px}
+  .pf-chip.c3{left:12px}
+  .pf-chip{padding:11px 14px}
+  .pf-chip b{font-size:19px}
+  .svc{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+  .cta-btns .btn{width:100%}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+  .tl{padding-left:28px}
+  .tl-item::before{left:-27px;width:15px;height:15px}
+}
+@media (max-width:479px){
+  .nums{grid-template-columns:1fr 1fr;gap:12px}
+  .num{padding:24px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+@media print{
+  .hdr,.announce,.wa-float,.cta-btns,.mq{display:none}
+  body{background:#fff}
+  .rv{opacity:1;transform:none}
+}
+</style>
+<link rel="stylesheet" href="assets/css/rf-toggle.css">
+</head>
+<body>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce">
+  <div class="container c-1430">
+    <div class="announce-in">
+      <p><span>Nano Indonesia</span> — Digital Yearbook • Creative Production House • AR Technology • Event Organizer • Visual Creators</p>
+      <a href="mailto:ramafakhirin@gmail.com" data-rf-id="cta.consult">Free Consultation
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr">
+  <div class="container c-1430">
+    <div class="hdr-in">
+      <a href="index.html" class="logo">Ramahf<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html" data-rf-id="nav.home">Home</a>
+        <a href="about.html" class="active" data-rf-id="nav.about">About</a>
+        <a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a>
+        <a href="services.html" data-rf-id="nav.services">Services</a>
+        <a href="blog.html" data-rf-id="nav.blog">Blog</a>
+        <a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a>
+        <a href="contact.html" data-rf-id="nav.contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn-grad btn-sm" href="https://wa.me/6282244719826" target="_blank" rel="noopener" data-rf-id="cta.talk">Let's Talk</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+      <li><a href="about.html" class="active" data-rf-id="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+      <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+      <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+      <li><a href="contact.html" data-rf-id="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container c-1230">
+    <div class="hero-grid">
+      <div>
+<div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="about.hero.eyebrow">✦ Founder &amp; Visual Communication Creator</span></div>
+<h1 class="rv" data-cms="about.hero.title">Builder. Creator.<br><em>Problem Solver.</em></h1>
+        <p class="lead rv" data-cms="about.hero.subtitle">I'm <strong>Rama Hadyan Fakhirin</strong> — an entrepreneur and creative director from Jember, East Java. For <strong>9 years</strong> I've been turning blank canvases into brands, events, and digital experiences that people actually remember.</p>
+        <p class="lead rv">I founded <strong>PT Nano Indonesia Sakti</strong> in 2017 and grew it from a one-person idea into a 40-person creative house serving <strong>231+ schools and companies</strong> across Indonesia.</p>
+        <div class="sign rv">
+          <div>
+            <div class="sign-name">Rama Hadyan Fakhirin</div>
+            <div class="sign-role">Founder &amp; CMO, PT Nano Indonesia Sakti</div>
+          </div>
+        </div>
+        <div class="hero-btns rv">
+          <a class="btn btn-grad" href="mailto:ramafakhirin@gmail.com">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Let's collaborate
+          </a>
+          <a class="btn btn-ghost" href="portfolio.html">View my work</a>
+        </div>
+      </div>
+
+      <div class="pf-wrap rv">
+        <div class="pf">
+          <div class="pf-mono">
+            <b>RF</b>
+            <small>Ramah Fakhirin</small>
+          </div>
+          <div class="pf-grid"></div>
+          <img src="assets/img/ramah/profile.jpg" alt="Rama Hadyan Fakhirin" loading="lazy"
+               onerror="this.remove()">
+        </div>
+        <div class="pf-chip c1">
+          <div class="pf-ico">🏢</div>
+          <div><b>2017</b><small>Founded Nano</small></div>
+        </div>
+        <div class="pf-chip c2">
+          <div class="pf-ico">⭐</div>
+          <div><b>4.9</b><small>Client rating</small></div>
+        </div>
+        <div class="pf-chip c3">
+          <div class="pf-ico">🤝</div>
+          <div><b>231+</b><small>Clients served</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERT MARQUEE ===================== -->
+<div class="mq">
+  <div class="mq-label">Certified by industry-leading platforms</div>
+  <div class="mq-track">
+    <span>Google Ads</span><span>Microsoft Ads Pro</span><span>HubSpot Sales</span><span>HubSpot GDD</span><span>SEMrush Pro</span><span>Google Cloud</span><span>Android Enterprise</span><span>Google Digital Garage</span><span>Elements of AI</span><span>Sales Management</span>
+    <span aria-hidden="true">Google Ads</span><span aria-hidden="true">Microsoft Ads Pro</span><span aria-hidden="true">HubSpot Sales</span><span aria-hidden="true">HubSpot GDD</span><span aria-hidden="true">SEMrush Pro</span><span aria-hidden="true">Google Cloud</span><span aria-hidden="true">Android Enterprise</span><span aria-hidden="true">Google Digital Garage</span><span aria-hidden="true">Elements of AI</span><span aria-hidden="true">Sales Management</span>
+  </div>
+</div>
+
+<!-- ===================== PILLARS ===================== -->
+<section class="sec" id="story">
+  <div class="container c-1230">
+    <div class="text-center rv" style="margin-bottom:56px">
+      <div class="rf-badge"><span class="rf-dot"></span> What I've built</div>
+      <h2 class="sec-title">Three Things<br>That Define <span>My Work</span></h2>
+    </div>
+    <div class="pillars">
+      <article class="pillar rv">
+        <div class="pillar-ico">🏢</div>
+        <h3>PT Nano Indonesia Sakti</h3>
+        <p>Founder &amp; CMO since 2017. Four divisions under one roof — Digital Yearbook, AR Technology, Event Organizer, and Visual Production House — run by a team of 40.</p>
+      </article>
+      <article class="pillar rv">
+        <div class="pillar-ico">🎯</div>
+        <h3>231+ Schools &amp; Companies</h3>
+        <p>One of the leading digital yearbook organizers in Indonesia, alongside visual production and event work. Clients range from schools to corporates across the country.</p>
+      </article>
+      <article class="pillar rv">
+        <div class="pillar-ico">🎓</div>
+        <h3>10+ Certifications</h3>
+        <p>Google Ads, HubSpot, Microsoft Ads, SEMrush, Google Cloud, Android Enterprise, Elements of AI and more — strategy backed by formal, verifiable training.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TIMELINE ===================== -->
+<section class="sec" style="padding-top:0" id="journey">
+  <div class="container c-1230">
+    <div class="text-center rv" style="margin-bottom:60px">
+      <div class="rf-badge"><span class="rf-dot"></span> The journey</div>
+      <h2 class="sec-title">From Jember,<br><span>To The Country.</span></h2>
+      <p class="sec-lead">No shortcuts, no inherited playbook — just nine years of shipping work, learning in public, and building a team that outgrew every room we started in.</p>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item rv">
+        <span class="tl-year">The foundation</span>
+        <h3>Pasuruan → Jember</h3>
+        <p>SMPN 1 Pasuruan, then SMAN 1 Pasuruan, then a Bachelor of Information Systems at Universitas Jember. That's where the two halves came together: systems thinking on one side, visual storytelling on the other.</p>
+      </div>
+      <div class="tl-item rv">
+        <span class="tl-year">2017</span>
+        <h3>Nano Indonesia is born</h3>
+        <p>Started as a small digital yearbook project for local schools. No investor, no safety net — just a laptop, a camera, and a conviction that graduation memories deserved better than a stack of printed pages.</p>
+      </div>
+      <div class="tl-item rv">
+        <span class="tl-year">Building the craft</span>
+        <h3>From yearbooks to full production</h3>
+        <p>The service line expanded: creative production house, AR technology, and full event organizing. Each new division came from a real client problem, not a business plan slide.</p>
+      </div>
+      <div class="tl-item rv">
+        <span class="tl-year">Scaling up</span>
+        <h3>A team of 40, a country of clients</h3>
+        <p>What began solo became a 40-person creative house handling 50+ school deals per cycle. Systems, CRM, internal PWAs — I built the tools we needed because nothing off the shelf fit how we work.</p>
+      </div>
+      <div class="tl-item rv">
+        <span class="tl-year">Today</span>
+        <h3>231+ clients and still building</h3>
+        <p>Digital yearbooks, company websites, web apps, AR experiences, and graduation productions — with a 4.9 average rating across 50+ school collaborations. Still hands-on, still shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NUMBERS ===================== -->
+<section class="sec band">
+  <div class="container c-1230 band-in">
+    <div class="text-center rv">
+      <div class="rf-badge on-dark"><span class="rf-dot"></span> By the numbers</div>
+      <h2 class="sec-title on-dark">9 Years Building<br>A <span>Creative Agency</span></h2>
+    </div>
+    <div class="nums rv">
+      <div class="num"><b><i>231</i>+</b><small>Clients Served</small></div>
+      <div class="num"><b>40</b><small>Team Members</small></div>
+      <div class="num"><b><i>50</i>+</b><small>School Deals / Cycle</small></div>
+      <div class="num"><b>4.9</b><small>Average Client Rating</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="sec" id="skills">
+  <div class="container c-1230">
+    <div class="text-center rv" style="margin-bottom:64px">
+      <div class="rf-badge"><span class="rf-dot"></span> Skills &amp; Expertise</div>
+      <h2 class="sec-title">What I<br>Do <span>Best</span></h2>
+      <p class="sec-lead">Building brands and digital experiences across Indonesia since 2017 — from visual production, digital yearbooks and AR technology to corporate and school events.</p>
+    </div>
+
+    <div class="split">
+      <!-- LEFT: skill bars -->
+      <div class="rv" id="skillBars">
+        <div class="blk-title">Core expertise</div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Business &amp; Brand Strategy</span><span class="sb-pct">95%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="95"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Project Management</span><span class="sb-pct">92%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="92"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Sales &amp; Marketing</span><span class="sb-pct">90%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="90"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Visual Communication</span><span class="sb-pct">88%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="88"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Photography &amp; Video</span><span class="sb-pct">85%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="85"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Adobe Creative Suite</span><span class="sb-pct">82%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="82"></div></div>
+        </div>
+        <div class="sb">
+          <div class="sb-hd"><span class="sb-name">Web &amp; App Development</span><span class="sb-pct">75%</span></div>
+          <div class="sb-track"><div class="sb-fill" data-w="75"></div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: certs + education -->
+      <div class="rv">
+        <div class="blk-title">Certifications</div>
+        <div class="certs">
+          <span class="ctag">Google Ads</span>
+          <span class="ctag">Microsoft Ads Pro</span>
+          <span class="ctag">HubSpot Sales</span>
+          <span class="ctag">HubSpot GDD</span>
+          <span class="ctag">SEMrush Pro</span>
+          <span class="ctag">Google Cloud</span>
+          <span class="ctag">Android Enterprise</span>
+          <span class="ctag">Google Digital Garage</span>
+          <span class="ctag">Elements of AI</span>
+          <span class="ctag">Sales Management</span>
+        </div>
+
+        <div class="blk-title">Education &amp; Awards</div>
+        <div class="edu">
+          <div class="edu-ico">🎓</div>
+          <div>
+            <div class="edu-t">Bachelor of Information Systems</div>
+            <div class="edu-s">Universitas Jember</div>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="edu-ico">🏆</div>
+          <div>
+            <div class="edu-t">Finalist — ASC Agribusiness</div>
+            <div class="edu-s">Startup Competition</div>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="edu-ico">💻</div>
+          <div>
+            <div class="edu-t">Google Developer Student Clubs</div>
+            <div class="edu-s">GDSC Jember</div>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="edu-ico">🏫</div>
+          <div>
+            <div class="edu-t">SMAN 1 Pasuruan</div>
+            <div class="edu-s">Senior High School</div>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="edu-ico">🏫</div>
+          <div>
+            <div class="edu-t">SMPN 1 Pasuruan</div>
+            <div class="edu-s">Junior High School</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="sec band" id="services">
+  <div class="container c-1230 band-in">
+    <div class="text-center rv">
+      <div class="rf-badge on-dark"><span class="rf-dot"></span> My services</div>
+      <h2 class="sec-title on-dark">Services I'm<br>Always <span>Delivering</span></h2>
+    </div>
+    <div class="svc rv">
+      <div class="svc-item">
+        <div class="ico">🌐</div>
+        <h4>Web Design &amp; Dev</h4>
+        <p>HTML/CSS/JS, landing pages, yearbook sites, PWA, company profiles</p>
+      </div>
+      <div class="svc-item">
+        <div class="ico">📢</div>
+        <h4>Visual Creators</h4>
+        <p>Design &amp; branding, motion and multimedia, social content, layout and graphic design</p>
+      </div>
+      <div class="svc-item">
+        <div class="ico">🎯</div>
+        <h4>Brand Strategy</h4>
+        <p>Brand identity, positioning, messaging, visual direction, digital marketing, Google Ads</p>
+      </div>
+      <div class="svc-item">
+        <div class="ico">📷</div>
+        <h4>Photo &amp; Video</h4>
+        <p>Event photography, short-form video, content creation, film-making, commercial and product</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALUES ===================== -->
+<section class="sec">
+  <div class="container c-1230">
+    <div class="text-center rv" style="margin-bottom:56px">
+      <div class="rf-badge"><span class="rf-dot"></span> How I work</div>
+      <h2 class="sec-title">Three Rules<br>I Never <span>Break</span></h2>
+    </div>
+    <div class="vals">
+      <article class="val rv">
+        <h3>Strategy before pixels</h3>
+        <p>Beautiful work that misses the business goal is decoration. Every project starts with what the client is actually trying to win — then the design follows.</p>
+      </article>
+      <article class="val rv">
+        <h3>Ship it, then refine it</h3>
+        <p>A live product teaches you more in a week than a plan does in a month. I set clear timelines up front and get real work in front of real users fast.</p>
+      </article>
+      <article class="val rv">
+        <h3>Founder-level ownership</h3>
+        <p>I've built a company from zero, so I treat every engagement like equity. No hand-offs, no disappearing after launch — I stay accountable for the outcome.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="sec" style="padding-top:0" id="clients">
+  <div class="container c-1230">
+    <div class="text-center rv">
+      <div class="rf-badge"><span class="rf-dot"></span> Client feedback</div>
+      <h2 class="sec-title">What Clients<br>Say About <span>Me</span></h2>
+      <p class="sec-lead">4.9 out of 5, based on 50+ school collaborations.</p>
+    </div>
+
+    <div class="tst">
+      <article class="tst-item rv">
+        <div class="tst-stars">
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+        </div>
+        <p>“Nano delivered our yearbook website beyond expectations. The Harry Potter theme was stunning — our students were blown away on reveal day.”</p>
+        <div class="tst-by">
+          <div class="tst-av">RD</div>
+          <div>
+            <div class="tst-n">Rachma Dewi, S.Pd</div>
+            <div class="tst-r">Homeroom Teacher, SMA Merdeka</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tst-item rv">
+        <div class="tst-stars">
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+        </div>
+        <p>“The visual event Nano organized was flawlessly executed. From rundown to décor, every detail was handled with professionalism and heart.”</p>
+        <div class="tst-by">
+          <div class="tst-av">AK</div>
+          <div>
+            <div class="tst-n">Angga Kusuma</div>
+            <div class="tst-r">Committee, SMAN 2 Situbondo</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tst-item rv">
+        <div class="tst-stars">
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+        </div>
+        <p>“Working with Rama on digital marketing was a game-changer. He understands both the data and the creative side — a rare combination.”</p>
+        <div class="tst-by">
+          <div class="tst-av">FA</div>
+          <div>
+            <div class="tst-n">Farid Alamsyah</div>
+            <div class="tst-r">Founder, Startup Jember</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tst-item rv">
+        <div class="tst-stars">
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+          <svg viewBox="0 0 15 15"><path d="M7.2.9a.3.3 0 0 1 .6 0l1.5 4.8c0 .1.2.2.3.2h5c.3 0 .4.4.2.5l-4 3a.3.3 0 0 0-.1.3l1.5 4.8c.1.3-.2.5-.5.4l-4-3a.3.3 0 0 0-.4 0l-4 3c-.3.2-.6 0-.5-.4L4.3 9.7a.3.3 0 0 0-.1-.3l-4-3c-.3-.2-.2-.5.1-.5h5c.2 0 .3-.1.3-.2L7.2.9Z"></path></svg>
+        </div>
+        <p>“Our yearbook website was everything we dreamed of. The AR feature was something no other school had — Nano set us apart in the best way.”</p>
+        <div class="tst-by">
+          <div class="tst-av">IS</div>
+          <div>
+            <div class="tst-n">Indriastutie Setia H., S.Si., M.Si.</div>
+            <div class="tst-r">Principal, SMP Al-Furqan</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" style="padding-top:0" id="faq">
+  <div class="container c-1230">
+    <div class="text-center rv" style="margin-bottom:52px">
+      <div class="rf-badge"><span class="rf-dot"></span> FAQ</div>
+      <h2 class="sec-title">Got Any<br><span>Questions?</span></h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item rv">
+        <button class="faq-btn">What kind of projects do you take on?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">I work on web design &amp; development, digital marketing, brand identity, photography/videography, and business consulting — especially for schools, agencies, and startups in Indonesia.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">Are you available for freelance projects outside Nano?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. While Nano is my primary focus, I'm selectively open to freelance and consulting engagements. I prefer projects where I can add real strategic value — feel free to reach out.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">How long does a typical web project take?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">A landing page or yearbook site typically takes 2–4 weeks. A full company profile or custom web app takes 4–8 weeks. I always set clear timelines up front.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">Do you work with clients globally?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Absolutely. Most of our clients are local to East Java, but we serve globally. International collaboration runs remotely via video calls and async workflows.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">What makes you different from other freelancers?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">I'm a founder who has built and scaled a real business — a team of 40, 50+ school deals annually, products built from zero. That strategic depth shows up in every engagement.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="sec cta" id="contact">
+  <div class="container c-1230">
+    <div class="cta-in">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Let's build something</div>
+      <h2 class="rv">Ready To<br><span>Work Together?</span></h2>
+      <p class="rv">Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is open.</p>
+      <div class="cta-btns rv">
+        <a class="btn btn-grad" href="mailto:ramafakhirin@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Send an Email
+        </a>
+        <a class="btn btn-ghost on-dark" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20read%20your%20about%20page%20and%20would%20like%20to%20talk" target="_blank" rel="noopener">WhatsApp Me</a>
+      </div>
+      <div class="cta-contacts rv">
+        <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
+        <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
+        <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
+        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ftr">
+  <div class="container c-1230">
+    <div class="ftr-grid">
+      <div>
+        <a href="index.html" class="ftr-logo">Ramahf<span>.</span></a>
+        <p>Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — turning blank canvases into digital experiences people remember.</p>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+          <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+          <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+          <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.onthispage">On This Page</h4>
+        <ul>
+          <li><a href="#story">The Story</a></li>
+          <li><a href="#journey">The Journey</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
+          <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
+          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; 2026 Rama Hadyan Fakhirin — PT Nano Indonesia Sakti. All Rights Reserved.</span>
+      <a href="index.html" data-rf-id="ftr.back">&larr; Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20read%20your%20about%20page" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+  <span data-rf-id="cta.consultation">Consultation</span>
+</a>
+
+<script>
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger');
+var mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', function () { mobileNav.classList.toggle('open'); });
+mobileNav.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () { mobileNav.classList.remove('open'); });
+});
+
+/* ---------- Reveal on scroll ---------- */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e, i) {
+    if (!e.isIntersecting) return;
+    e.target.style.transitionDelay = (Math.min(i, 5) * 70) + 'ms';
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+/* ---------- Skill bars ---------- */
+var sbio = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (!e.isIntersecting) return;
+    var bars = e.target.querySelectorAll('.sb-fill');
+    bars.forEach(function (b, i) {
+      setTimeout(function () { b.style.width = b.dataset.w + '%'; }, i * 110);
+    });
+    sbio.unobserve(e.target);
+  });
+}, { threshold: 0.25 });
+var sbWrap = document.getElementById('skillBars');
+if (sbWrap) sbio.observe(sbWrap);
+
+/* ---------- Number count-up ---------- */
+var numio = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('.num b').forEach(function (el) {
+      var target = el.querySelector('i') || el;
+      var end = parseFloat(target.textContent);
+      if (isNaN(end)) return;
+      var dec = (target.textContent.indexOf('.') !== -1) ? 1 : 0;
+      var start = null, dur = 1400;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        target.textContent = (end * eased).toFixed(dec);
+        if (p < 1) requestAnimationFrame(step);
+        else target.textContent = end.toFixed(dec);
+      }
+      requestAnimationFrame(step);
+    });
+    numio.unobserve(e.target);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.nums').forEach(function (el) { numio.observe(el); });
+
+/* ---------- FAQ accordion ---------- */
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.faq-btn');
+  if (!btn) return;
+  var item = btn.closest('.faq-item');
+  var ans = item.querySelector('.faq-ans');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function (i) {
+    i.classList.remove('open');
+    i.querySelector('.faq-ans').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+  }
+});
+
+/* ---------- Smooth anchor with header offset ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="assets/js/rf-toggle.js"></script>
+
+<!-- CMS: konten dinamis dari Supabase. Isi HTML di atas dipakai sebagai fallback. -->
+<script>
+  window.RF_CMS_CONFIG = {
+    url: 'https://tfnsulqqfzkmefdhgoyi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw',
+    page: 'about'
+  };
+</script>
+<script src="assets/js/rf-cms.js" defer></script>
+</body>
+</html>

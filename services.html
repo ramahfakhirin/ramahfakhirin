@@ -1,0 +1,1063 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overscroll-behavior:none;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Services — Web, Branding, Visual &amp; Event Production | Ramahfakhirin</title>
+<meta name="description" content="Web design &amp; development, visual creation, brand strategy, photo &amp; video, digital yearbooks, AR technology, and event production. Built by PT Nano Indonesia Sakti.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ramahfakhirin.com/services">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramahfakhirin.com/services">
+<meta property="og:title" content="Services — Ramahfakhirin">
+<meta property="og:description" content="From landing pages to enterprise apps, brand identity to full event production. One team, 9 years, 231+ clients.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — matching ramahfakhirin.com template
+   ============================================================ */
+:root{
+  --rf-accent:#7463FF;
+  --rf-accent2:#9585FF;
+  --rf-bg:#F7F7FD;
+  --rf-bg2:#EEEEF8;
+  --rf-dark:#0E0F11;
+  --rf-dark2:#101016;
+  --rf-night:#08041D;
+  --rf-mid:#66666C;
+  --rf-bdr:#E2E2F0;
+  --rf-ff-head:"Phudu",serif;
+  --rf-ff-body:"Onest","Inter",sans-serif;
+  --rf-grad:linear-gradient(230deg,#FF994B 6.7%,#D34BE9 48.83%,#3188FF 90.96%);
+  --rf-grad-purple:linear-gradient(120deg,#7463FF,#9585FF);
+  --rf-shadow:0 18px 50px rgba(20,16,60,.08);
+  --rf-shadow-lg:0 28px 80px rgba(20,16,60,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--rf-ff-body);
+  background-color:var(--rf-bg);
+  color:var(--rf-dark);
+  font-size:16px;line-height:1.7;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5{font-family:var(--rf-ff-head);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--rf-dark)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button,input{font-family:inherit}
+::selection{background:var(--rf-accent);color:#fff}
+
+.container{width:100%;margin:0 auto;padding:0 24px}
+.c-1230{max-width:1278px}
+.c-1430{max-width:1478px}
+.c-1630{max-width:1678px}
+.sec{padding:104px 0}
+.text-center{text-align:center}
+.mb-48{margin-bottom:48px}
+.mb-64{margin-bottom:64px}
+
+/* ---------- Badge ---------- */
+.rf-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rf-accent);background:rgba(116,99,255,.12);
+  padding:7px 18px;border-radius:99px;border:1px solid rgba(116,99,255,.25);
+  margin-bottom:24px;
+}
+.rf-badge.on-dark{color:#cfc8ff;background:rgba(116,99,255,.18);border-color:rgba(116,99,255,.38)}
+.rf-dot{width:7px;height:7px;border-radius:50%;background:var(--rf-accent);animation:rfPulse 2s infinite}
+@keyframes rfPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+
+/* ---------- Section head ---------- */
+.sec-title{font-size:clamp(34px,5vw,70px);line-height:1.04;margin-bottom:18px}
+.sec-title span{color:var(--rf-accent)}
+.sec-title.on-dark{color:#fff}
+.sec-lead{font-size:16px;color:var(--rf-mid);max-width:660px;margin:0 auto;line-height:1.8}
+.sec-lead.on-dark{color:rgba(255,255,255,.6)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;justify-content:center;font-size:15px;font-weight:600;letter-spacing:-.01em;border-radius:14px;padding:15px 26px;border:none;transition:.4s;line-height:1;cursor:pointer}
+.btn-grad{color:#fff;background:var(--rf-grad);box-shadow:0 10px 26px rgba(148,80,220,.28)}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(148,80,220,.38)}
+.btn-purple{color:#fff;background:var(--rf-accent);box-shadow:0 10px 26px rgba(116,99,255,.3)}
+.btn-purple:hover{background:#6252ee;transform:translateY(-3px)}
+.btn-ghost{color:var(--rf-dark);background:transparent;border:1.5px solid var(--rf-bdr)}
+.btn-ghost:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-ghost.on-dark:hover{border-color:var(--rf-accent2);color:var(--rf-accent2)}
+.btn-block{width:100%}
+.btn-sm{padding:12px 20px;font-size:14px;border-radius:12px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.announce{background:var(--rf-dark);color:rgba(255,255,255,.72);font-size:12.5px}
+.announce-in{display:flex;align-items:center;justify-content:center;gap:18px;padding:11px 0;flex-wrap:wrap}
+.announce-in span{color:var(--rf-accent2);font-weight:600}
+.announce-in a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.announce-in a:hover{color:var(--rf-accent2)}
+
+.hdr{position:sticky;top:0;z-index:99;background:rgba(247,247,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,226,240,.7)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.logo{font-family:var(--rf-ff-head);font-size:24px;font-weight:700;color:#1a1a1a}
+.logo span{color:var(--rf-accent)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--rf-mid);transition:.3s;position:relative}
+.nav a:hover,.nav a.active{color:var(--rf-accent)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--rf-accent);transition:width .3s;border-radius:2px}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.hdr-right{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--rf-bdr);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.burger i{display:block;width:17px;height:1.8px;background:var(--rf-dark);border-radius:2px}
+.mobile-nav{display:none;border-top:1px solid var(--rf-bdr);background:#fff}
+.mobile-nav.open{display:block}
+.mobile-nav ul{padding:14px 0}
+.mobile-nav a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--rf-dark)}
+.mobile-nav a:hover,.mobile-nav a.active{background:var(--rf-bg2);color:var(--rf-accent);font-weight:600}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:92px 0 76px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1100px;height:660px;background:radial-gradient(ellipse at center,rgba(116,99,255,.20),rgba(116,99,255,0) 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-170px;right:-120px;width:540px;height:540px;background:radial-gradient(circle,rgba(211,75,233,.14),rgba(211,75,233,0) 68%);pointer-events:none}
+.hero-in{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(38px,6.2vw,78px);line-height:1.02;margin-bottom:22px}
+.hero h1 span{color:var(--rf-accent)}
+.hero p.lead{font-size:17px;color:var(--rf-mid);max-width:680px;margin:0 auto 34px;line-height:1.8}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:50px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:860px;margin:0 auto}
+.hstat{background:#fff;border:1px solid var(--rf-bdr);border-radius:18px;padding:22px 16px;box-shadow:var(--rf-shadow)}
+.hstat b{display:block;font-family:var(--rf-ff-head);font-size:30px;color:var(--rf-accent);line-height:1;margin-bottom:6px}
+.hstat small{font-size:12.5px;color:var(--rf-mid)}
+
+/* ============================================================
+   SERVICE NAVIGATOR
+   ============================================================ */
+.snav{background:#fff;border-block:1px solid var(--rf-bdr);padding:22px 0;position:sticky;top:79px;z-index:90;backdrop-filter:blur(14px)}
+.snav-in{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.snav a{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:13.5px;font-weight:500;color:var(--rf-mid);
+  border:1.5px solid var(--rf-bdr);border-radius:99px;padding:9px 20px;transition:.3s;
+}
+.snav a:hover{border-color:var(--rf-accent);color:var(--rf-accent);background:rgba(116,99,255,.05)}
+.snav a em{font-style:normal;font-size:15px}
+
+/* ============================================================
+   SERVICE BLOCKS
+   ============================================================ */
+.svc-block{padding:96px 0;border-bottom:1px solid var(--rf-bdr)}
+.svc-block:nth-child(even){background:var(--rf-bg2)}
+.svc-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.svc-block:nth-child(even) .svc-grid{direction:rtl}
+.svc-block:nth-child(even) .svc-grid > *{direction:ltr}
+.svc-no{font-family:var(--rf-ff-head);font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--rf-accent);margin-bottom:14px}
+.svc-h{font-size:clamp(30px,3.6vw,46px);line-height:1.06;margin-bottom:18px}
+.svc-p{font-size:15.5px;color:var(--rf-mid);line-height:1.85;margin-bottom:26px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.svc-tags span{font-size:12px;font-weight:500;color:var(--rf-accent);background:rgba(116,99,255,.08);border:1.5px solid rgba(116,99,255,.22);border-radius:99px;padding:6px 14px}
+.svc-meta{display:flex;gap:34px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--rf-bdr)}
+.svc-meta div small{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--rf-mid);margin-bottom:5px}
+.svc-meta div b{font-family:var(--rf-ff-head);font-size:17px;color:var(--rf-dark)}
+
+/* deliverables card */
+.dlv{background:#fff;border:1px solid var(--rf-bdr);border-radius:24px;padding:38px 34px;box-shadow:var(--rf-shadow)}
+.svc-block:nth-child(even) .dlv{background:#fff}
+.dlv-hd{display:flex;align-items:center;gap:16px;margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid var(--rf-bdr)}
+.dlv-ico{width:56px;height:56px;border-radius:17px;background:rgba(116,99,255,.1);border:1px solid rgba(116,99,255,.2);display:grid;place-items:center;font-size:26px;flex-shrink:0}
+.dlv-hd b{display:block;font-family:var(--rf-ff-head);font-size:17px;line-height:1.3}
+.dlv-hd small{font-size:12.5px;color:var(--rf-mid)}
+.dlv ul li{position:relative;padding-left:28px;font-size:14px;line-height:1.65;color:#3a3a5c;margin-bottom:13px}
+.dlv ul li:last-child{margin-bottom:0}
+.dlv ul li::before{content:"";position:absolute;left:0;top:3px;width:17px;height:17px;border-radius:50%;background:rgba(116,99,255,.14)}
+.dlv ul li::after{content:"";position:absolute;left:5.2px;top:8px;width:6px;height:3px;border-left:1.8px solid var(--rf-accent);border-bottom:1.8px solid var(--rf-accent);transform:rotate(-45deg)}
+.dlv ul li b{color:var(--rf-dark);font-weight:600}
+
+/* ============================================================
+   SPECIALTY (dark) — Nano divisions
+   ============================================================ */
+.spec{background:var(--rf-night);position:relative;overflow:hidden}
+.spec::before{content:"";position:absolute;top:-200px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.26),rgba(116,99,255,0) 68%)}
+.spec::after{content:"";position:absolute;bottom:-240px;right:-160px;width:640px;height:640px;background:radial-gradient(circle,rgba(211,75,233,.18),rgba(211,75,233,0) 70%)}
+.spec-in{position:relative;z-index:2}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.spec-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:38px 32px;transition:.42s cubic-bezier(.16,1,.3,1)}
+.spec-item:hover{transform:translateY(-8px);background:rgba(116,99,255,.13);border-color:rgba(116,99,255,.42)}
+.spec-ico{width:58px;height:58px;border-radius:17px;background:rgba(116,99,255,.18);border:1px solid rgba(116,99,255,.32);display:grid;place-items:center;font-size:26px;margin-bottom:24px}
+.spec-item h3{font-size:22px;color:#fff;margin-bottom:12px}
+.spec-item p{font-size:14px;color:rgba(255,255,255,.58);line-height:1.75;margin-bottom:22px}
+.spec-item ul li{position:relative;padding-left:20px;font-size:13px;color:rgba(255,255,255,.66);line-height:1.6;margin-bottom:9px}
+.spec-item ul li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--rf-accent2)}
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.proc{background:#fff;border:1px solid var(--rf-bdr);border-radius:20px;padding:30px 24px;transition:.35s;position:relative;overflow:hidden}
+.proc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--rf-grad-purple);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.proc:hover{border-color:rgba(116,99,255,.45);transform:translateY(-6px);box-shadow:var(--rf-shadow)}
+.proc:hover::after{transform:scaleX(1)}
+.proc-num{font-family:var(--rf-ff-head);font-size:44px;line-height:1;color:rgba(116,99,255,.22);margin-bottom:12px}
+.proc h4{font-size:18px;margin-bottom:9px}
+.proc p{font-size:13px;color:var(--rf-mid);line-height:1.68}
+
+/* ============================================================
+   PRICING TEASER
+   ============================================================ */
+.pk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:stretch}
+.pk{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--rf-bdr);
+  border-radius:20px;padding:28px 24px;transition:.35s cubic-bezier(.16,1,.3,1);position:relative;
+}
+.pk:hover{transform:translateY(-7px);border-color:rgba(116,99,255,.45);box-shadow:var(--rf-shadow-lg)}
+.pk.feat{background:var(--rf-dark2);border-color:transparent;box-shadow:0 26px 60px rgba(18,12,60,.32)}
+.pk.feat::before{
+  content:"";position:absolute;inset:-1.5px;border-radius:21px;padding:1.5px;
+  background:var(--rf-grad-purple);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.pk-tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--rf-grad-purple);color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 15px;border-radius:99px;white-space:nowrap;box-shadow:0 8px 20px rgba(116,99,255,.45)}
+.pk-ico{font-size:26px;margin-bottom:14px}
+.pk h3{font-size:19px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:7px}
+.pk .pk-for{font-size:12.5px;color:var(--rf-mid);line-height:1.6;min-height:56px;margin-bottom:18px}
+.pk-pre{display:block;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rf-accent);margin-bottom:5px}
+.pk-amt{font-family:var(--rf-ff-head);font-size:clamp(22px,1.9vw,28px);line-height:1;margin-bottom:20px}
+.pk-amt sup{font-family:var(--rf-ff-body);font-size:12px;font-weight:600;color:var(--rf-mid);vertical-align:super;margin-right:3px}
+.pk-list{flex:1;margin-bottom:22px}
+.pk-list li{position:relative;padding-left:20px;font-size:12.5px;line-height:1.6;color:#3a3a5c;margin-bottom:9px}
+.pk-list li::before{content:"";position:absolute;left:2px;top:7px;width:6px;height:6px;border-radius:50%;background:var(--rf-accent);opacity:.55}
+.pk.feat h3,.pk.feat .pk-amt{color:#fff}
+.pk.feat .pk-for,.pk.feat .pk-amt sup{color:rgba(255,255,255,.5)}
+.pk.feat .pk-list li{color:rgba(255,255,255,.72)}
+.pk.feat .pk-list li::before{background:var(--rf-accent2);opacity:1}
+.pk-more{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--rf-accent);transition:gap .3s}
+.pk-more:hover{gap:12px}
+.pk.feat .pk-more{color:var(--rf-accent2)}
+.price-note{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--rf-mid);background:#fff;border:1px solid var(--rf-bdr);border-radius:99px;padding:8px 18px;margin-top:22px}
+.price-note b{color:var(--rf-dark);font-weight:600}
+
+/* ============================================================
+   ADD-ONS
+   ============================================================ */
+.addon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.addon{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--rf-bdr);border-radius:16px;padding:18px 22px;transition:.3s}
+.addon:hover{border-color:rgba(116,99,255,.45);box-shadow:var(--rf-shadow);transform:translateY(-3px)}
+.addon-l{display:flex;align-items:center;gap:14px;min-width:0}
+.addon-ico{width:38px;height:38px;flex-shrink:0;border-radius:11px;background:rgba(116,99,255,.1);display:grid;place-items:center;font-size:17px}
+.addon-name{font-size:14px;font-weight:600;color:var(--rf-dark);line-height:1.35}
+.addon-name small{display:block;font-weight:400;font-size:11.5px;color:var(--rf-mid);margin-top:2px}
+.addon-price{font-family:var(--rf-ff-head);font-size:15px;color:var(--rf-accent);white-space:nowrap;text-align:right}
+.addon-price small{display:block;font-family:var(--rf-ff-body);font-size:10.5px;color:var(--rf-mid);font-weight:400}
+
+/* ============================================================
+   WHY
+   ============================================================ */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:w}
+.why-item{position:relative;background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;padding:34px 30px 30px;box-shadow:var(--rf-shadow);transition:.4s}
+.why-item:hover{transform:translateY(-6px);border-color:rgba(116,99,255,.3)}
+.why-item::before{counter-increment:w;content:"0" counter(w);position:absolute;top:20px;right:26px;font-family:var(--rf-ff-head);font-size:44px;line-height:1;color:rgba(116,99,255,.11)}
+.why-item h3{font-size:19px;margin-bottom:11px;max-width:80%}
+.why-item p{font-size:14px;color:var(--rf-mid);line-height:1.78}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{max-width:880px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--rf-bdr);border-radius:18px;margin-bottom:14px;overflow:hidden;transition:.35s}
+.faq-item.open{border-color:rgba(116,99,255,.4);box-shadow:var(--rf-shadow)}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;padding:22px 26px;background:transparent;border:none;font-family:var(--rf-ff-head);font-size:17px;font-weight:600;color:var(--rf-dark);cursor:pointer}
+.faq-ico{width:30px;height:30px;border-radius:9px;background:var(--rf-bg2);display:grid;place-items:center;flex-shrink:0;transition:.35s}
+.faq-ico svg{width:15px;height:15px;stroke:var(--rf-dark);fill:none;stroke-width:2;transition:.35s}
+.faq-item.open .faq-ico{background:var(--rf-accent);transform:rotate(45deg)}
+.faq-item.open .faq-ico svg{stroke:#fff}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.16,1,.3,1)}
+.faq-ans-in{padding:0 26px 24px;font-size:14.5px;color:var(--rf-mid);line-height:1.85}
+
+/* ============================================================
+   CTA + FOOTER
+   ============================================================ */
+.cta{background:var(--rf-night);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-180px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.28),rgba(116,99,255,0) 68%)}
+.cta::after{content:"";position:absolute;bottom:-220px;right:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(211,75,233,.20),rgba(211,75,233,0) 70%)}
+.cta-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-size:clamp(34px,5vw,66px);color:#fff;line-height:1.04;margin-bottom:18px}
+.cta h2 span{color:var(--rf-accent2)}
+.cta p{color:rgba(255,255,255,.62);font-size:16px;max-width:600px;margin:0 auto 34px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.cta-contacts{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px}
+.cta-ci{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.62);transition:color .3s}
+.cta-ci:hover{color:#fff}
+
+.ftr{background:var(--rf-bg);padding:70px 0 34px;border-top:1px solid var(--rf-bdr)}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:48px}
+.ftr-logo{font-family:var(--rf-ff-head);font-size:26px;font-weight:700;color:#1a1a1a;margin-bottom:18px;display:inline-block}
+.ftr-logo span{color:var(--rf-accent)}
+.ftr p{font-size:14px;color:var(--rf-mid);line-height:1.75;max-width:330px}
+.ftr h4{font-family:var(--rf-ff-head);font-size:17px;margin-bottom:18px}
+.ftr ul li{margin-bottom:10px}
+.ftr ul li a,.ftr ul li span{font-size:14px;color:var(--rf-mid);transition:.3s}
+.ftr ul li a:hover{color:var(--rf-accent)}
+.ftr-bottom{border-top:1px solid var(--rf-bdr);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--rf-mid)}
+.ftr-bottom a:hover{color:var(--rf-accent)}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:98;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 34px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(37,211,102,.5)}
+
+.rv{opacity:0;transform:translateY(32px);transition:opacity .78s cubic-bezier(.16,1,.3,1),transform .78s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1399px){
+  .pk-grid{grid-template-columns:repeat(3,1fr)}
+  .proc-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1199px){
+  .nav{display:none}
+  .burger{display:flex}
+  .svc-grid{grid-template-columns:1fr;gap:44px}
+  .svc-block:nth-child(even) .svc-grid{direction:ltr}
+  .spec-grid{grid-template-columns:1fr;gap:18px}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:991px){
+  .sec{padding:78px 0}
+  .svc-block{padding:66px 0}
+  .hero{padding:64px 0 60px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .pk-grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:1fr;gap:18px}
+  .snav{position:static}
+}
+@media (max-width:767px){
+  .container{padding:0 18px}
+  .sec{padding:60px 0}
+  .svc-block{padding:54px 0}
+  .announce-in p{font-size:11.5px;text-align:center}
+  .announce-in a{display:none}
+  .hero-cta .btn,.cta-btns .btn{width:100%}
+  .pk-grid{grid-template-columns:1fr;gap:16px}
+  .pk .pk-for{min-height:auto}
+  .proc-grid{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+  .dlv{padding:28px 22px}
+  .svc-meta{gap:24px}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+  .snav-in{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .snav a{flex-shrink:0}
+}
+@media (max-width:479px){
+  .hero-stats{grid-template-columns:1fr 1fr;gap:12px}
+  .hstat{padding:18px 12px}
+  .hstat b{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+@media print{
+  .hdr,.announce,.wa-float,.cta-btns,.hero-cta,.snav{display:none}
+  body{background:#fff}
+  .rv{opacity:1;transform:none}
+  .pk,.dlv{break-inside:avoid;box-shadow:none}
+}
+</style>
+<link rel="stylesheet" href="assets/css/rf-toggle.css">
+</head>
+<body>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce">
+  <div class="container c-1430">
+    <div class="announce-in">
+      <p><span>Nano Indonesia</span> — Digital Yearbook • Creative Production House • AR Technology • Event Organizer • Visual Creators</p>
+      <a href="mailto:ramafakhirin@gmail.com" data-rf-id="cta.consult">Free Consultation
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr">
+  <div class="container c-1430">
+    <div class="hdr-in">
+      <a href="index.html" class="logo">Ramahf<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html" data-rf-id="nav.home">Home</a>
+        <a href="about.html" data-rf-id="nav.about">About</a>
+        <a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a>
+        <a href="services.html" class="active" data-rf-id="nav.services">Services</a>
+        <a href="blog.html" data-rf-id="nav.blog">Blog</a>
+        <a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a>
+        <a href="contact.html" data-rf-id="nav.contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn-grad btn-sm" href="https://wa.me/6282244719826" target="_blank" rel="noopener" data-rf-id="cta.talk">Let's Talk</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+      <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+      <li><a href="services.html" class="active" data-rf-id="nav.services">Services</a></li>
+      <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+      <li><a href="contact.html" data-rf-id="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container c-1230">
+    <div class="hero-in">
+      <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="services.hero.eyebrow">✦ What I Do</span></div>
+      <h1 class="rv" data-cms="services.hero.title">Services I'm<br>Always <span>Delivering.</span></h1>
+      <p class="lead rv" data-cms="services.hero.subtitle">Four core disciplines and three specialist divisions — from a single landing page to a full graduation production. Everything is built in-house by a team of 40, with clear scope, clear timeline, and source code that ends up in your hands.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-grad" href="#core">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg>
+          Explore Services
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener" data-rf-id="cta.consult">Free Consultation</a>
+      </div>
+      <div class="hero-stats rv">
+        <div class="hstat"><b>231+</b><small>Clients Served</small></div>
+        <div class="hstat"><b>40</b><small>Team Members</small></div>
+        <div class="hstat"><b>9</b><small>Years of Work</small></div>
+        <div class="hstat"><b>4.9</b><small>Client Rating</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICE NAVIGATOR ===================== -->
+<nav class="snav" aria-label="Service sections">
+  <div class="container c-1430">
+    <div class="snav-in">
+      <a href="#web"><em>🌐</em> Web Design &amp; Dev</a>
+      <a href="#visual"><em>📢</em> Visual Creators</a>
+      <a href="#brand"><em>🎯</em> Brand Strategy</a>
+      <a href="#photo"><em>📷</em> Photo &amp; Video</a>
+      <a href="#divisions"><em>✦</em> Nano Divisions</a>
+      <a href="#packages"><em>💳</em> Packages</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CORE SERVICES ===================== -->
+<div id="core">
+
+  <!-- 01 — WEB -->
+  <section class="svc-block" id="web">
+    <div class="container c-1230">
+      <div class="svc-grid">
+        <div class="rv">
+          <div class="svc-no">Service 01</div>
+          <h2 class="svc-h">Web Design<br>&amp; Development</h2>
+          <p class="svc-p">Landing pages, company profiles, yearbook sites, e-commerce, and custom web applications. Every build starts with the business goal, gets designed in Figma before a line of code is written, and ships fast, responsive, and search-ready.</p>
+          <div class="svc-tags">
+            <span>HTML/CSS/JS</span><span>Laravel</span><span>Next.js</span><span>CMS</span><span>PWA</span><span>E-commerce</span><span>REST API</span><span>Technical SEO</span>
+          </div>
+          <div class="svc-meta">
+            <div><small>Typical timeline</small><b>7 days – 3 months</b></div>
+            <div><small>Starting from</small><b>Rp 5,000,000</b></div>
+            <div><small>Source code</small><b>100% yours</b></div>
+          </div>
+        </div>
+        <div class="dlv rv">
+          <div class="dlv-hd">
+            <div class="dlv-ico">🌐</div>
+            <div>
+              <b>What you get</b>
+              <small>Deliverables included in every web project</small>
+            </div>
+          </div>
+          <ul>
+            <li><b>Custom UI design</b> in Figma, reviewed and approved before development</li>
+            <li>Fully responsive build — tested on mobile, tablet, and desktop</li>
+            <li>Domain and hosting configured for the first year, SSL active</li>
+            <li>On-page SEO, sitemap, Google Analytics and Search Console setup</li>
+            <li>CMS so your team can update content without touching code</li>
+            <li>Contact forms, WhatsApp integration, and Google Maps embed</li>
+            <li>Speed optimization and Core Web Vitals tuning</li>
+            <li><b>Full source code handover</b> plus a training session</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 — VISUAL -->
+  <section class="svc-block" id="visual">
+    <div class="container c-1230">
+      <div class="svc-grid">
+        <div class="rv">
+          <div class="svc-no">Service 02</div>
+          <h2 class="svc-h">Visual<br>Creators</h2>
+          <p class="svc-p">Design and branding, motion and multimedia, social content, layout and graphic design. This is the division that turns a strategy deck into something people actually stop scrolling for — consistent across every channel you publish on.</p>
+          <div class="svc-tags">
+            <span>Graphic Design</span><span>Motion Graphics</span><span>Layout Design</span><span>Social Content</span><span>Adobe Suite</span><span>Illustration</span><span>Print Ready</span>
+          </div>
+          <div class="svc-meta">
+            <div><small>Typical timeline</small><b>3 – 21 days</b></div>
+            <div><small>Formats</small><b>Digital + print</b></div>
+            <div><small>Revisions</small><b>Up to 4 rounds</b></div>
+          </div>
+        </div>
+        <div class="dlv rv">
+          <div class="dlv-hd">
+            <div class="dlv-ico">📢</div>
+            <div>
+              <b>What you get</b>
+              <small>Visual assets built for consistency at scale</small>
+            </div>
+          </div>
+          <ul>
+            <li><b>Social media kits</b> — feed, story, reel covers, and carousel templates</li>
+            <li>Motion graphics and animated explainers for campaigns</li>
+            <li>Editorial layout for yearbooks, catalogues, magazines, and reports</li>
+            <li>Marketing collateral: banners, posters, standees, merchandise mockups</li>
+            <li>Presentation and pitch deck design</li>
+            <li>Editable master files handed over (AI, PSD, AE, Figma)</li>
+            <li>Print-ready exports with correct bleed, CMYK, and resolution</li>
+            <li><b>Template systems</b> so your team can keep producing on-brand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — BRAND -->
+  <section class="svc-block" id="brand">
+    <div class="container c-1230">
+      <div class="svc-grid">
+        <div class="rv">
+          <div class="svc-no">Service 03</div>
+          <h2 class="svc-h">Brand<br>Strategy</h2>
+          <p class="svc-p">Brand identity, positioning, messaging, visual direction, digital marketing, and Google Ads. I've spent nine years building a brand from zero, so strategy here is not a slide deck — it's the decisions that determine whether the work sells.</p>
+          <div class="svc-tags">
+            <span>Brand Identity</span><span>Positioning</span><span>Messaging</span><span>Google Ads</span><span>SEO Strategy</span><span>Content Plan</span><span>Analytics</span>
+          </div>
+          <div class="svc-meta">
+            <div><small>Typical timeline</small><b>2 – 6 weeks</b></div>
+            <div><small>Certified in</small><b>Google Ads, HubSpot</b></div>
+            <div><small>Output</small><b>Guideline + playbook</b></div>
+          </div>
+        </div>
+        <div class="dlv rv">
+          <div class="dlv-hd">
+            <div class="dlv-ico">🎯</div>
+            <div>
+              <b>What you get</b>
+              <small>Strategy documents you can actually execute against</small>
+            </div>
+          </div>
+          <ul>
+            <li><b>Brand discovery workshop</b> with your decision makers</li>
+            <li>Competitive audit and market positioning statement</li>
+            <li>Logo system, colour palette, typography, and usage rules</li>
+            <li>Complete brand guideline document (PDF + editable source)</li>
+            <li>Messaging framework: tone of voice, key lines, elevator pitch</li>
+            <li>Google Ads campaign setup with keyword research and conversion tracking</li>
+            <li>Content pillar plan and a 90-day publishing calendar</li>
+            <li><b>Monthly performance reporting</b> with plain-language recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 — PHOTO & VIDEO -->
+  <section class="svc-block" id="photo">
+    <div class="container c-1230">
+      <div class="svc-grid">
+        <div class="rv">
+          <div class="svc-no">Service 04</div>
+          <h2 class="svc-h">Photo<br>&amp; Video</h2>
+          <p class="svc-p">Event photography, short-form video, content creation, film-making, commercial ads, product shoots, and company profiles. Full in-house production — from the first storyboard to the final colour grade, with no third-party hand-offs.</p>
+          <div class="svc-tags">
+            <span>Event Coverage</span><span>Product Photography</span><span>Company Profile</span><span>Short-form Video</span><span>Commercial Ads</span><span>Colour Grading</span><span>Aerial</span>
+          </div>
+          <div class="svc-meta">
+            <div><small>Typical timeline</small><b>7 – 30 days</b></div>
+            <div><small>Crew</small><b>In-house team</b></div>
+            <div><small>Delivery</small><b>Raw + graded</b></div>
+          </div>
+        </div>
+        <div class="dlv rv">
+          <div class="dlv-hd">
+            <div class="dlv-ico">📷</div>
+            <div>
+              <b>What you get</b>
+              <small>Production handled end to end</small>
+            </div>
+          </div>
+          <ul>
+            <li><b>Pre-production</b>: concept, storyboard, shot list, and scheduling</li>
+            <li>Full-day event coverage with multi-camera and audio capture</li>
+            <li>Studio product photography with retouching and clean cutouts</li>
+            <li>Company profile videos, 60–90 seconds, fully produced</li>
+            <li>Short-form vertical edits sized for Reels, TikTok, and Shorts</li>
+            <li>Aerial and drone footage where the location permits</li>
+            <li>Professional colour grading, sound mix, and subtitle burn-in</li>
+            <li><b>Selected raw files</b> delivered alongside the final edit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== NANO DIVISIONS ===================== -->
+<section class="sec spec" id="divisions">
+  <div class="container c-1230 spec-in">
+    <div class="text-center rv">
+      <div class="rf-badge on-dark"><span class="rf-dot"></span> Specialist divisions</div>
+      <h2 class="sec-title on-dark">What Makes<br>Nano <span>Different</span></h2>
+      <p class="sec-lead on-dark">Three divisions you won't find bundled at most studios — the reason 231+ schools and companies picked us over a generic agency.</p>
+    </div>
+
+    <div class="spec-grid">
+      <article class="spec-item rv">
+        <div class="spec-ico">📖</div>
+        <h3>Digital Yearbook</h3>
+        <p>One of the leading digital yearbook organizers in Indonesia. Interactive flipbooks, custom-themed microsites, and printed companions — handled from photoshoot to launch day.</p>
+        <ul>
+          <li>Custom-themed yearbook website per school</li>
+          <li>Animated PDF flipbook with page-turn engine</li>
+          <li>Class photoshoot, styling, and retouching</li>
+          <li>Guestbook, profile pages, and memory galleries</li>
+          <li>Printed book production and delivery</li>
+        </ul>
+      </article>
+
+      <article class="spec-item rv">
+        <div class="spec-ico">🕶️</div>
+        <h3>AR Technology</h3>
+        <p>Web-based augmented reality that runs in a browser — no app download. Point a phone at a printed page and it plays. The feature that made client yearbooks stand out from every other school in the region.</p>
+        <ul>
+          <li>Image-to-video AR engine (marker based)</li>
+          <li>Runs in mobile browser, no install needed</li>
+          <li>3D model viewer and product try-on</li>
+          <li>Interactive filters for social campaigns</li>
+          <li>Printed marker design included</li>
+        </ul>
+      </article>
+
+      <article class="spec-item rv">
+        <div class="spec-ico">🎪</div>
+        <h3>Event Organizer</h3>
+        <p>Graduation ceremonies, school events, and corporate productions across East Java and beyond. Rundown, stage, décor, documentation — one team accountable for the whole day.</p>
+        <ul>
+          <li>Concept, rundown, and full event planning</li>
+          <li>Stage design, décor, and set production</li>
+          <li>Lighting, sound, and multimedia operation</li>
+          <li>MC coordination and talent booking</li>
+          <li>Photo and video documentation on the day</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="sec" style="background:var(--rf-bg2)" id="process">
+  <div class="container c-1430">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> How we work</div>
+      <h2 class="sec-title rv">Five Steps From<br>Idea To <span>Live</span></h2>
+      <p class="sec-lead rv">Transparent at every stage — you always know exactly where the project stands.</p>
+    </div>
+    <div class="proc-grid rv">
+      <div class="proc">
+        <div class="proc-num">01</div>
+        <h4>Consultation</h4>
+        <p>A free 30-minute call to map your goals, target users, and visual references. Output: a written needs summary and a package recommendation.</p>
+      </div>
+      <div class="proc">
+        <div class="proc-num">02</div>
+        <h4>Proposal &amp; Deal</h4>
+        <p>You receive a written quote, scope of work, and timeline. Once agreed, the deposit marks the official project start.</p>
+      </div>
+      <div class="proc">
+        <div class="proc-num">03</div>
+        <h4>Design</h4>
+        <p>Wireframes first, then full UI. You review and give feedback until the design is approved — before a single line of code is written.</p>
+      </div>
+      <div class="proc">
+        <div class="proc-num">04</div>
+        <h4>Development</h4>
+        <p>Coding, integration, and testing. You get a live preview link and a written progress report every week.</p>
+      </div>
+      <div class="proc">
+        <div class="proc-num">05</div>
+        <h4>Launch &amp; Support</h4>
+        <p>Deploy to your domain, training session, full source code handover, then the warranty period begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PACKAGES ===================== -->
+<section class="sec" id="packages">
+  <div class="container c-1630">
+    <div class="text-center mb-64">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Packages</div>
+      <h2 class="sec-title rv">Pick The Package<br>That Fits <span>Your Scale</span></h2>
+      <p class="sec-lead rv">Five build packages, all including responsive design, first-year hosting, and a bug warranty. Prices are starting points in Rupiah, before VAT.</p>
+      <div class="price-note rv">💡 <b>Not sure which?</b>&nbsp;Free 30-minute consultation — we'll map your needs together.</div>
+    </div>
+
+    <div class="pk-grid">
+      <div class="pk rv">
+        <div class="pk-ico">🚀</div>
+        <h3>Starter</h3>
+        <p class="pk-for">Landing pages and mini company profiles for small businesses, personal brands, and events.</p>
+        <span class="pk-pre">Starting from</span>
+        <div class="pk-amt"><sup>Rp</sup>5,000,000</div>
+        <ul class="pk-list">
+          <li>1–3 pages, one-page or landing</li>
+          <li>Premium template tuned to your brand</li>
+          <li>Domain + SSD hosting, 1 year</li>
+          <li>Contact form + floating WhatsApp</li>
+          <li>Basic on-page SEO + Analytics</li>
+          <li>7–10 working days · 2 revisions</li>
+        </ul>
+        <a class="pk-more" href="pricelist.html#paket">Full details →</a>
+      </div>
+
+      <div class="pk rv">
+        <div class="pk-ico">🏢</div>
+        <h3>Business</h3>
+        <p class="pk-for">A complete company profile with a CMS, so your team manages the content directly.</p>
+        <span class="pk-pre">Starting from</span>
+        <div class="pk-amt"><sup>Rp</sup>12,500,000</div>
+        <ul class="pk-list">
+          <li>6–10 custom pages</li>
+          <li>Custom UI design in Figma</li>
+          <li>CMS — no coding needed</li>
+          <li>Blog module + product catalogue</li>
+          <li>Bilingual Indonesian &amp; English</li>
+          <li>14–21 working days · 4 revisions</li>
+        </ul>
+        <a class="pk-more" href="pricelist.html#paket">Full details →</a>
+      </div>
+
+      <div class="pk feat rv">
+        <span class="pk-tag">★ Most Popular</span>
+        <div class="pk-ico">🛒</div>
+        <h3>Professional</h3>
+        <p class="pk-for">Online stores and lightweight web apps with automated payments and an admin dashboard.</p>
+        <span class="pk-pre">Starting from</span>
+        <div class="pk-amt"><sup>Rp</sup>27,500,000</div>
+        <ul class="pk-list">
+          <li>Unlimited pages</li>
+          <li>UI/UX from scratch + Figma prototype</li>
+          <li>Cart, checkout, coupons, stock</li>
+          <li>Payment gateway (Midtrans/Xendit/QRIS)</li>
+          <li>Admin dashboard + multi-role users</li>
+          <li>30–45 working days · 6 revisions</li>
+        </ul>
+        <a class="pk-more" href="pricelist.html#paket">Full details →</a>
+      </div>
+
+      <div class="pk rv">
+        <div class="pk-ico">⚙️</div>
+        <h3>Custom Apps</h3>
+        <p class="pk-for">Web apps and internal systems built specifically around your team's workflow.</p>
+        <span class="pk-pre">Starting from</span>
+        <div class="pk-amt"><sup>Rp</sup>55,000,000</div>
+        <ul class="pk-list">
+          <li>Requirements analysis + BRD document</li>
+          <li>Custom web app (Laravel / Next.js)</li>
+          <li>POS, inventory, attendance, booking, LMS</li>
+          <li>REST API + integration docs</li>
+          <li>Analytics dashboard + Excel/PDF export</li>
+          <li>2–3 months · 12-month warranty</li>
+        </ul>
+        <a class="pk-more" href="pricelist.html#paket">Full details →</a>
+      </div>
+
+      <div class="pk rv">
+        <div class="pk-ico">🏆</div>
+        <h3>Enterprise</h3>
+        <p class="pk-for">Android and iOS mobile apps plus a large-scale digital ecosystem.</p>
+        <span class="pk-pre">Starting from</span>
+        <div class="pk-amt"><sup>Rp</sup>120,000,000</div>
+        <ul class="pk-list">
+          <li>Product discovery workshop</li>
+          <li>Flutter/native app — Android &amp; iOS</li>
+          <li>Play Store &amp; App Store publishing</li>
+          <li>Scalable backend + cloud infrastructure</li>
+          <li>Security audit + load testing</li>
+          <li>4–6 months · 12-month warranty + SLA</li>
+        </ul>
+        <a class="pk-more" href="pricelist.html#paket">Full details →</a>
+      </div>
+    </div>
+
+    <div class="text-center rv" style="margin-top:48px">
+      <a class="btn btn-purple" href="pricelist.html">
+        See the full pricelist &amp; comparison table
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADD-ONS ===================== -->
+<section class="sec" style="padding-top:0" id="addons">
+  <div class="container c-1430">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Add-ons</div>
+      <h2 class="sec-title rv">Bolt Anything On<br>To <span>Any Package</span></h2>
+      <p class="sec-lead rv">Need something outside the package? Add it individually — no need to jump a tier.</p>
+    </div>
+
+    <div class="addon-grid rv">
+      <div class="addon"><div class="addon-l"><div class="addon-ico">✍️</div><div class="addon-name">Professional copywriting<small>Research + writing, per page</small></div></div><div class="addon-price">Rp 350K<small>/page</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📷</div><div class="addon-name">Studio product photography<small>10 ready-to-use shots + retouch</small></div></div><div class="addon-price">Rp 1.5M<small>/package</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🎬</div><div class="addon-name">Company profile video<small>60–90 seconds, full production</small></div></div><div class="addon-price">Rp 4.5M<small>/video</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🎨</div><div class="addon-name">Logo &amp; brand identity<small>Logo, colour, type, guideline</small></div></div><div class="addon-price">Rp 3.5M<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🕶️</div><div class="addon-name">Web AR / interactive filter<small>AR marker, 3D viewer, IG filter</small></div></div><div class="addon-price">Rp 7.5M<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📖</div><div class="addon-name">Digital yearbook<small>Interactive yearbook + AR</small></div></div><div class="addon-price">Rp 9M<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">📈</div><div class="addon-name">Google Ads setup<small>Keyword research, campaign, tracking</small></div></div><div class="addon-price">Rp 2.5M<small>one-time setup</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🔍</div><div class="addon-name">Monthly SEO<small>Content, backlinks, performance report</small></div></div><div class="addon-price">Rp 3M<small>/month</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🛠️</div><div class="addon-name">Monthly maintenance<small>Updates, backup, monitoring, minor fixes</small></div></div><div class="addon-price">Rp 750K<small>/month</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">💬</div><div class="addon-name">WhatsApp Business API<small>Automated notifications &amp; chatbot</small></div></div><div class="addon-price">Rp 3M<small>starting from</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">🌏</div><div class="addon-name">Additional language<small>Includes content translation</small></div></div><div class="addon-price">Rp 1.5M<small>/language</small></div></div>
+      <div class="addon"><div class="addon-l"><div class="addon-ico">⚡</div><div class="addon-name">Fast track delivery<small>Queue priority, timeline compressed</small></div></div><div class="addon-price">+30%<small>of package value</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section class="sec" style="padding-top:0">
+  <div class="container c-1230">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Why work with me</div>
+      <h2 class="sec-title rv">Three Reasons<br>Clients <span>Stay</span></h2>
+    </div>
+    <div class="why">
+      <article class="why-item rv">
+        <h3>Founder-level ownership</h3>
+        <p>I've built a company from zero — 40 people, 50+ school deals a cycle. I treat every engagement like equity, and I stay accountable long after launch day.</p>
+      </article>
+      <article class="why-item rv">
+        <h3>Everything under one roof</h3>
+        <p>Strategy, design, code, photo, video, print, and event production are all in-house. No vendor chain, no finger-pointing when a deadline gets tight.</p>
+      </article>
+      <article class="why-item rv">
+        <h3>You own the output</h3>
+        <p>Source code, hosting access, domains, databases, and third-party accounts are handed over in full after final payment. No vendor lock-in, ever.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" style="background:var(--rf-bg2)" id="faq">
+  <div class="container c-1230">
+    <div class="text-center mb-48">
+      <div class="rf-badge rv"><span class="rf-dot"></span> FAQ</div>
+      <h2 class="sec-title rv">Questions<br>Before We <span>Start</span></h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item rv">
+        <button class="faq-btn">Can I combine several services in one project?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">That's the usual case. A yearbook project often bundles web development, photography, print, AR, and event production into a single contract with one timeline and one point of contact. We quote the combined scope so you aren't paying five separate coordination overheads.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">How long does a typical project take?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">A landing page or yearbook site typically takes 2–4 weeks. A full company profile or custom web app takes 4–8 weeks, and enterprise mobile ecosystems run 4–6 months. Timelines start once the deposit is received and your content materials are complete. Fast track is available at +30%.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">Do I own the source code and design files?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes, 100%. After final payment, all source code, hosting access, domains, databases, editable design files, and third-party accounts are transferred to you. There is no vendor lock-in — you're free to continue development with any team.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">What if I need a feature that isn't in any package?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Check the add-ons first — most common extras are already priced individually. If the feature is genuinely custom, we estimate it separately based on engineering hours and fold it into your package contract, so you still get one invoice and one timeline.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">Do you work with clients outside East Java?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. Most projects run remotely over WhatsApp, email, and scheduled video calls. We've worked with clients across Indonesia and internationally. On-site work — event production and photography in particular — is quoted with travel included.</div></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-btn">What happens after the warranty period ends?
+          <span class="faq-ico"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">You can move onto a monthly maintenance plan from Rp 750,000 covering security updates, routine backups, uptime monitoring, and minor fixes. Work outside a maintenance contract is quoted case by case. Either way, you keep full access to everything.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="sec cta" id="contact">
+  <div class="container c-1230">
+    <div class="cta-in">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Start here</div>
+      <h2 class="rv">Ready To<br><span>Work Together?</span></h2>
+      <p class="rv">Tell me about your project — you'll get a package recommendation, a time estimate, and a written quote within one business day. The first consultation is completely free.</p>
+      <div class="cta-btns rv">
+        <a class="btn btn-grad" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20saw%20your%20services%20page%20and%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"></path></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost on-dark" href="mailto:ramafakhirin@gmail.com?subject=Project%20Inquiry">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Send an Email
+        </a>
+      </div>
+      <div class="cta-contacts rv">
+        <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
+        <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
+        <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
+        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ftr">
+  <div class="container c-1230">
+    <div class="ftr-grid">
+      <div>
+        <a href="index.html" class="ftr-logo">Ramahf<span>.</span></a>
+        <p>Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — turning blank canvases into digital experiences people remember.</p>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+          <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+          <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+          <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.services">Services</h4>
+        <ul>
+          <li><a href="#web">Web Design &amp; Dev</a></li>
+          <li><a href="#visual">Visual Creators</a></li>
+          <li><a href="#brand">Brand Strategy</a></li>
+          <li><a href="#photo">Photo &amp; Video</a></li>
+          <li><a href="#divisions">Nano Divisions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
+          <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
+          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; 2026 Rama Hadyan Fakhirin — PT Nano Indonesia Sakti. All Rights Reserved.</span>
+      <span>Prices effective January 2026 and subject to change.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+  <span data-rf-id="cta.consultation">Consultation</span>
+</a>
+
+<script>
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger');
+var mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', function () { mobileNav.classList.toggle('open'); });
+mobileNav.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () { mobileNav.classList.remove('open'); });
+});
+
+/* ---------- Reveal on scroll ---------- */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e, i) {
+    if (!e.isIntersecting) return;
+    e.target.style.transitionDelay = (Math.min(i, 5) * 70) + 'ms';
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+/* ---------- FAQ accordion ---------- */
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.faq-btn');
+  if (!btn) return;
+  var item = btn.closest('.faq-item');
+  var ans = item.querySelector('.faq-ans');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function (i) {
+    i.classList.remove('open');
+    i.querySelector('.faq-ans').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+  }
+});
+
+/* ---------- Smooth anchor with header offset ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="assets/js/rf-toggle.js"></script>
+
+<!-- CMS: konten dinamis dari Supabase. Isi HTML di atas dipakai sebagai fallback. -->
+<script>
+  window.RF_CMS_CONFIG = {
+    url: 'https://tfnsulqqfzkmefdhgoyi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw',
+    page: 'services'
+  };
+</script>
+<script src="assets/js/rf-cms.js" defer></script>
+</body>
+</html>

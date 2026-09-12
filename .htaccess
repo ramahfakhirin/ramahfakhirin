@@ -1,0 +1,23 @@
+
+RewriteEngine On
+
+# Shortlinks - route ke HTML handler with JS redirect
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^s/([a-z0-9-]+)/?$ /shortlink.html?code=$1 [QSA,L]
+
+# CMS React SPA Admin rewrite
+RewriteCond %{REQUEST_URI} ^/admin
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin/.* /admin/index.html [L]
+
+# Redirect jika user membuka .html langsung
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# Secara internal cari file .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]

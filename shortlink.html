@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+</head>
+<body style="text-align: center; font-family: Arial; padding: 40px;">
+    <p>Redirecting...</p>
+    <script>
+        (async () => {
+            const code = new URLSearchParams(window.location.search).get('code');
+            if (!code) {
+                document.body.innerHTML = '<p>Error: No code provided</p>';
+                return;
+            }
+            
+            try {
+                const res = await fetch(`https://tfnsulqqfzkmefdhgoyi.supabase.co/rest/v1/shortlinks?code=eq.${code}&select=full_url`, {
+                    headers: {
+                        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw'
+                    }
+                });
+                
+                const data = await res.json();
+                if (data && data.length > 0 && data[0].full_url) {
+                    window.location.href = data[0].full_url;
+                } else {
+                    document.body.innerHTML = '<p>Error: Shortlink not found</p>';
+                }
+            } catch (e) {
+                document.body.innerHTML = `<p>Error: ${e.message}</p>`;
+            }
+        })();
+    </script>
+</body>
+</html>

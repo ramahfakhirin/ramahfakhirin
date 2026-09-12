@@ -1,0 +1,645 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overscroll-behavior:none;scroll-behavior:smooth">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Contact Ramahfakhirin — Let's Build Something Together</title>
+<meta name="description" content="Get in touch with Ramahfakhirin for website, app, branding, and creative production services. Free 30-minute consultation. Based in Jember, Indonesia.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ramahfakhirin.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramahfakhirin.com/contact">
+<meta property="og:title" content="Contact Ramahfakhirin — Let's Build Something Together">
+<meta property="og:description" content="Reach out for a free 30-minute consultation. Website, app, branding, and creative production services.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — matching ramahfakhirin.com template
+   ============================================================ */
+:root{
+  --rf-accent:#7463FF;
+  --rf-accent2:#9585FF;
+  --rf-bg:#F7F7FD;
+  --rf-bg2:#EEEEF8;
+  --rf-dark:#0E0F11;
+  --rf-dark2:#101016;
+  --rf-night:#08041D;
+  --rf-mid:#66666C;
+  --rf-bdr:#E2E2F0;
+  --rf-ff-head:"Phudu",serif;
+  --rf-ff-body:"Onest","Inter",sans-serif;
+  --rf-grad:linear-gradient(230deg,#FF994B 6.7%,#D34BE9 48.83%,#3188FF 90.96%);
+  --rf-grad-purple:linear-gradient(120deg,#7463FF,#9585FF);
+  --rf-shadow:0 18px 50px rgba(20,16,60,.08);
+  --rf-shadow-lg:0 28px 80px rgba(20,16,60,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--rf-ff-body);
+  background-color:var(--rf-bg);
+  color:var(--rf-dark);
+  font-size:16px;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5,h6{font-family:var(--rf-ff-head);font-weight:700;line-height:1.1;letter-spacing:-.01em;color:var(--rf-dark)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button,input,select,textarea{font-family:inherit}
+::selection{background:var(--rf-accent);color:#fff}
+
+/* ---------- Layout helpers ---------- */
+.container{width:100%;margin:0 auto;padding:0 24px}
+.c-1230{max-width:1278px}
+.c-1430{max-width:1478px}
+.c-1630{max-width:1678px}
+.sec{padding:110px 0}
+.text-center{text-align:center}
+.mb-48{margin-bottom:48px}
+.mb-64{margin-bottom:64px}
+
+/* ---------- Badge / section pill ---------- */
+.rf-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--rf-accent);background:rgba(116,99,255,.12);
+  padding:7px 18px;border-radius:99px;border:1px solid rgba(116,99,255,.25);
+  margin-bottom:24px;font-family:var(--rf-ff-body);
+}
+.rf-badge.on-dark{color:#cfc8ff;background:rgba(116,99,255,.18);border-color:rgba(116,99,255,.38)}
+.rf-dot{width:7px;height:7px;border-radius:50%;background:var(--rf-accent);animation:rfPulse 2s infinite}
+@keyframes rfPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.75)}}
+
+/* ---------- Section titles ---------- */
+.sec-title{font-size:clamp(34px,5vw,70px);line-height:1.04;margin-bottom:18px}
+.sec-title span{color:var(--rf-accent)}
+.sec-title.on-dark{color:#fff}
+.sec-lead{font-size:16px;color:var(--rf-mid);max-width:640px;margin:0 auto;line-height:1.8}
+.sec-lead.on-dark{color:rgba(255,255,255,.6)}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;justify-content:center;
+  font-size:15px;font-weight:600;letter-spacing:-.01em;
+  border-radius:14px;padding:15px 26px;border:none;transition:.4s;line-height:1;cursor:pointer;
+}
+.btn-grad{color:#fff;background:var(--rf-grad);box-shadow:0 10px 26px rgba(148,80,220,.28)}
+.btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(148,80,220,.38)}
+.btn-purple{color:#fff;background:var(--rf-accent);box-shadow:0 10px 26px rgba(116,99,255,.3)}
+.btn-purple:hover{background:#6252ee;transform:translateY(-3px)}
+.btn-ghost{color:var(--rf-dark);background:transparent;border:1.5px solid var(--rf-bdr)}
+.btn-ghost:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-ghost.on-dark:hover{border-color:var(--rf-accent2);color:var(--rf-accent2)}
+.btn-block{width:100%}
+.btn-sm{padding:12px 20px;font-size:14px;border-radius:12px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.announce{background:var(--rf-dark);color:rgba(255,255,255,.72);font-size:12.5px}
+.announce-in{display:flex;align-items:center;justify-content:center;gap:18px;padding:11px 0;flex-wrap:wrap}
+.announce-in span{color:var(--rf-accent2);font-weight:600}
+.announce-in a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.announce-in a:hover{color:var(--rf-accent2)}
+
+.hdr{position:sticky;top:0;z-index:99;background:rgba(247,247,253,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,226,240,.7)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.logo{font-family:var(--rf-ff-head);font-size:24px;font-weight:700;color:#1a1a1a;letter-spacing:-.01em}
+.logo span{color:var(--rf-accent)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:14.5px;font-weight:500;color:var(--rf-mid);transition:.3s;position:relative}
+.nav a:hover,.nav a.active{color:var(--rf-accent)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--rf-accent);transition:width .3s;border-radius:2px}
+.nav a:hover::after,.nav a.active::after{width:100%}
+.hdr-right{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--rf-bdr);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.burger i{display:block;width:17px;height:1.8px;background:var(--rf-dark);border-radius:2px}
+.mobile-nav{display:none;border-top:1px solid var(--rf-bdr);background:#fff}
+.mobile-nav.open{display:block}
+.mobile-nav ul{padding:14px 0}
+.mobile-nav a{display:block;padding:12px 24px;font-size:15px;font-weight:500;color:var(--rf-dark)}
+.mobile-nav a:hover,.mobile-nav a.active{background:var(--rf-bg2);color:var(--rf-accent);font-weight:600}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;padding:96px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:1100px;height:660px;background:radial-gradient(ellipse at center,rgba(116,99,255,.20),rgba(116,99,255,0) 66%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-160px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(211,75,233,.14),rgba(211,75,233,0) 68%);pointer-events:none}
+.hero-in{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(38px,6.2vw,78px);line-height:1.02;margin-bottom:22px}
+.hero h1 span{color:var(--rf-accent)}
+.hero p.lead{font-size:17px;color:var(--rf-mid);max-width:660px;margin:0 auto 34px;line-height:1.8}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+
+/* ============================================================
+   CONTACT INFO
+   ============================================================ */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.info-card{background:#fff;border:1px solid var(--rf-bdr);border-radius:22px;padding:36px 30px;text-align:center;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s}
+.info-card:hover{transform:translateY(-8px);border-color:rgba(116,99,255,.45);box-shadow:var(--rf-shadow-lg)}
+.info-card .ico{font-size:36px;margin-bottom:16px;display:block}
+.info-card h3{font-size:20px;margin-bottom:10px}
+.info-card p{font-size:14px;color:var(--rf-mid);line-height:1.75}
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.form-wrap{max-width:740px;margin:0 auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-grid .full{grid-column:1/-1}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group label{font-size:13.5px;font-weight:600;color:var(--rf-dark)}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:13px 16px;border:1.5px solid var(--rf-bdr);border-radius:14px;
+  font-size:14.5px;color:var(--rf-dark);background:#fff;outline:none;transition:.3s;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#a3a3b5}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--rf-accent);box-shadow:0 0 0 4px rgba(116,99,255,.1)}
+.form-group textarea{resize:vertical;min-height:130px}
+.form-note{font-size:13px;color:var(--rf-mid);margin-top:8px}
+.form-submit{margin-top:28px}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-wrap{max-width:880px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--rf-bdr)}
+.faq-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;background:none;border:none;text-align:left;font-size:15.5px;font-weight:500;color:var(--rf-dark);transition:color .3s;cursor:pointer}
+.faq-btn:hover{color:var(--rf-accent)}
+.faq-ico{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--rf-bg2);display:flex;align-items:center;justify-content:center;transition:.3s}
+.faq-ico svg{width:14px;height:14px;transition:transform .3s;stroke:var(--rf-dark)}
+.faq-item.open .faq-ico{background:var(--rf-accent)}
+.faq-item.open .faq-ico svg{transform:rotate(45deg);stroke:#fff}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.faq-ans-in{padding:0 0 22px;font-size:14.5px;color:var(--rf-mid);line-height:1.8;max-width:760px}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta{background:var(--rf-night);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-180px;left:-140px;width:640px;height:640px;background:radial-gradient(circle,rgba(116,99,255,.28),rgba(116,99,255,0) 68%)}
+.cta::after{content:"";position:absolute;bottom:-220px;right:-160px;width:620px;height:620px;background:radial-gradient(circle,rgba(211,75,233,.20),rgba(211,75,233,0) 70%)}
+.cta-in{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-size:clamp(34px,5vw,66px);color:#fff;line-height:1.04;margin-bottom:18px}
+.cta h2 span{color:var(--rf-accent2)}
+.cta p{color:rgba(255,255,255,.62);font-size:16px;max-width:600px;margin:0 auto 34px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.cta-contacts{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px}
+.cta-ci{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.62);transition:color .3s}
+.cta-ci:hover{color:#fff}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.ftr{background:var(--rf-bg);padding:70px 0 34px;border-top:1px solid var(--rf-bdr)}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:36px;margin-bottom:48px}
+.ftr-logo{font-family:var(--rf-ff-head);font-size:26px;font-weight:700;color:#1a1a1a;margin-bottom:18px;display:inline-block}
+.ftr-logo span{color:var(--rf-accent)}
+.ftr p{font-size:14px;color:var(--rf-mid);line-height:1.75;max-width:330px}
+.ftr h4{font-family:var(--rf-ff-head);font-size:17px;margin-bottom:18px}
+.ftr ul li{margin-bottom:10px}
+.ftr ul li a,.ftr ul li span{font-size:14px;color:var(--rf-mid);transition:.3s}
+.ftr ul li a:hover{color:var(--rf-accent)}
+.ftr-bottom{border-top:1px solid var(--rf-bdr);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--rf-mid)}
+
+/* ---------- Floating WhatsApp ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:98;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-size:14px;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 34px rgba(37,211,102,.4);transition:.3s}
+.wa-float:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(37,211,102,.5)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1199px){
+  .nav{display:none}
+  .burger{display:flex}
+  .ftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:991px){
+  .sec{padding:80px 0}
+  .info-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .hero{padding:70px 0 60px}
+}
+@media (max-width:767px){
+  .container{padding:0 18px}
+  .sec{padding:64px 0}
+  .ftr-grid{grid-template-columns:1fr}
+  .announce-in p{font-size:11.5px;text-align:center}
+  .announce-in a{display:none}
+  .hero-cta .btn,.cta-btns .btn{width:100%}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+}
+@media print{
+  .hdr,.announce,.wa-float,.cta-btns,.hero-cta{display:none}
+  body{background:#fff}
+  .rv{opacity:1;transform:none}
+}
+</style>
+<link rel="stylesheet" href="assets/css/rf-toggle.css">
+</head>
+<body>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce">
+  <div class="container c-1430">
+    <div class="announce-in">
+      <p><span>Nano Indonesia</span> — Digital Yearbook • Creative Production House • AR Technology • Event Organizer • Visual Creators</p>
+      <a href="mailto:ramafakhirin@gmail.com" data-rf-id="cta.consult">Free Consultation
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H1M9 1V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="hdr">
+  <div class="container c-1430">
+    <div class="hdr-in">
+      <a href="index.html" class="logo">Ramahf<span>.</span></a>
+      <nav class="nav">
+        <a href="index.html" data-rf-id="nav.home">Home</a>
+        <a href="about.html" data-rf-id="nav.about">About</a>
+        <a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a>
+        <a href="services.html" data-rf-id="nav.services">Services</a>
+        <a href="blog.html" data-rf-id="nav.blog">Blog</a>
+        <a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a>
+        <a href="contact.html" class="active" data-rf-id="nav.contact">Contact</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn-grad btn-sm" href="https://wa.me/6282244719826" target="_blank" rel="noopener" data-rf-id="cta.talk">Let's Talk</a>
+        <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+      <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+      <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+      <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+      <li><a href="contact.html" class="active" data-rf-id="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container c-1230">
+    <div class="hero-in">
+      <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="contact.hero.eyebrow">✦ Get In Touch</span></div>
+      <h1 class="rv" data-cms="contact.hero.title">Let's Build<br><span>Something Together.</span></h1>
+      <p class="lead rv" data-cms="contact.hero.subtitle">Whether you have a project in mind, want to collaborate, or just want to say hi — my inbox is open. Reach out and we'll map out your project together in a free 30-minute consultation.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-grad" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+          Let's Talk
+        </a>
+        <a class="btn btn-ghost" href="mailto:ramafakhirin@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linecap="round"></path><path d="M22 4L12 13 2 4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Send an Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT INFO ===================== -->
+<section class="sec" style="background:var(--rf-bg2)">
+  <div class="container c-1430">
+    <div class="info-grid">
+      <div class="info-card rv">
+        <span class="ico">📍</span>
+        <h3>Location</h3>
+        <p>Jember, East Java, Indonesia<br>Makassar, South Sulawesi, Indonesia</p>
+      </div>
+      <div class="info-card rv">
+        <span class="ico">📱</span>
+        <h3>Phone &amp; Chat</h3>
+        <p>+62 822 4471 9826 (WhatsApp)<br>Available: Mon–Sat, 09:00–18:00 WIB</p>
+      </div>
+      <div class="info-card rv">
+        <span class="ico">📧</span>
+        <h3>Email</h3>
+        <p>ramafakhirin@gmail.com<br>Response within 1 business day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT FORM ===================== -->
+<section class="sec" id="form">
+  <div class="container c-1230">
+    <div class="text-center mb-64">
+      <div class="rf-badge rv"><span class="rf-dot"></span> Reach Out</div>
+      <h2 class="sec-title rv">Send a <span>Message</span></h2>
+      <p class="sec-lead rv">Fill in the form below and your message will open a WhatsApp chat with me. Or send an email directly.</p>
+    </div>
+    <div class="form-wrap rv">
+      <form id="contactForm" autocomplete="on">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fName">Your Name</label>
+            <input type="text" id="fName" name="name" placeholder="e.g. John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="fEmail">Email Address</label>
+            <input type="email" id="fEmail" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="fPhone">WhatsApp Number</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+62 xxx xxxx xxxx">
+          </div>
+          <div class="form-group">
+            <label for="fProject">Project Type</label>
+            <select id="fProject" name="project">
+              <option value="" disabled selected>Select a category</option>
+              <option value="Website">Website</option>
+              <option value="Brand Strategy">Brand Strategy</option>
+              <option value="Visual Creation">Visual Creation</option>
+              <option value="Photo &amp; Video">Photo &amp; Video</option>
+              <option value="Event">Event</option>
+              <option value="Digital Yearbook">Digital Yearbook</option>
+              <option value="AR Technology">AR Technology</option>
+              <option value="Custom App">Custom App</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="fBudget">Budget Range</label>
+            <select id="fBudget" name="budget">
+              <option value="" disabled selected>Select a range</option>
+              <option value="Under 5M">Under 5M</option>
+              <option value="5-15M">5–15M</option>
+              <option value="15-30M">15–30M</option>
+              <option value="30-60M">30–60M</option>
+              <option value="60M+">60M+</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="fMessage">Your Message</label>
+            <textarea id="fMessage" name="message" placeholder="Tell me about your project, goals, timeline..." required></textarea>
+          </div>
+        </div>
+        <div class="form-submit text-center">
+          <button type="submit" class="btn btn-grad">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            Send Message
+          </button>
+        </div>
+      </form>
+      <p class="form-note text-center" style="margin-top:18px">Or email me directly at <a href="mailto:ramafakhirin@gmail.com" style="color:var(--rf-accent);font-weight:600">ramafakhirin@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq" style="background:var(--rf-bg2)">
+  <div class="container c-1230">
+    <div class="text-center mb-64">
+      <div class="rf-badge rv"><span class="rf-dot"></span> FAQ</div>
+      <h2 class="sec-title rv">Frequently<br><span>Asked Questions</span></h2>
+    </div>
+    <div class="faq-wrap rv">
+
+      <div class="faq-item">
+        <button class="faq-btn">Are you currently accepting new projects?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. I take on a limited number of projects per month to ensure quality. Reach out via WhatsApp or the form above and I'll confirm availability within 1 business day.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">What does the free 30-minute consultation cover?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">We'll discuss your project goals, target audience, desired features, timeline, and budget range. I'll recommend the best package or approach, and provide a rough estimate. No pressure, no obligation — it's a two-way conversation to see if we're a good fit.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Do you provide exact pricing before starting?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. After the consultation, I'll send a written proposal with fixed pricing, scope of work, and timeline. No hidden fees, no surprise charges. You pay only what's in the agreement.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">How long does a typical project take?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">It depends on scope. A landing page takes 7–10 working days, a company profile 14–21 days, an online store 30–45 days, and custom web apps run in weeks or months. The proposal always includes an estimated timeline.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Can I pay in installments?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Yes. For Starter and Business packages, it's 50% upfront and 50% at handover. Professional packages are split into 3 milestones. Custom and Enterprise projects use per-milestone payments as outlined in the work contract.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Do you offer post-launch support?
+          <div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" stroke-linecap="round"></path></svg></div>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">Every package includes a warranty period — 1 month for Starter, 3 months for Business, 6 months for Professional, and 12 months for Custom/Enterprise. After that, monthly maintenance is available starting at Rp 750,000/month.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA DARK ===================== -->
+<section class="sec cta" id="contact">
+  <div class="container c-1230">
+    <div class="cta-in">
+      <div class="rf-badge on-dark rv"><span class="rf-dot"></span> Let's Chat</div>
+      <h2 class="rv">Still Curious<span>.</span></h2>
+      <p class="rv">The best way to know if we're a fit is a quick chat. No pressure, no obligation. Just a conversation about what you need and how I can help.</p>
+      <div class="cta-btns rv">
+        <a class="btn btn-grad" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost on-dark" href="mailto:ramafakhirin@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linecap="round"></path><path d="M22 4L12 13 2 4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Send an Email
+        </a>
+      </div>
+      <div class="cta-contacts rv">
+        <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
+        <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
+        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ftr">
+  <div class="container c-1230">
+    <div class="ftr-grid">
+      <div>
+        <a href="index.html" class="ftr-logo">Ramahf<span>.</span></a>
+        <p>Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti — turning blank canvases into digital experiences people remember.</p>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-rf-id="nav.home">Home</a></li>
+          <li><a href="about.html" data-rf-id="nav.about">About</a></li>
+          <li><a href="portfolio.html" data-rf-id="nav.portfolio">Portfolio</a></li>
+          <li><a href="services.html" data-rf-id="nav.services">Services</a></li>
+          <li><a href="blog.html" data-rf-id="nav.blog">Blog</a></li>
+      <li><a href="pricelist.html" data-rf-id="nav.pricelist">Pricelist</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.services">Services</h4>
+        <ul>
+          <li><span>Website Development</span></li>
+          <li><span>Brand Strategy</span></li>
+          <li><span>Visual Creation</span></li>
+          <li><span>Digital Yearbook</span></li>
+          <li><span>Event Production</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-rf-id="ftr.contact">Contact</h4>
+        <ul>
+          <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
+          <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
+          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; 2026 Ramahfakhirin — PT Nano Indonesia Sakti. All Rights Reserved.</span>
+      <a href="index.html" data-rf-id="ftr.back">&larr; Back to Home</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6282244719826?text=Hi%20Ramah%2C%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4a3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7 0 .2 1.8 2.9 4.5 3.9 1.6.6 2.2.7 3 .5.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"></path></svg>
+  <span data-rf-id="cta.consultation">Consultation</span>
+</a>
+
+<script>
+/* ---------- Mobile nav ---------- */
+var burger = document.getElementById('burger');
+var mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', function () { mobileNav.classList.toggle('open'); });
+mobileNav.querySelectorAll('a').forEach(function (a) {
+  a.addEventListener('click', function () { mobileNav.classList.remove('open'); });
+});
+
+/* ---------- Contact form -> CMS + WhatsApp ---------- */
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  var rawName = document.getElementById('fName').value.trim();
+  var rawEmail = document.getElementById('fEmail').value.trim();
+  var rawPhone = document.getElementById('fPhone').value.trim();
+  var rawProject = document.getElementById('fProject').value;
+  var rawBudget = document.getElementById('fBudget').value;
+  var rawMessage = document.getElementById('fMessage').value.trim();
+
+  /* Simpan ke CMS. Kalau gagal, WhatsApp tetap dibuka. */
+  if (window.RFCMS) {
+    RFCMS.sendMessage({
+      name: rawName,
+      email: rawEmail,
+      phone: rawPhone,
+      subject: [rawProject, rawBudget].filter(Boolean).join(' — '),
+      message: rawMessage
+    }).catch(function () { /* diamkan: pengiriman via WhatsApp tetap lanjut */ });
+  }
+
+  var name = encodeURIComponent(rawName);
+  var email = encodeURIComponent(rawEmail);
+  var phone = encodeURIComponent(rawPhone);
+  var project = encodeURIComponent(rawProject);
+  var budget = encodeURIComponent(rawBudget);
+  var message = encodeURIComponent(rawMessage);
+  var waMsg = 'Hi Ramah%2C%20I%20filled%20out%20the%20contact%20form%0A%0A'
+    + 'Name%3A%20' + name + '%0A'
+    + 'Email%3A%20' + email + '%0A'
+    + 'Phone%3A%20' + (phone || 'Not provided') + '%0A'
+    + 'Project%20Type%3A%20' + (project || 'Not specified') + '%0A'
+    + 'Budget%20Range%3A%20' + (budget || 'Not specified') + '%0A%0A'
+    + 'Message%3A%0A' + message;
+  window.open('https://wa.me/6282244719826?text=' + waMsg, '_blank', 'noopener');
+});
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = this.parentElement;
+    var ans = item.querySelector('.faq-ans');
+    var isOpen = item.classList.contains('open');
+    /* close all */
+    document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+      openItem.classList.remove('open');
+      openItem.querySelector('.faq-ans').style.maxHeight = '0';
+    });
+    /* toggle current */
+    if (!isOpen) {
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ---------- Reveal on scroll ---------- */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e, i) {
+    if (e.isIntersecting) {
+      e.target.style.transitionDelay = (Math.min(i, 6) * 60) + 'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+/* ---------- Smooth anchor scroll ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var id = a.getAttribute('href');
+    if (id.length < 2) return;
+    var t = document.querySelector(id);
+    if (!t) return;
+    ev.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 78, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="assets/js/rf-toggle.js"></script>
+
+<!-- CMS: konten dinamis dari Supabase. Isi HTML di atas dipakai sebagai fallback. -->
+<script>
+  window.RF_CMS_CONFIG = {
+    url: 'https://tfnsulqqfzkmefdhgoyi.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw',
+    page: 'contact'
+  };
+</script>
+<script src="assets/js/rf-cms.js" defer></script>
+</body>
+</html>

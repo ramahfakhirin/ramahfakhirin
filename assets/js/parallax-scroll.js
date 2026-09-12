@@ -1,5 +1,7 @@
 $(function() {
-    ParallaxScroll.init();
+    if (window.innerWidth > 767) {
+        ParallaxScroll.init();
+    }
 });
 
 var ParallaxScroll = {
