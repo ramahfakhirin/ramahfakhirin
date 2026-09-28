@@ -229,68 +229,93 @@
         else rest.push(p);
       });
 
-      var featEl = document.getElementById('featured');
-      if (featEl) {
-        if (featured) {
-          featEl.setAttribute('data-cat', postCatKey(featured.category));
-          featEl.setAttribute('data-q', [featured.title, (featured.tags || []).join(' ')]
-            .join(' ').toLowerCase());
-          var catEl = featEl.querySelector('.feat-cat');
-          if (catEl) catEl.textContent = featured.category || '';
-          var h2 = featEl.querySelector('h2');
-          if (h2) h2.textContent = featured.title || '';
-          var pEl = featEl.querySelector('.feat-body p');
-          if (pEl) pEl.textContent = featured.excerpt || '';
-          var metaSpans = featEl.querySelectorAll('.feat-meta span');
-          if (metaSpans.length >= 5) {
-            metaSpans[2].textContent = (featured.read_minutes || 5) + ' min read';
-            metaSpans[4].textContent = monthYear(featured.published_at);
-          }
+       var featEl = document.getElementById('featured');
+       if (featEl) {
+         if (featured) {
+           featEl.setAttribute('data-cat', postCatKey(featured.category));
+           featEl.setAttribute('data-q', [featured.title, (featured.tags || []).join(' ')]
+             .join(' ').toLowerCase());
+           var catEl = featEl.querySelector('.feat-cat');
+           if (catEl) catEl.textContent = featured.category || '';
+           var h2 = featEl.querySelector('h2');
+           if (h2) h2.textContent = featured.title || '';
+           var pEl = featEl.querySelector('.feat-body p');
+           if (pEl) pEl.textContent = featured.excerpt || '';
+           var metaSpans = featEl.querySelectorAll('.feat-meta span');
+           if (metaSpans.length >= 5) {
+             metaSpans[2].textContent = (featured.read_minutes || 5) + ' min read';
+             metaSpans[4].textContent = monthYear(featured.published_at);
+           }
 
-          /* Kartu unggulan dibuat bisa diklik menuju halaman artikel */
-          featEl.style.cursor = 'pointer';
-          if (!featEl.dataset.linked) {
-            featEl.dataset.linked = '1';
-            featEl.addEventListener('click', function () {
-              location.href = 'post.html?slug=' + featEl.dataset.slug;
-            });
-          }
-          featEl.dataset.slug = featured.slug;
-        } else {
-          featEl.style.display = 'none';
-        }
-      }
+           /* Update featured image jika tersedia */
+           var featMedia = featEl.querySelector('.feat-media');
+           if (featMedia && featured.cover) {
+             var img = document.createElement('img');
+             img.src = featured.cover;
+             img.alt = featured.title || '';
+             img.style.width = '100%';
+             img.style.height = '100%';
+             img.style.objectFit = 'cover';
+             img.style.display = 'block';
+             featMedia.innerHTML = '';
+             featMedia.appendChild(img);
+             var featPin = document.createElement('span');
+             featPin.className = 'feat-pin';
+             featPin.textContent = '★ Featured';
+             featMedia.appendChild(featPin);
+           }
+
+           /* Kartu unggulan dibuat bisa diklik menuju halaman artikel */
+           featEl.style.cursor = 'pointer';
+           if (!featEl.dataset.linked) {
+             featEl.dataset.linked = '1';
+             featEl.addEventListener('click', function () {
+               location.href = 'post.html?slug=' + featEl.dataset.slug;
+             });
+           }
+           featEl.dataset.slug = featured.slug;
+         } else {
+           featEl.style.display = 'none';
+         }
+       }
 
       var phColors = ['a', 'b', 'c', 'd', 'e', 'f'];
-      var html = '';
-      rest.forEach(function (p, i) {
-        var cat = p.category || 'Tech';
-        var tags = (p.tags || []).map(function (t) {
-          return '<span>' + esc(t) + '</span>';
-        }).join('');
-        var haystack = [p.title, p.excerpt, cat, (p.tags || []).join(' ')]
-          .filter(Boolean).join(' ').toLowerCase();
+       var html = '';
+       rest.forEach(function (p, i) {
+         var cat = p.category || 'Tech';
+         var tags = (p.tags || []).map(function (t) {
+           return '<span>' + esc(t) + '</span>';
+         }).join('');
+         var haystack = [p.title, p.excerpt, cat, (p.tags || []).join(' ')]
+           .filter(Boolean).join(' ').toLowerCase();
 
-        html += '<article class="post rv" data-cat="' + esc(postCatKey(cat)) + '"' +
-                  ' data-q="' + esc(haystack) + '">' +
-                  '<div class="post-media">' +
-                    '<div class="ph ph-' + phColors[i % 6] + '">' +
-                      '<svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path>' +
-                      '<path d="M3 7l9 5 9-5M12 12v10"></path></svg>' +
-                      '<span>' + esc(cat) + '</span>' +
-                    '</div>' +
-                    '<span class="post-pin">' + esc(cat) + '</span>' +
-                    '<span class="post-read">' + (p.read_minutes || 5) + ' min</span>' +
-                  '</div>' +
-                  '<div class="post-body">' +
-                    '<div class="post-date">' + esc(monthYear(p.published_at)) + '</div>' +
-                    '<h3>' + esc(p.title) + '</h3>' +
-                    '<p>' + esc(p.excerpt || '') + '</p>' +
-                    '<div class="post-tags">' + tags + '</div>' +
-                    '<a class="post-more" href="post.html?slug=' + esc(p.slug) + '">Read article &#8594;</a>' +
-                  '</div>' +
-                '</article>';
-      });
+         var mediaHtml = '';
+         if (p.cover) {
+           mediaHtml = '<img src="' + esc(p.cover) + '" alt="' + esc(p.title) + '" loading="lazy">';
+         } else {
+           mediaHtml = '<div class="ph ph-' + phColors[i % 6] + '">' +
+                       '<svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path>' +
+                       '<path d="M3 7l9 5 9-5M12 12v10"></path></svg>' +
+                       '<span>' + esc(cat) + '</span>' +
+                       '</div>';
+         }
+
+         html += '<article class="post rv" data-cat="' + esc(postCatKey(cat)) + '"' +
+                   ' data-q="' + esc(haystack) + '">' +
+                   '<div class="post-media">' +
+                     mediaHtml +
+                     '<span class="post-pin">' + esc(cat) + '</span>' +
+                     '<span class="post-read">' + (p.read_minutes || 5) + ' min</span>' +
+                   '</div>' +
+                   '<div class="post-body">' +
+                     '<div class="post-date">' + esc(monthYear(p.published_at)) + '</div>' +
+                     '<h3>' + esc(p.title) + '</h3>' +
+                     '<p>' + esc(p.excerpt || '') + '</p>' +
+                     '<div class="post-tags">' + tags + '</div>' +
+                     '<a class="post-more" href="post.html?slug=' + esc(p.slug) + '">Read article &#8594;</a>' +
+                   '</div>' +
+                 '</article>';
+       });
 
       postGrid.innerHTML = html;
       return;
