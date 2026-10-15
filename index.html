@@ -8,7 +8,8 @@
   <meta name="description"
     content="Entrepreneur, creative director, and builder from Jember. Founder of PT Nano Indonesia Sakti.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="icon" type="image/png" href="assets/img/favicon/favicon.png?v=2">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="assets/img/favicon/favicon.png?v=2">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
@@ -19,6 +20,23 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/ramah.css">
 <link rel="stylesheet" href="assets/css/rf-toggle.css">
+<script>
+(function() {
+    const match = window.location.pathname.match(/^\/s\/([a-z0-9-]+)/i);
+    if (!match) return;
+    
+    const code = match[1];
+    fetch(`https://tfnsulqqfzkmefdhgoyi.supabase.co/rest/v1/shortlinks?code=eq.${code}&select=full_url`, {
+        headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTUwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw'}
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data?.length > 0 && data[0].full_url) {
+            window.location.href = data[0].full_url;
+        }
+    });
+})();
+</script>
 </head>
 
 <body class="tp-magic-cursor" data-bg-color="#08041D">
@@ -45,7 +63,7 @@
     <div class="tp-offcanvas-wrapper">
       <div class="tp-offcanvas-top d-flex align-items-center justify-content-between">
         <div class="tp-offcanvas-logo">
-          <a href="index.html"><span
+          <a href="https://ramahfakhirin.com"><span
               style="font-family:'Phudu',serif;font-size:22px;font-weight:700;color:#1a1a1a">Ramahf<span
                 style="color:#7463FF">.</span></span></a>
         </div>
@@ -73,7 +91,7 @@
           <ul>
             <li><a href="tel:+6282244719826" data-cms="settings.contact_phone">+62 822 4471 9826</a></li>
             <li><a href="mailto:ramafakhirin@gmail.com" data-cms="settings.contact_email">ramafakhirin@gmail.com</a></li>
-            <li><a href="#" data-cms="settings.contact_address">Jember &amp; Makassar, Indonesia</a></li>
+             <li><a href="#" data-cms="settings.contact_address">Jember, Indonesia</a></li>
           </ul>
         </div>
         <div class="tp-offcanvas-social">
@@ -137,7 +155,7 @@
             <div class="row align-items-center">
               <div class="col-xl-2 col-lg-4 col-md-6 col-5">
                 <div class="tp-header-10-logo">
-                  <a href="index.html"><span
+                  <a href="https://ramahfakhirin.com"><span
                       style="font-family:'Phudu',serif;font-size:24px;font-weight:700;color:#1a1a1a;letter-spacing:-.01em">Ramahf<span
                         style="color:#7463FF">.</span></span></a>
                 </div>
@@ -428,7 +446,7 @@
             </div>
             <div class="rf-sec-cta tp_fade_anim" data-delay=".9">
               <div class="animated-border-box border-icon radius-style-2">
-                <a class="tp-btn-gradient sm p-relative" href="about.html">
+                <a class="tp-btn-gradient sm p-relative" href="about">
                   <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                       stroke-width="2">
                       <circle cx="12" cy="8" r="4" />
@@ -437,7 +455,7 @@
                   Read My Full Story
                 </a>
               </div>
-              <a class="rf-btn-outline" href="portfolio.html">
+              <a class="rf-btn-outline" href="portfolio">
                 See My Work
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -713,250 +731,250 @@
               </div>
             </div>
             <div class="row" id="rfPortGrid">
-              <div class="col-md-6 rf-port-item" data-cat="yearbook">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-a">
-                    <img src="assets/img/porto/1nanoyearbook.png" alt="Nano Yearbook - Digital Yearbook for Schools"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Nano Yearbook</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Company Website</div>
-                    <div class="rf-pov-title">Nano Yearbook</div><a href="https://nanoyearbook.com" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">Nano Yearbook</div>
-                  <div class="rf-pmeta">Indonesia&apos;s #1 Digital Yearbook Organizer &middot; Since 2017</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="web">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-b">
-                    <img src="assets/img/porto/2abinawa.png" alt="Website CV Abinawa - General Contractor"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Nano AR Tech</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Company Website</div>
-                    <div class="rf-pov-title">Abinawa &mdash; General Contractor</div><a href="https://abinawa.co.id" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">CV. Abinawa</div>
-                  <div class="rf-pmeta">General Contractor & Supplier Professional in Indonesia</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="yearbook">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-c">
-                    <img src="assets/img/porto/3dinchara.png" alt="DINCHARA - MA CI Amanatul Ummah"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Digital Yearbook</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Digital Yearbook</div>
-                    <div class="rf-pov-title">DINCHARA &mdash; Yearbook Site</div><a href="https://nano.co.id/ebook/ma-ci-amanatul-ummah-2025/" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">DINCHARA &mdash; MA CI Amanatul Ummah</div>
-                  <div class="rf-pmeta">HTML/CSS/JS &middot; PDF Flipbook &middot; Animated</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="app">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-d">
-                    <img src="assets/img/porto/4trackingnano.png" alt="Project Tracking Nano Yearbook"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Project Tracking</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Project Tracking</div>
-                    <div class="rf-pov-title">Nano Indonesia &mdash; Nanodidn</div><a href="https://tracking.nano.co.id/" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">Project Tracking &mdash; Nanoidn</div>
-                  <div class="rf-pmeta">Management Project &middot; Tracking &middot; CRM</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="web">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-e">
-                    <img src="assets/img/porto/5nanocoid.png" alt="Compro Nano Indonesia - Event Organizer"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Profile Nano Indonesia</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Company Website</div>
-                    <div class="rf-pov-title">PT Nano Indonesia Sakti</div><a href="https://nano.co.id/" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">PT. Nano Indonesia Sakti</div>
-                  <div class="rf-pmeta">Production House &middot; Yearbook Organizer &amp; Event Organizer</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="yearbook">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-f">
-                    <img src="assets/img/porto/6astranajmia.png" alt="Digital Yearbook"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Digital Yearbook</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Digital Yearbook</div>
-                    <div class="rf-pov-title">Astra Najmia &mdash; SMP AL-Furqan</div><a href="https://nano.co.id/ebook/smp-al-furqan-2026" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">Astra Najmia &mdash; SMP AL-Furqan</div>
-                  <div class="rf-pmeta">HTML/CSS/JS · PDF Flipbook · Animated</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="app">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-a">
-                    <img src="assets/img/porto/7bisnisnano.png" alt="Nanoidn Bisnis Up"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>Nanoidn Bisnis CRM</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">WebApp</div>
-                    <div class="rf-pov-title">Nanoidn Bisnis CRM</div><a href="https://bisnisup.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">Nanoidn Bisnis CRM</div>
-                  <div class="rf-pmeta">Web Application &middot; Customer Relationship Management</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="ar">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-c">
-                    <img src="assets/img/porto/8arnano.png" alt="AR Nano Development"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>AR Nanoidn Development</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Augmented Reality</div>
-                    <div class="rf-pov-title">Nanoidn AR Integration</div><a href="https://ar.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">Nanoidn AR Integration</div>
-                  <div class="rf-pmeta">Augmented Reality &middot; Interactive Experience</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="app">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-b">
-                    <img src="assets/img/porto/9hrisnano.png" alt="HRIS Nanoidn - Internal Attendance PWA"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>HRIS Nano</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">HRIS</div>
-                    <div class="rf-pov-title">HRIS Nanoidn &mdash; Internal Attendance PWA</div><a href="https://hrisnano.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">HRIS Nanoidn &mdash; Internal Attendance PWA</div>
-                  <div class="rf-pmeta">Web Application &middot; Mobile-first</div>
-                </div>
-              </div>
-              <div class="col-md-6 rf-port-item" data-cat="app">
-                <div class="rf-pcard">
-                  <div class="rf-pcard-media rf-ph-e">
-                    <img src="assets/img/porto/10uwu.png" alt="UWU Trash Bank"
-                         class="rf-pcard-img"
-                         onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
-                    <div class="rf-ph-fallback">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <path d="M3 9h18M9 21V9" />
-                      </svg>
-                      <span>UWU Trade - Trash Bank</span>
-                    </div>
-                  </div>
-                  <div class="rf-pov">
-                    <div class="rf-pov-cat">Web Application</div>
-                    <div class="rf-pov-title">UWU Trade - Trash Bank</div><a href="https://uwu.ramahfakhirin.com" class="rf-pov-link">View Project &#8594;</a>
-                  </div>
-                </div>
-                <div class="rf-pcontent">
-                  <div class="rf-ptitle">UWU Trade - Trash Bank</div>
-                  <div class="rf-pmeta">Web Application &middot; Mobile-first</div>
-                </div>
-              </div>
+               <div class="col-md-6 rf-port-item" data-cat="yearbook">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-a">
+                     <img src="assets/img/porto/1nanoyearbook.png" alt="Nano Yearbook - Digital Yearbook for Schools"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Nano Yearbook</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Creative Digital Yearbook</div>
+                     <div class="rf-pov-title">Nano Yearbook #1 in Indonesia</div><a href="https://nanoyearbook.com" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">NANO YEARBOOK ☐ CREATIVE DIGITAL YEARBOOK #1 IN INDONESIA</div>
+                   <div class="rf-pmeta">The official website of Nano Yearbook, a creative digital yearbook brand that has worked with 231+ schools 🎯 Bold blue and 3D visuals make the brand feel modern from the first glance 🚀 No cap, the yearbook itself steals the show 🔥</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="web">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-b">
+                     <img src="assets/img/porto/2abinawa.png" alt="Website CV Abinawa - General Contractor"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Abinawa</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">General Contractor</div>
+                     <div class="rf-pov-title">Abinawa &mdash; Supplier Professional</div><a href="https://abinawa.co.id" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">ABINAWA 🏢 GENERAL CONTRACTOR & SUPPLIER PROFESSIONAL IN INDONESIA</div>
+                   <div class="rf-pmeta">The official website of CV Abinawa, a general contractor and supplier offering integrated construction solutions 🏗 Clean, modern, and built to show the company's strengths at first glance 🌟 No cap, the building visuals sell it all 🔨</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="yearbook">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-c">
+                     <img src="assets/img/porto/3dinchara.png" alt="DINCHARA - MA CI Amanatul Ummah"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>DINCHARA</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Digital Yearbook</div>
+                     <div class="rf-pov-title">DINCHARA &mdash; MA Amanatul Ummah</div><a href="https://nano.co.id/ebook/ma-ci-amanatul-ummah-2025/" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">DINCHARA 🌟 DIGITAL YEARBOOK MA AMANATUL UMMAH ANNUAL CLASS OF 2025</div>
+                   <div class="rf-pmeta">The 2025 digital yearbook of MA Amanatul Ummah, built like a comic book with bold yellow and blue energy 🎨 Every page feels like a cinematic adventure, so graphic moments pop off the screen 🌈 No cap, this yearbook is anything but ordinary 🎬</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="app">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-d">
+                     <img src="assets/img/porto/4trackingnano.png" alt="Project Tracking Nano Yearbook"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Nanoidn Tracking</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Tracking System</div>
+                     <div class="rf-pov-title">Nanoidn Tracking &mdash; Track Code</div><a href="https://tracking.nano.co.id/" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">NANOIDN TRACKING V1 📊 TRACK YOUR PROJECT WITH JUST A CODE</div>
+                   <div class="rf-pmeta">A tracking page where clients can check project status, documents already sent, and the latest progress ⚡ Just enter your project code and everything shows up on the screen. No login hassle, no cap, super transparent ✨</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="web">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-e">
+                     <img src="assets/img/porto/5nanocoid.png" alt="Compro Nano Indonesia - Event Organizer"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Nano Indonesia</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Creative Production</div>
+                     <div class="rf-pov-title">Nano Indonesia Sakti</div><a href="https://nano.co.id/" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">NANO INDONESIA SAKTI 🎨 YOUR CREATIVE PRODUCTION PARTNER</div>
+                   <div class="rf-pmeta">The official website of PT Nano Indonesia Sakti, a creative partner for yearbooks, events, media production, plus equipment and photobooth rentals 🎥 Bold, dark, and full of gradients so the brand sticks from first glance ✨ No cap, this impression is anything but boring 🔥</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="yearbook">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-f">
+                     <img src="assets/img/porto/6astranajmia.png" alt="Digital Yearbook"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Astra Najmia</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Digital Yearbook</div>
+                     <div class="rf-pov-title">Astra Najmia &mdash; SMP AL-Furqan</div><a href="https://nano.co.id/ebook/smp-al-furqan-2026" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">ASTRA NAJMIA 🌟 DIGITAL YEARBOOK SMP AL-FURQAN</div>
+                   <div class="rf-pmeta">SMP Al-Furqan's 2026 digital yearbook with a Netflix-style vibe 📱 Every step, laugh, and moment from school is packed into a story you can replay anytime. No cap, this yearbook makes the nostalgia hit right away 🎬</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="app">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-a">
+                     <img src="assets/img/porto/7bisnisnano.png" alt="Nanoidn Bisnis Up"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Business CRM</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Dashboard</div>
+                     <div class="rf-pov-title">Nanoidn Business CRM</div><a href="https://bisnisup.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">NANOIDN BUSINESS CRM 📊 ALL YOUR BUSINESS, ONE DASHBOARD</div>
+                   <div class="rf-pmeta">A CRM to manage leads, invoices, income, expenses, and projects in one dashboard 📈 Track cash flow and billing status without jumping between spreadsheets. Clean, fast, and easy to read 💪</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="ar">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-c">
+                     <img src="assets/img/porto/8arnano.png" alt="AR Nano Development"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>Nanoidn AR</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Augmented Reality</div>
+                     <div class="rf-pov-title">Nanoidn AR Integration</div><a href="https://ar.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">NANOIDN AR INTEGRATION 🔗 UPLOAD MARKER, INSTANT AR, NO CODING NEEDED</div>
+                   <div class="rf-pmeta">Upload a marker, pick a video or 3D object, and get a shareable AR link 🎯 No app download, no coding, no server needed. Average setup time about 2 minutes, so let's go 🚀</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="app">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-b">
+                     <img src="assets/img/porto/9hrisnano.png" alt="HRIS Nanoidn - Internal Attendance PWA"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>HRIS Nanoidn</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Attendance System</div>
+                     <div class="rf-pov-title">HRIS Nanoidn V1</div><a href="https://hrisnano.nano.co.id" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">HRIS NANOIDN V1 🔔 ATTENDANCE PWA THAT MAKES CHECK-IN EFFORTLESS</div>
+                   <div class="rf-pmeta">An HRIS for managing attendance, shifts, leave, and team approvals on one dashboard 📲 Track check-ins, late arrivals, and work locations in real time, then download reports in one click 📋 No more manual attendance recaps in Excel, no cap 📱</div>
+                 </div>
+               </div>
+               <div class="col-md-6 rf-port-item" data-cat="app">
+                 <div class="rf-pcard">
+                   <div class="rf-pcard-media rf-ph-e">
+                     <img src="assets/img/porto/10uwu.png" alt="UWU Trash Bank"
+                          class="rf-pcard-img"
+                          onerror="this.style.display='none'; this.parentElement.classList.add('rf-ph-empty')">
+                     <div class="rf-ph-fallback">
+                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                         <rect x="3" y="3" width="18" height="18" rx="2" />
+                         <path d="M3 9h18M9 21V9" />
+                       </svg>
+                       <span>UWU Trade</span>
+                     </div>
+                   </div>
+                   <div class="rf-pov">
+                     <div class="rf-pov-cat">Fintech App</div>
+                     <div class="rf-pov-title">UWU Trade - Trash Bank</div><a href="https://uwu.ramahfakhirin.com" class="rf-pov-link">View Project &#8594;</a>
+                   </div>
+                 </div>
+                 <div class="rf-pcontent">
+                   <div class="rf-ptitle">UWU TRADE 💚 TRASH TURNS INTO CASH</div>
+                   <div class="rf-pmeta">An app that turns your trash into balance 💚 Scan waste with AI, check its value, and the money goes straight to your UWU e-wallet. Use it for top-ups, transfers, and PPOB bill payments 💳 Eco-friendly, real rewards, no cap ✨</div>
+                 </div>
+               </div>
             </div>
             <div class="text-center mt-50">
               <div class="animated-border-box radius-style-2" style="display:inline-block">
-                <a class="tp-btn-gradient sm p-relative" href="portfolio.html">
+                <a class="tp-btn-gradient sm p-relative" href="portfolio">
                   See More Projects
                   <span style="margin-left:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </a>
@@ -1018,7 +1036,7 @@
               </div>
               <div class="rf-sec-cta on-dark tp_fade_anim" data-delay=".7">
                 <div class="animated-border-box border-icon radius-style-2">
-                  <a class="tp-btn-gradient sm p-relative" href="services.html">
+                  <a class="tp-btn-gradient sm p-relative" href="services">
                     <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2">
                         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -1029,7 +1047,7 @@
                     Explore All Services
                   </a>
                 </div>
-                <a class="rf-btn-outline on-dark" href="pricelist.html">
+                <a class="rf-btn-outline on-dark" href="pricelist">
                   View Pricelist
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -1041,138 +1059,37 @@
         </div>
 
         <!-- ==================== BLOG ==================== -->
-        <div class="app-stack-area pt-130 pb-120" id="blog">
+        <div class="app-blog-area pt-130 pb-120" id="blog">
           <div class="container container-1230">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="text-center mb-55">
-                  <span class="tp-section-subtitle border-bg bg-color tp_fade_anim" data-delay=".3">Blog &amp;
-                    Notes</span>
-                  <h3 class="tp-section-title-phudu fs-70 mb-20 tp_fade_anim" data-delay=".5">Notes From<br>The <span
-                      style="color:#7463FF">Build</span></h3>
-                  <div class="tp_fade_anim" data-delay=".7">
-                    <p>Articles and field notes on technology, business building, design, and the journey of running a
-                      creative company from East Java.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="row" style="visibility:visible; opacity:1; margin-bottom:40px;">
+               <div class="col-lg-12">
+                 <div class="text-center mb-55" style="visibility:visible; opacity:1;">
+                   <span class="tp-section-subtitle border-bg bg-color tp_fade_anim" data-delay=".3" style="visibility:visible; opacity:1;">Blog &amp;
+                     Notes</span>
+                   <h3 class="tp-section-title-phudu fs-70 mb-20 tp_fade_anim" data-delay=".5" style="visibility:visible; opacity:1;">Notes From<br>The <span
+                       style="color:#7463FF">Build</span></h3>
+                   <div class="tp_fade_anim" data-delay=".7" style="visibility:visible; opacity:1;">
+                     <p>Articles and field notes on technology, business building, design, and the journey of running a
+                       creative company from East Java.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
 
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <a href="post.html?slug=nine-years-building-a-creative-agency-from-a-city-nobody-bets-on" class="rf-bcard tp_fade_anim" data-delay=".3">
-                  <div class="rf-bcard-media rf-bg-a">
-                    <span class="rf-bcard-pin">Business</span>
-                    <span class="rf-bcard-read">12 min</span>
-                    <div class="rf-bcard-mono">09</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">March 2026</div>
-                    <h4 class="rf-bcard-title">Nine Years Building a Creative Agency From a City Nobody Bets On</h4>
-                    <p class="rf-bcard-text">Everyone tells you to move to Jakarta. I stayed in Jember and built a
-                      40-person company anyway &mdash; here is the unglamorous version.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <a href="blog.html#web-ar-native-app" class="rf-bcard tp_fade_anim" data-delay=".5">
-                  <div class="rf-bcard-media rf-bg-b">
-                    <span class="rf-bcard-pin">Tech</span>
-                    <span class="rf-bcard-read">8 min</span>
-                    <div class="rf-bcard-mono">AR</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">March 2026</div>
-                    <h4 class="rf-bcard-title">Why We Built Web AR Instead of a Native App</h4>
-                    <p class="rf-bcard-text">Every school asked for AR. Nobody wanted to download an app for it. How we
-                      shipped marker-based AR that runs in a mobile browser.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <a href="blog.html#project-pricing" class="rf-bcard tp_fade_anim" data-delay=".7">
-                  <div class="rf-bcard-media rf-bg-d">
-                    <span class="rf-bcard-pin">Business</span>
-                    <span class="rf-bcard-read">7 min</span>
-                    <div class="rf-bcard-mono">Rp</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">February 2026</div>
-                    <h4 class="rf-bcard-title">How I Price Projects Without Undercutting Myself</h4>
-                    <p class="rf-bcard-text">For years I quoted by feeling and lost money on half my projects. Switching
-                      to a package model changed the conversation entirely.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <a href="blog.html#design-system-style-guide" class="rf-bcard tp_fade_anim" data-delay=".3">
-                  <div class="rf-bcard-media rf-bg-c">
-                    <span class="rf-bcard-pin">Design</span>
-                    <span class="rf-bcard-read">6 min</span>
-                    <div class="rf-bcard-mono">DS</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">February 2026</div>
-                    <h4 class="rf-bcard-title">A Design System Is Not a Style Guide</h4>
-                    <p class="rf-bcard-text">We shipped 40 yearbook sites in one cycle. The only reason that was
-                      possible: a component system the whole team could build against.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <a href="blog.html#tech-team-outside-jakarta" class="rf-bcard tp_fade_anim" data-delay=".5">
-                  <div class="rf-bcard-media rf-bg-e">
-                    <span class="rf-bcard-pin">Journey</span>
-                    <span class="rf-bcard-read">9 min</span>
-                    <div class="rf-bcard-mono">JBR</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">January 2026</div>
-                    <h4 class="rf-bcard-title">Building a Tech Team Outside Jakarta</h4>
-                    <p class="rf-bcard-text">The talent is here, the pipeline is not. What it takes to hire, train, and
-                      keep good people where nobody else is competing.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <a href="blog.html#hr-pwa" class="rf-bcard tp_fade_anim" data-delay=".7">
-                  <div class="rf-bcard-media rf-bg-f">
-                    <span class="rf-bcard-pin">Tech</span>
-                    <span class="rf-bcard-read">10 min</span>
-                    <div class="rf-bcard-mono">PWA</div>
-                  </div>
-                  <div class="rf-bcard-body">
-                    <div class="rf-bcard-date">January 2026</div>
-                    <h4 class="rf-bcard-title">We Replaced Our HR Software With a PWA in Three Weeks</h4>
-                    <p class="rf-bcard-text">Nothing off the shelf fit how our team works. So we built an offline-first
-                      attendance PWA &mdash; cheaper than the subscription we cancelled.</p>
-                    <span class="rf-bcard-more">Read article &#8594;</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="rf-sec-cta tp_fade_anim" data-delay=".9">
-              <div class="animated-border-box border-icon radius-style-2">
-                <a class="tp-btn-gradient sm p-relative" href="blog.html">
-                  <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2">
-                      <path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z" />
-                      <path d="M18 7h2v13H7" />
-                    </svg></span>
-                  Read All Articles
-                </a>
-              </div>
-              <a class="rf-btn-outline" href="blog.html#subscribe">
+             <div class="row" style="margin-left: -12px; margin-right: -12px;">
+             </div>
+             <div class="rf-sec-cta tp_fade_anim" data-delay=".9">
+               <div class="animated-border-box border-icon radius-style-2">
+                 <a class="tp-btn-gradient sm p-relative" href="blog">
+                   <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                       stroke-width="2">
+                       <path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z" />
+                       <path d="M18 7h2v13H7" />
+                     </svg></span>
+                   Read All Articles
+                 </a>
+               </div>
+               <a class="rf-btn-outline" href="blog#subscribe">
                 Subscribe to Newsletter
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
@@ -1814,14 +1731,14 @@
                 <div class="dgm-footer-widget app-footer-widget app-footer-col-2">
                   <h4 class="dgm-footer-widget-title" style="font-family:'Phudu',serif">Navigation</h4>
                   <div class="dgm-footer-widget-menu">
-                    <ul>
-                      <li><a href="#about" data-rf-id="nav.about">About</a></li>
-                      <li><a href="#skills" data-rf-id="nav.skills">Skills</a></li>
-                      <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#services" data-rf-id="nav.services">Services</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="#faq">FAQ</a></li>
-                    </ul>
+                     <ul>
+                       <li><a href="#about" data-rf-id="nav.about">About</a></li>
+                       <li><a href="#skills" data-rf-id="nav.skills">Skills</a></li>
+                       <li><a href="#portfolio">Portfolio</a></li>
+                       <li><a href="#services" data-rf-id="nav.services">Services</a></li>
+                       <li><a href="blog">Blog</a></li>
+                       <li><a href="#faq">FAQ</a></li>
+                     </ul>
                   </div>
                 </div>
               </div>
@@ -1915,7 +1832,64 @@
       page: 'home'
     };
   </script>
-  <script src="assets/js/rf-cms.js" defer></script>
+  <script src="assets/js/rf-cms.js?v=8" defer></script>
+
+  <script defer>
+    document.addEventListener('rf-cms:rendered', function(e) {
+      var portfolioGrid = document.getElementById('rfPortGrid');
+      var projects = e.detail.projects || [];
+      if (portfolioGrid && projects.length) {
+        renderPortfolio(projects);
+      }
+    });
+
+    function renderPortfolio(projects) {
+      var grid = document.getElementById('rfPortGrid');
+      var bgColors = ['rf-ph-a', 'rf-ph-b', 'rf-ph-c', 'rf-ph-d', 'rf-ph-e', 'rf-ph-f'];
+
+      function catKey(category) {
+        var c = String(category || '').toLowerCase();
+        if (c.indexOf('yearbook') !== -1) return 'yearbook';
+        if (c.indexOf('ar') === 0 || c.indexOf('ar tech') !== -1) return 'ar';
+        if (c.indexOf('app') !== -1) return 'app';
+        if (c.indexOf('event') !== -1) return 'event';
+        if (c.indexOf('web') !== -1) return 'web';
+        return 'web';
+      }
+
+      function esc(s) {
+        if (!s) return '';
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+
+      var html = '';
+      var limit = 10;
+      projects.slice(0, limit).forEach(function(p, i) {
+        var cat = catKey(p.category);
+        var img = p.thumbnail ? '<img src="' + esc(p.thumbnail) + '" alt="' + esc(p.title) + '" class="rf-pcard-img" loading="lazy" onerror="this.style.display=\'none\'; this.parentElement.classList.add(\'rf-ph-empty\')">' : '';
+        var fallback = '<div class="rf-ph-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg><span>' + esc(p.title) + '</span></div>';
+        
+        html += '<div class="col-md-6 rf-port-item" data-cat="' + esc(cat) + '">' +
+                  '<div class="rf-pcard">' +
+                    '<div class="rf-pcard-media ' + bgColors[i % 6] + '">' +
+                      img + fallback +
+                      '<div class="rf-pov">' +
+                        '<div class="rf-pov-cat">' + esc(p.category || '') + '</div>' +
+                        '<div class="rf-pov-title">' + esc(p.title) + '</div>' +
+                        '<a href="' + esc(p.url || '#') + '" class="rf-pov-link"' + (p.url ? ' target="_blank" rel="noopener"' : '') + '>View Project &#8594;</a>' +
+                      '</div>' +
+                    '</div>' +
+                    '<div class="rf-pcontent">' +
+                      '<div class="rf-ptitle">' + esc(p.title) + '</div>' +
+                      '<div class="rf-pmeta">' + esc(p.summary || '') + '</div>' +
+                    '</div>' +
+                  '</div>' +
+                '</div>';
+      });
+
+      grid.innerHTML = html;
+    }
+  </script>
 </body>
 
 </html>

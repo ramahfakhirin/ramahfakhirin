@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+</head>
+<body style="text-align:center;padding:40px;font-family:Arial">
+    <p>Redirecting...</p>
+    <script>
+        let code = new URLSearchParams(window.location.search).get('code');
+        
+        if (!code) {
+            const pathMatch = window.location.pathname.match(/^\/s\/([a-z0-9-]+)/i);
+            if (pathMatch) code = pathMatch[1];
+        }
+        
+        if (!code) {
+            document.body.innerHTML = '<p>Error: No shortcode</p>';
+        } else {
+            fetch(`https://tfnsulqqfzkmefdhgoyi.supabase.co/rest/v1/shortlinks?code=eq.${code}&select=full_url`, {
+                headers: {'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmbnN1bHFxZnprbWVmZGhnb3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk1NzEwNDEsImV4cCI6MjEwNDQ5MTA0MX0.ZkD3CtUJC51SoXSkMEPFh0WW8NHzV-MACezOH4Zk0Nw'}
+            }).then(r => r.json()).then(data => {
+                if (data?.length > 0 && data[0].full_url) {
+                    window.location.href = data[0].full_url;
+                } else {
+                    document.body.innerHTML = '<p>Shortcode not found: ' + code + '</p>';
+                }
+            }).catch(e => {
+                document.body.innerHTML = `<p>Error: ${e.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -12,7 +12,8 @@
 <meta property="og:title" content="Blog &amp; Notes — Ramahfakhirin">
 <meta property="og:description" content="Writing about technology, business, design, and the journey of building a creative company from Jember.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png?v=2">
+<link rel="apple-touch-icon" href="assets/img/favicon/favicon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -136,7 +137,7 @@ button,input{font-family:inherit}
    TOOLBAR — filter + search
    ============================================================ */
 .toolbar{position:sticky;top:79px;z-index:90;background:rgba(247,247,253,.94);backdrop-filter:blur(14px);padding:20px 0;border-block:1px solid var(--rf-bdr)}
-.toolbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.toolbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;width:100%;overflow-x:hidden}
 .filter{display:flex;gap:8px;flex-wrap:wrap}
 .fbtn{padding:9px 20px;border-radius:99px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--rf-bdr);background:transparent;color:var(--rf-mid);transition:all .3s;display:inline-flex;align-items:center;gap:7px}
 .fbtn:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
@@ -393,8 +394,8 @@ button,input{font-family:inherit}
       <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="blog.hero.eyebrow">✦ Blog &amp; Field Notes</span></div>
       <h1 class="rv" data-cms="blog.hero.title">Notes From<br>The <span>Build.</span></h1>
       <p class="lead rv" data-cms="blog.hero.subtitle">Articles, news, and honest field notes on technology, business building, design, and the journey of running a creative company from a small city in East Java. Written between projects, not from a template.</p>
-      <div class="hero-stats rv">
-        <div><b>12</b><small>Articles Published</small></div>
+       <div class="hero-stats rv">
+         <div><b id="hero-articles-count" style="visibility:hidden">12</b><small>Articles Published</small></div>
         <div><b>5</b><small>Topics Covered</small></div>
         <div><b>Weekly</b><small>Publishing Rhythm</small></div>
       </div>
@@ -407,7 +408,7 @@ button,input{font-family:inherit}
   <div class="container c-1630">
     <div class="toolbar-in">
       <div class="filter">
-        <button class="fbtn on" data-filter="all">All <em>12</em></button>
+         <button class="fbtn on" data-filter="all">All <em id="filter-all-count">12</em></button>
         <button class="fbtn" data-filter="tech">Tech <em>4</em></button>
         <button class="fbtn" data-filter="business">Business <em>3</em></button>
         <button class="fbtn" data-filter="journey">Journey <em>2</em></button>
@@ -762,12 +763,12 @@ button,input{font-family:inherit}
         <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
         <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
         <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
-        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+         <span class="cta-ci">📍 Jember, Indonesia</span>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
 <!-- ===================== FOOTER ===================== -->
 <footer class="ftr">
   <div class="container c-1230">
@@ -802,8 +803,8 @@ button,input{font-family:inherit}
           <li><a href="tel:+6282244719826">+62 822 4471 9826</a></li>
           <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
           <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
-          <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><span>Jember &amp; Makassar, Indonesia</span></li>
+           <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
+           <li><span>Jember, Indonesia</span></li>
         </ul>
       </div>
     </div>
@@ -846,8 +847,16 @@ function indexPosts() {
   haystacks = all.map(function (card) {
     return ((card.dataset.q || '') + ' ' + card.textContent).toLowerCase().replace(/\s+/g, ' ');
   });
+  var heroCount = document.getElementById('hero-articles-count');
+  if (heroCount) {
+    heroCount.textContent = all.length;
+    heroCount.style.visibility = 'visible';
+  }
+  var filterAllCount = document.getElementById('filter-all-count');
+  if (filterAllCount) {
+    filterAllCount.textContent = all.length;
+  }
 }
-indexPosts();
 
 function applyFilter() {
   var q = search.value.trim().toLowerCase();

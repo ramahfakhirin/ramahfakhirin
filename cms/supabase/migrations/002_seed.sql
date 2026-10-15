@@ -174,7 +174,7 @@ insert into public.settings (key, value, label, "group") values
   ('brand_name',   '"Ramahf"'::jsonb, 'Brand Name', 'general'),
   ('contact_email','"ramafakhirin@gmail.com"'::jsonb, 'Email', 'contact'),
   ('contact_phone','"+62 822 4471 9826"'::jsonb, 'Phone', 'contact'),
-  ('contact_address', '"Jember & Makassar, Indonesia"'::jsonb, 'Address', 'contact'),
+  ('contact_address', '"Jember, Indonesia"'::jsonb, 'Address', 'contact'),
   ('social_links', '{"linkedin":"https://www.linkedin.com/in/ramahfakhirin","instagram":"https://www.instagram.com/nanoidn","whatsapp":"https://wa.me/6282244719826"}'::jsonb, 'Social Links', 'contact'),
   ('footer_tagline', '"Entrepreneur, creative director & builder from Jember."'::jsonb, 'Footer Tagline', 'general')
 on conflict (key) do nothing;

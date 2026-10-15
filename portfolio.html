@@ -12,7 +12,8 @@
 <meta property="og:title" content="Full Portfolio — Ramahfakhirin">
 <meta property="og:description" content="Selected works: digital yearbooks, company websites, web apps, AR technology, and event production.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png?v=2">
+<link rel="apple-touch-icon" href="assets/img/favicon/favicon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -126,7 +127,7 @@ button,input{font-family:inherit}
    TOOLBAR — filter + search
    ============================================================ */
 .toolbar{position:sticky;top:79px;z-index:90;background:rgba(247,247,253,.92);backdrop-filter:blur(14px);padding:20px 0;border-bottom:1px solid var(--rf-bdr)}
-.toolbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.toolbar-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;width:100%;overflow-x:hidden}
 .filter{display:flex;gap:8px;flex-wrap:wrap}
 .fbtn{padding:9px 20px;border-radius:99px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--rf-bdr);background:transparent;color:var(--rf-mid);transition:all .3s;display:inline-flex;align-items:center;gap:7px}
 .fbtn:hover{border-color:var(--rf-accent);color:var(--rf-accent)}
@@ -318,8 +319,8 @@ button,input{font-family:inherit}
       <div class="rf-badge rv"><span class="rf-dot"></span> <span data-cms="portfolio.hero.eyebrow">✦ Full Worked Portfolio</span></div>
       <h1 class="rv" data-cms="portfolio.hero.title">Every Project,<br><span>One Page.</span></h1>
       <p class="lead rv" data-cms="portfolio.hero.subtitle">A collection of projects I built with the Nano Indonesia team — from digital yearbooks for dozens of schools, company websites, internal systems, AR technology, to graduation event production.</p>
-      <div class="hero-stats rv">
-        <div class="hstat"><b>19</b><small>Projects Shown</small></div>
+       <div class="hero-stats rv">
+         <div class="hstat"><b id="hero-projects-count" style="visibility:hidden">24</b><small>Projects Shown</small></div>
         <div class="hstat"><b>50+</b><small>School Collabs</small></div>
         <div class="hstat"><b>9</b><small>Years of Work</small></div>
         <div class="hstat"><b>4.9</b><small>Client Rating</small></div>
@@ -333,7 +334,7 @@ button,input{font-family:inherit}
   <div class="container c-1630">
     <div class="toolbar-in">
       <div class="filter">
-        <button class="fbtn on" data-filter="all">All <em>19</em></button>
+         <button class="fbtn on" data-filter="all">All <em>24</em></button>
         <button class="fbtn" data-filter="yearbook">Yearbook <em>7</em></button>
         <button class="fbtn" data-filter="web">Website <em>2</em></button>
         <button class="fbtn" data-filter="app">Web App <em>5</em></button>
@@ -351,7 +352,7 @@ button,input{font-family:inherit}
 <!-- ===================== GRID ===================== -->
 <section class="sec" style="padding-top:0" id="work">
   <div class="container c-1630">
-    <p class="result-count">Showing <b id="shown">19</b> of <b>19</b> projects</p>
+     <p class="result-count">Showing <b id="shown">24</b> of <b>24</b> projects</p>
 
     <div class="grid" id="grid">
 
@@ -540,11 +541,11 @@ button,input{font-family:inherit}
         <div class="pcard-media">
           <span class="year">2024</span>
           <img src="assets/img/porto/1119rectovious.png" alt="RECTOVIOUS — SMAN 1 Kencong" loading="lazy">
-          <div class="pov">
+          <a class="pov" href="#" target="_blank" rel="noopener">
             <span class="pov-cat">Digital Yearbook</span>
-            <span class="pov-title">RECTOVIOUS &mdash; Yearbook Site</span>
-            <span class="pov-note">Public link coming soon</span>
-          </div>
+            <span class="pov-title">RECTOVIOUS &mdash; SMAN 1 Kencong</span>
+            <span class="pov-link">Public link coming soon</span>
+          </a>
         </div>
         <div class="pcard-body">
           <h3>RECTOVIOUS &mdash; SMAN 1 Kencong</h3>
@@ -560,11 +561,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path><path d="M3 7l9 5 9-5M12 12v10"></path></svg>
             <span>AR Technology</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">AR Technology</span>
-            <span class="pov-title">Nano AR &mdash; Image to Video</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">AR Technology</span><span class="pov-title">Nano AR &mdash; Image to Video</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>Nano AR Technology</h3>
@@ -581,11 +578,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"></path><path d="M18 7h2v13H7"></path></svg>
             <span>Digital Yearbook</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Digital Yearbook</span>
-            <span class="pov-title">ASCENDANTS &mdash; Harry Potter Theme</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Digital Yearbook</span><span class="pov-title">ASCENDANTS &mdash; Harry Potter Theme</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>ASCENDANTS 2025 &mdash; SMA SHAFTA</h3>
@@ -601,11 +594,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
             <span>Event Organizer</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Event Organizer</span>
-            <span class="pov-title">Graduation &amp; Commencement Events</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Event Organizer</span><span class="pov-title">Graduation &amp; Commencement Events</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>Nano EO &mdash; Graduation Events</h3>
@@ -621,11 +610,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M11 18h2"></path></svg>
             <span>Progressive Web App</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Web Development</span>
-            <span class="pov-title">SENSI &mdash; Internal Attendance PWA</span>
-            <span class="pov-note">Internal system &middot; restricted access</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Web Development</span><span class="pov-title">SENSI &mdash; Internal Attendance PWA</span><span class="pov-link">Internal system &middot; restricted access</span></a>
         </div>
         <div class="pcard-body">
           <h3>SENSI &mdash; Nano Internal PWA</h3>
@@ -641,11 +626,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"></path><path d="M18 7h2v13H7"></path></svg>
             <span>Digital Yearbook</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Digital Yearbook</span>
-            <span class="pov-title">Carolusians 31 Yearbook</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Digital Yearbook</span><span class="pov-title">Carolusians 31 Yearbook</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>Carolusians 31 &mdash; Yearbook Site</h3>
@@ -661,11 +642,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 14h8"></path></svg>
             <span>Web Development</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Web Development</span>
-            <span class="pov-title">Pancaastra Yearbook Website</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Web Development</span><span class="pov-title">Pancaastra Yearbook Website</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>Pancaastra &mdash; Yearbook Website</h3>
@@ -681,11 +658,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"></path><path d="M3 7l9 5 9-5M12 12v10"></path></svg>
             <span>AR Technology</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">AR Technology</span>
-            <span class="pov-title">AZVERON &mdash; AR Yearbook Experience</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">AR Technology</span><span class="pov-title">AZVERON &mdash; AR Yearbook Experience</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>AZVERON &mdash; AR Yearbook</h3>
@@ -701,11 +674,7 @@ button,input{font-family:inherit}
             <svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg>
             <span>Event Organizer</span>
           </div>
-          <div class="pov">
-            <span class="pov-cat">Event Organizer</span>
-            <span class="pov-title">Dinchara &mdash; Graduation Production</span>
-            <span class="pov-note">Documentation coming soon</span>
-          </div>
+          <a class="pov" href="#" target="_blank" rel="noopener"><span class="pov-cat">Event Organizer</span><span class="pov-title">Dinchara &mdash; Graduation Production</span><span class="pov-link">Documentation coming soon</span></a>
         </div>
         <div class="pcard-body">
           <h3>Dinchara &mdash; Graduation Event</h3>
@@ -742,13 +711,13 @@ button,input{font-family:inherit}
         <a href="mailto:ramafakhirin@gmail.com" class="cta-ci">📧 ramafakhirin@gmail.com</a>
         <a href="tel:+6282244719826" class="cta-ci">📱 +62 822 4471 9826</a>
         <a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener" class="cta-ci">💼 LinkedIn</a>
-        <span class="cta-ci">📍 Jember &amp; Makassar, Indonesia</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
+         <span class="cta-ci">📍 Jember, Indonesia</span>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- ===================== FOOTER ===================== -->
 <footer class="ftr">
   <div class="container c-1230">
     <div class="ftr-grid">
@@ -784,11 +753,11 @@ button,input{font-family:inherit}
           <li><a href="mailto:ramafakhirin@gmail.com">ramafakhirin@gmail.com</a></li>
           <li><a href="https://www.instagram.com/nanoidn" target="_blank" rel="noopener">Instagram @nanoidn</a></li>
           <li><a href="https://www.linkedin.com/in/ramahfakhirin" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><span>Jember &amp; Makassar, Indonesia</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="ftr-bottom">
+           <li><span>Jember, Indonesia</span></li>
+         </ul>
+       </div>
+     </div>
+     <div class="ftr-bottom">
       <span>&copy; 2026 Ramahfakhirin — PT Nano Indonesia Sakti. All Rights Reserved.</span>
       <a href="index.html" data-rf-id="ftr.back">&larr; Back to Home</a>
     </div>
@@ -824,8 +793,12 @@ function indexCards() {
   haystacks = cards.map(function (card) {
     return ((card.dataset.q || '') + ' ' + card.textContent).toLowerCase().replace(/\s+/g, ' ');
   });
+  var heroCount = document.getElementById('hero-projects-count');
+  if (heroCount) {
+    heroCount.textContent = cards.length;
+    heroCount.style.visibility = 'visible';
+  }
 }
-indexCards();
 
 function applyFilter() {
   var q = search.value.trim().toLowerCase();

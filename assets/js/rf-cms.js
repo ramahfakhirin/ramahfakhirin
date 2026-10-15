@@ -146,13 +146,11 @@
       var img = p.thumbnail
         ? '<img src="' + esc(p.thumbnail) + '" alt="' + esc(p.title) + '" loading="lazy">'
         : '';
-      var pov = p.url
-        ? '<a class="pov" href="' + esc(p.url) + '" target="_blank" rel="noopener">' +
+      var pov = '<a class="pov" href="' + esc(p.url || '#') + '"' + (p.url ? ' target="_blank" rel="noopener"' : '') + '>' +
             '<span class="pov-cat">' + esc(p.category || '') + '</span>' +
             '<span class="pov-title">' + esc(p.title) + '</span>' +
-            '<span class="pov-link">View Project &#8594;</span>' +
-          '</a>'
-        : '';
+            '<span class="pov-link">' + esc(p.url ? 'View Project &#8594;' : 'Coming Soon') + '</span>' +
+          '</a>';
       var tags = (p.tags || []).map(function (t) {
         return '<span>' + esc(t) + '</span>';
       }).join('');
@@ -321,31 +319,41 @@
       return;
     }
 
-    /* ---- Blok blog di halaman home ---- */
-    var homeRow = document.querySelector('.app-blog-area .row');
-    if (!homeRow || !homeRow.querySelector('.rf-bcard')) return;
+     /* ---- Blok blog di halaman home ---- */
+     var homeRow = document.querySelectorAll('.app-blog-area .row');
+     homeRow = homeRow.length > 1 ? homeRow[1] : null;
+     if (!homeRow) return;
 
-    var bgColors = ['rf-bg-a', 'rf-bg-b', 'rf-bg-c', 'rf-bg-d', 'rf-bg-e', 'rf-bg-f'];
-    var homeHtml = '';
-    store.posts.slice(0, 6).forEach(function (p, i) {
-      var cat = p.category || 'Tech';
-      homeHtml += '<div class="col-lg-4 col-md-6">' +
-                    '<a href="post.html?slug=' + esc(p.slug) + '" class="rf-bcard tp_fade_anim"' +
-                      ' data-delay="' + (0.3 + (i % 3) * 0.2).toFixed(1) + '">' +
-                      '<div class="rf-bcard-media ' + bgColors[i % 6] + '">' +
-                        '<span class="rf-bcard-pin">' + esc(cat) + '</span>' +
-                        '<span class="rf-bcard-read">' + (p.read_minutes || 5) + ' min</span>' +
-                        '<div class="rf-bcard-mono">' + esc(cat.slice(0, 2).toUpperCase()) + '</div>' +
-                      '</div>' +
-                      '<div class="rf-bcard-body">' +
-                        '<div class="rf-bcard-date">' + esc(monthYear(p.published_at)) + '</div>' +
-                        '<h4 class="rf-bcard-title">' + esc(p.title) + '</h4>' +
-                        '<p class="rf-bcard-text">' + esc(p.excerpt || '') + '</p>' +
-                        '<span class="rf-bcard-more">Read article &#8594;</span>' +
-                      '</div>' +
-                    '</a>' +
-                  '</div>';
-    });
+     var bgColors = ['rf-bg-a', 'rf-bg-b', 'rf-bg-c', 'rf-bg-d', 'rf-bg-e', 'rf-bg-f'];
+     var delays = ['.3', '.5', '.7', '.3', '.5', '.7'];
+     var homeHtml = '';
+     store.posts.slice(0, 6).forEach(function (p, i) {
+       var cat = p.category || 'Tech';
+       var mono = cat.slice(0, 2).toUpperCase();
+       var mediaHtml = '';
+       var monoDisplay = 'block';
+       if (p.cover) {
+         mediaHtml = '<img src="' + esc(p.cover) + '" alt="' + esc(p.title) + '" style="width:100%; height:100%; object-fit:cover; display:block; position:relative; z-index:1;" loading="lazy">';
+         monoDisplay = 'none';
+       }
+       homeHtml += '<div class="col-lg-4 col-md-6">' +
+                     '<a href="post.html?slug=' + esc(p.slug) + '" class="rf-bcard tp_fade_anim"' +
+                       ' data-delay="' + delays[i % 6] + '">' +
+                       '<div class="rf-bcard-media ' + bgColors[i % 6] + '" style="position:relative;">' +
+                         mediaHtml +
+                         '<span class="rf-bcard-pin">' + esc(cat) + '</span>' +
+                         '<span class="rf-bcard-read">' + (p.read_minutes || 5) + ' min</span>' +
+                         '<div class="rf-bcard-mono" style="display:' + monoDisplay + ';">' + esc(mono) + '</div>' +
+                       '</div>' +
+                       '<div class="rf-bcard-body">' +
+                         '<div class="rf-bcard-date">' + esc(monthYear(p.published_at)) + '</div>' +
+                         '<h4 class="rf-bcard-title">' + esc(p.title) + '</h4>' +
+                         '<p class="rf-bcard-text">' + esc(p.excerpt || '') + '</p>' +
+                         '<span class="rf-bcard-more">Read article &#8594;</span>' +
+                       '</div>' +
+                     '</a>' +
+                   '</div>';
+     });
     homeRow.innerHTML = homeHtml;
   }
 
